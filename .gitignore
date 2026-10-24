@@ -13,3 +13,6 @@ data/private/
 # os
 .DS_Store
 Thumbs.db
+
+# local scratch
+.tmp/

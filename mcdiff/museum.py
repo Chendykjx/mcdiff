@@ -1,4 +1,11 @@
-"""The museum: every SKU that vanished from a menu gets a tombstone."""
+"""The museum: every SKU that vanished from a menu gets a tombstone.
+
+A menu has *dayparts*: a breakfast item disappears at 10:30 and comes back
+tomorrow at 05:00 — that is not retirement.  So an SKU is only considered gone
+when, for **every daypart it ever appeared in**, the newest snapshot of that
+daypart no longer lists it.  Anything still listed in the latest snapshot of one
+of its dayparts is alive.
+"""
 
 from __future__ import annotations
 
@@ -33,6 +40,7 @@ class ItemHistory:
     last_seen: str = ""
     prices: list[tuple[str, int]] = field(default_factory=list)
     synthetic: bool = False
+    dayparts: set[str] = field(default_factory=set)
 
     @property
     def days_alive(self) -> int:
@@ -77,6 +85,7 @@ class ItemHistory:
             "first_price_cents": self.first_price,
             "last_price_cents": self.last_price,
             "price_changes": self.price_changes,
+            "dayparts": sorted(self.dayparts),
             "epitaph": self.epitaph() if status == "gone" else "",
             "synthetic": self.synthetic,
         }
@@ -88,30 +97,31 @@ class Museum:
     generated_at: str
     items: list[ItemHistory]
     snapshot_count: int
+    status: dict[str, str] = field(default_factory=dict)
 
     @property
     def gone(self) -> list[ItemHistory]:
-        return [item for item in self.items if item.code not in self._alive]
+        return [item for item in self.items if self.status.get(item.code) == "gone"]
 
     @property
     def alive(self) -> list[ItemHistory]:
-        return [item for item in self.items if item.code in self._alive]
-
-    _alive: set[str] = field(default_factory=set)
+        return [item for item in self.items if self.status.get(item.code) != "gone"]
 
     def to_dict(self) -> dict[str, Any]:
         gone = sorted(self.gone, key=lambda item: item.last_seen, reverse=True)
+        alive = sorted(self.alive, key=lambda item: item.name)
         return {
             "store": self.store,
             "generated_at": self.generated_at,
             "snapshot_count": self.snapshot_count,
             "stats": {
                 "tracked": len(self.items),
-                "alive": len(self.alive),
+                "alive": len(alive),
                 "gone": len(gone),
                 "synthetic": any(item.synthetic for item in self.items),
             },
-            "items": [item.to_dict(status="gone" if item.code not in self._alive else "alive") for item in (gone + self.alive)],
+            "items": [item.to_dict(status="gone") for item in gone]
+            + [item.to_dict(status="alive") for item in alive],
         }
 
     def render_markdown(self) -> str:
@@ -134,26 +144,35 @@ class Museum:
         return "\n".join(lines)
 
 
+def _latest_by_daypart(series: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    latest: dict[str, dict[str, Any]] = {}
+    for snap in series:
+        daypart = str(snap.get("daypart") or "unknown")
+        previous = latest.get(daypart)
+        if previous is None or str(snap.get("captured_at")) >= str(previous.get("captured_at")):
+            latest[daypart] = snap
+    return latest
+
+
 def build_museum(snapshots: Iterable[Mapping[str, Any]], *, store: Mapping[str, Any] | None = None) -> Museum:
     series = sorted(snapshots, key=lambda snap: str(snap.get("captured_at")))
     if not series:
         raise ValueError("no snapshots")
 
     histories: dict[str, ItemHistory] = {}
-    alive: set[str] = set()
-    synthetic_flag = False
+    seen_in_daypart: dict[str, set[str]] = {}
 
     for snap in series:
         captured_at = str(snap.get("captured_at"))
-        synthetic_flag = synthetic_flag or bool(snap.get("synthetic"))
-        meals = snap.get("meals") or {}
-        alive = set(meals)
-        for code, meal in meals.items():
+        daypart = str(snap.get("daypart") or "unknown")
+        synthetic = bool(snap.get("synthetic"))
+        for code, meal in (snap.get("meals") or {}).items():
             code = str(code)
             price = int(meal.get("price_cents") or 0)
+            seen_in_daypart.setdefault(code, set()).add(daypart)
             history = histories.get(code)
             if history is None:
-                history = ItemHistory(
+                histories[code] = ItemHistory(
                     code=code,
                     name=meal.get("name", ""),
                     category=meal.get("category", ""),
@@ -162,16 +181,28 @@ def build_museum(snapshots: Iterable[Mapping[str, Any]], *, store: Mapping[str, 
                     first_seen=captured_at,
                     last_seen=captured_at,
                     prices=[(captured_at, price)],
-                    synthetic=bool(snap.get("synthetic")),
+                    synthetic=synthetic,
+                    dayparts={daypart},
                 )
-                histories[code] = history
             else:
                 history.name = meal.get("name", history.name)
                 history.category = meal.get("category", history.category)
                 history.tags = list(meal.get("tags") or history.tags)
                 history.last_seen = captured_at
+                history.synthetic = history.synthetic or synthetic
+                history.dayparts.add(daypart)
                 if not history.prices or history.prices[-1][1] != price:
                     history.prices.append((captured_at, price))
+
+    latest_by_daypart = _latest_by_daypart(series)
+    status: dict[str, str] = {}
+    for code, item in histories.items():
+        alive = any(
+            code in (latest_by_daypart[daypart].get("meals") or {})
+            for daypart in seen_in_daypart.get(code, set())
+            if daypart in latest_by_daypart
+        )
+        status[code] = "alive" if alive else "gone"
 
     store_info = dict(store or (series[-1].get("store") or {}))
     return Museum(
@@ -179,7 +210,7 @@ def build_museum(snapshots: Iterable[Mapping[str, Any]], *, store: Mapping[str, 
         generated_at=str(series[-1].get("captured_at")),
         items=list(histories.values()),
         snapshot_count=len(series),
-        _alive=alive,
+        status=status,
     )
 
 

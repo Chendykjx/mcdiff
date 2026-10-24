@@ -49,10 +49,10 @@ def build_demo_payload(
     metas = [_snapshot_meta(snapshot, index) for index, snapshot in enumerate(series)]
 
     diffs: list[dict[str, Any]] = []
-    for before, after in _consecutive_pairs(series):
+    for index, (before, after) in enumerate(_consecutive_pairs(series)):
         diff = diff_snapshots(before, after)
         payload = diff.to_dict()
-        payload["id"] = f"{metas[series.index(before)]['id']}__{metas[series.index(after)]['id']}"
+        payload["id"] = f"{metas[index]['id']}__{metas[index + 1]['id']}"
         payload["changes"] = payload["changes"][:MAX_CHANGES_PER_DIFF]
         payload["label"] = (
             f"{before.get('daypart_label', '')} → {after.get('daypart_label', '')}"

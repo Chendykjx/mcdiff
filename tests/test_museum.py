@@ -11,9 +11,10 @@ def meal(name, price, tags=None, category="汉堡"):
     return {"name": name, "price_cents": price, "tags": tags or [], "category": category}
 
 
-def snap(meals, captured_at, synthetic=False):
+def snap(meals, captured_at, synthetic=False, daypart="lunch"):
     return {
         "captured_at": captured_at,
+        "daypart": daypart,
         "daypart_label": "午餐",
         "store": {"storeCode": "1", "storeName": "测试店"},
         "synthetic": synthetic,
@@ -37,6 +38,28 @@ class MuseumTests(unittest.TestCase):
         self.assertEqual(gone[0].days_alive, 3)
         self.assertEqual(gone[0].last_price, 1200)
         self.assertTrue(gone[0].epitaph())
+
+    def test_daypart_rotation_is_not_retirement(self):
+        series = [
+            snap({"1": meal("猪柳麦满分", 1400), "2": meal("巨无霸", 2500)}, "2026-10-24T05:00:00+08:00", daypart="breakfast"),
+            snap({"2": meal("巨无霸", 2500)}, "2026-10-24T05:05:00+08:00", daypart="breakfast"),
+            snap({"2": meal("巨无霸", 2500), "3": meal("麦辣鸡腿堡", 2200)}, "2026-10-24T12:00:00+08:00", daypart="lunch"),
+        ]
+        museum = build_museum(series)
+        status = {item.name: museum.status[item.code] for item in museum.items}
+        self.assertEqual(status["猪柳麦满分"], "gone")   # breakfast still runs, item no longer listed
+        self.assertEqual(status["麦辣鸡腿堡"], "alive")  # lunch-only item, latest lunch lists it
+
+    def test_item_alive_when_latest_daypart_still_lists_it(self):
+        series = [
+            snap({"1": meal("猪柳麦满分", 1400)}, "2026-10-24T05:00:00+08:00", daypart="breakfast"),
+            snap({"9": meal("巨无霸", 2500)}, "2026-10-24T12:00:00+08:00", daypart="lunch"),
+            snap({"1": meal("猪柳麦满分", 1400)}, "2026-10-25T05:00:00+08:00", daypart="breakfast"),
+        ]
+        museum = build_museum(series)
+        breakfast = next(item for item in museum.items if item.name == "猪柳麦满分")
+        self.assertEqual(museum.status[breakfast.code], "alive")
+        self.assertEqual(breakfast.dayparts, {"breakfast"})
 
     def test_alive_items(self):
         museum = build_museum(self.series())
