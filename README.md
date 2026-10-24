@@ -12,7 +12,9 @@
 
 ![demo](docs/media/demo.gif)
 
-**[🎮 30 秒在线体验（免登录）](https://Chendykjx.github.io/mcdiff/)** · [快速开始](#-快速开始) · [它用到的 MCP 工具](#-它用到的-mcp-工具) · [数据与边界](#-数据与边界)
+[![McDiff 演示页：事件卡 + git diff](docs/media/screenshot.png)](https://chendykjx.github.io/mcdiff/)
+
+**[🎮 30 秒在线体验（免登录）](https://chendykjx.github.io/mcdiff/)** · [快速开始](#-快速开始) · [它用到的 MCP 工具](#-它用到的-mcp-工具) · [数据与边界](#-数据与边界)
 
 > 麦当劳程序员创意开发大赛参赛作品 · 非麦当劳官方产品
 
