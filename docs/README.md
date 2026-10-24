@@ -72,6 +72,25 @@ python -m mcdiff report                    # 生成 docs/data.js + docs/data.jso
 7. **数据水印**：只要 `totals.synthetic` 为真，页面顶部固定一条提示，说明含示例快照。
 8. **页脚**：参赛声明（非麦当劳官方产品）、数据来源说明、MIT、仓库链接。
 
+## 配色（白底 + 麦当劳红金）
+
+固定浅色主题（`color-scheme: light`，不跟随系统深色）。所有颜色都是 `index.html` 顶部 `:root` 里的变量，改一处即可换色：
+
+| 变量 | 值 | 用途 |
+|---|---|---|
+| `--bg` / `--bg-soft` / `--bg-alt` | `#FFFFFF` / `#FFFBF3` / `#FAFAFA` | 页面底 / 博物馆等斑马区 / 页脚 |
+| `--line` / `--line-soft` | `#E7E1D6` / `#F0EBE2` | 卡片描边 / 分隔线 |
+| `--fg` / `--fg-dim` / `--fg-mute` | `#1A1A1A` / `#5C5C5C` / `#767676` | 主文字 / 次文字 / 元信息（白底 4.5:1+） |
+| `--fg-faint` | `#6F6F6F` | 行号、时间线标签（比灰色 `#8A8A8A` 深一档，保证 ≥4.5:1） |
+| `--red` / `--red-ink` / `--red-dark` | `#DA291C` / `#C8102E` / `#B71C1C` | 品牌红 / 正文红字 / 按钮 hover |
+| `--gold` / `--gold-wash` / `--gold-wash-2` | `#FFC72C` / `#FFF4CC` / `#FFF8E1` | 强调 / 事件卡底 / 水印条底 |
+| `--gold-brown` / `--brown-ink` | `#B07A00` / `#6B4E00` | 大号金色数字（仅 ≥26px）/ 金底上的字 |
+| `--add` `--add-bg` | `#1B7A38` `#EDF8F0` | diff `+` 行 |
+| `--del` `--del-bg` | `#C62828` `#FDECEC` | diff `-` 行 |
+| `--mod` `--mod-bg` | `#8A5A00` `#FFF7E3` | diff `~` 行 |
+
+金色只做点缀（顶部双色条、事件卡、徽章、时间线示例节点、H1 马克笔），大面积底色仍是白 / 暖白。
+
 ## 需要改的地方
 
 - `data.js` 里的 `project.repo` 由 `mcdiff/report.py` 写入，现在是真实仓库地址
