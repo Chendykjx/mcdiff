@@ -122,7 +122,8 @@ def build_demo_payload(
         )
 
     return {
-        "generated_at": now_local().isoformat(timespec="seconds"),
+        # deterministic: same snapshots → byte-identical payload → no commit noise
+        "generated_at": str(series[-1].get("captured_at")),
         "project": {
             "name": "McDiff",
             "tagline": "给麦当劳菜单建一个 git 仓库",
