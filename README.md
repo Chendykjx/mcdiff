@@ -68,7 +68,7 @@ python -m mcdiff report                    # 生成 docs/data.js + docs/data.jso
 
 ## 需要改的地方
 
-- `data.js` 里的 `project.repo` 目前是占位符 `https://github.com/你的账号/mcdiff`
+- `data.js` 里的 `project.repo` 目前是占位符 `https://github.com/Chendykjx/mcdiff`
   （由 `mcdiff/report.py` 生成），发布前替换成真实仓库地址，页脚的 GitHub 链接会自动跟着变。
 - 页面本身不含任何外部链接、字体或图片；唯一的 `http://` 字符串是 SVG 的 XML 命名空间标识符
   `http://www.w3.org/2000/svg`，它不是网络请求，不会产生 404。

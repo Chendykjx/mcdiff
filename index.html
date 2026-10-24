@@ -76,7 +76,7 @@
   .kicker .bar{display:inline-block;width:22px;height:1px;background:var(--mcd-red)}
   h1{font-size:clamp(27px,4.6vw,42px);letter-spacing:-.02em;max-width:18em}
   h1 .accent{color:var(--mcd-gold)}
-  .lede{margin-top:13px;font-size:clamp(15px,1.7vw,17px);color:var(--fg-dim);max-width:56ch}
+  .lede{margin-top:13px;font-size:clamp(15px,1.7vw,17px);color:var(--fg-dim);max-width:46em}
   .lede b{color:var(--fg);font-weight:600}
   .lede code{color:var(--mcd-gold);background:rgba(255,199,44,.08);padding:1px 5px;border-radius:2px;font-size:.9em}
 
@@ -125,6 +125,41 @@
   .rule{height:1px;background:var(--line);margin:0 0 24px}
 
   /* ------------------------------------------------------------ diff console */
+  /* 事件卡：把「一次采集里最劲爆的变化」提到选择器上方，别让它藏在大 diff 里 */
+  .event{
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    border:1px solid rgba(218,41,28,.4);border-left:2px solid var(--mcd-red);
+    background:#15100f;
+    padding:11px 14px;margin-bottom:10px;
+  }
+  .event[hidden]{display:none}
+  .event .bolt{color:var(--mcd-red);flex:none;font-family:var(--mono);font-size:13px;line-height:1}
+  .event .etext{flex:1 1 380px;min-width:0;font-size:13.5px;line-height:1.6;color:var(--fg-dim)}
+  .event .etext b{color:var(--fg);font-weight:600}
+  .event .etext .time{font-family:var(--mono);color:var(--mcd-gold);font-weight:600}
+  .event .etext .trans{font-family:var(--mono);font-size:12px;color:var(--fg-mute)}
+  .event .delta{
+    font-family:var(--mono);font-size:11.5px;padding:2px 7px;border-radius:2px;
+    border:1px solid var(--line);background:var(--bg-raise);flex:none;white-space:nowrap;
+  }
+  .event .delta .up{color:var(--add)}
+  .event .delta .down{color:var(--del)}
+  .event .delta .sep{color:var(--fg-mute)}
+  .event .event-btn{flex:none}
+  @media (max-width:720px){
+    .event{gap:8px;padding:10px 12px}
+    .event .etext{flex:1 1 100%;font-size:13px}
+    .event .event-btn{flex:1 1 auto;text-align:center}
+  }
+
+  /* 大 diff 折叠 */
+  .d-more{
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+    padding:8px 14px 2px;border-top:1px dashed var(--line-soft);margin-top:6px;
+  }
+  .d-more .msg{font-family:var(--mono);font-size:12px;color:var(--fg-mute)}
+  .d-more .btn{padding:3px 10px;font-size:11.5px}
+
   .picker{
     display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;
     border:1px solid var(--line);border-bottom:0;background:var(--bg-panel);
@@ -412,8 +447,8 @@
       <div class="kicker"><span class="bar" aria-hidden="true"></span>麦当劳程序员节创意开发大赛 · 参赛作品</div>
       <h1 id="h1">给麦当劳菜单建一个 <span class="accent">git 仓库</span></h1>
       <p class="lede" id="lede">
-        每天用麦当劳中国 MCP 采集一次门店菜单快照，像 <code>git commit</code> 一样存下来；
-        <code>git diff</code> 出今天哪个 SKU 涨价、降价、下架、新上。
+        每天用麦当劳中国 MCP 采一次门店菜单快照，像 <code>git commit</code> 一样存下来；
+        <code>git diff</code> 出今天谁涨价、谁下架。
       </p>
 
       <dl class="stats" id="stats" aria-label="项目总览数据"></dl>
@@ -433,6 +468,13 @@
       <div class="sec-head">
         <h2 id="diff-h">任意两次快照，现场算 diff</h2>
         <span class="sub">front-end · 由 detail 实时重算</span>
+      </div>
+
+      <div class="event" id="event-card" hidden>
+        <span class="bolt" aria-hidden="true">⚡</span>
+        <p class="etext" id="event-text"></p>
+        <span class="delta" id="event-delta" aria-hidden="true"></span>
+        <button class="btn event-btn" id="event-btn" type="button" aria-describedby="event-text">看这组 diff</button>
       </div>
 
       <div class="picker">
@@ -831,7 +873,9 @@
   /* ==================================================================
    * 4) 状态 + 下拉框
    * ================================================================== */
-  var state = { base: 0, tgt: 0 };
+  var COLLAPSE_THRESHOLD = 40;   // 一次 diff 超过这么多行就折叠
+  var COLLAPSE_SHOW = 30;        // 折叠时先渲染这么多行
+  var state = { base: 0, tgt: 0, expanded: false };
   var CHANGED_BY_INDEX = [];   // 第 i 个节点相对前一个快照的变化数，用于时间线深浅
   var PAIR_DIFFS = [];         // PAIR_DIFFS[i] = 快照 i-1 → i 的 diff 结果（i>=1）
 
@@ -971,8 +1015,11 @@
       empty.appendChild(et);
       body.appendChild(empty);
     } else {
-      var cap = 160;
-      var list = result.changes.slice(0, cap);
+      // 大 diff 折叠：超过 COLLAPSE_THRESHOLD 行时先给 COLLAPSE_SHOW 行，避免刷屏
+      var total = result.changes.length;
+      var clipped = !state.expanded && total > COLLAPSE_THRESHOLD;
+      var shownN = clipped ? COLLAPSE_SHOW : Math.min(total, 400);
+      var list = result.changes.slice(0, shownN);
       for (var i = 0; i < list.length; i++) {
         var ch = list[i];
         var mark = ch.kind === 'added' ? '+' : (ch.kind === 'removed' ? '-' : '~');
@@ -989,9 +1036,19 @@
         row.appendChild(det);
         pushLine(row);
       }
-      if (result.changes.length > cap) {
-        var more = el('div', 'd-line h');
-        more.appendChild(el('span', 'd-txt', '… 还有 ' + (result.changes.length - cap) + ' 处变化未显示'));
+
+      if (total > COLLAPSE_THRESHOLD) {
+        var more = el('div', 'd-more');
+        more.appendChild(el('span', 'msg',
+          clipped ? '… 还有 ' + (total - COLLAPSE_SHOW) + ' 处变化未显示' : '已展开全部 ' + total + ' 处变化'));
+        var moreBtn = el('button', 'btn', clipped ? '展开全部 ' + total + ' 处变化' : '收起，只看前 ' + COLLAPSE_SHOW + ' 行');
+        moreBtn.type = 'button';
+        moreBtn.setAttribute('aria-expanded', String(!clipped));
+        moreBtn.addEventListener('click', function () {
+          state.expanded = !state.expanded;
+          renderDiff();
+        });
+        more.appendChild(moreBtn);
         body.appendChild(more);
       }
     }
@@ -1025,8 +1082,161 @@
     ));
     range.appendChild(document.createTextNode(' @@'));
 
+    // 让两个下拉框始终与 state 对齐（防止外部只改 value 不派发 change 造成错位）
+    var selB = $('#sel-base'), selT = $('#sel-tgt');
+    if (selB && selB.value !== String(state.base)) selB.value = String(state.base);
+    if (selT && selT.value !== String(state.tgt)) selT.value = String(state.tgt);
+
     // 时间线高亮
     markTimeline();
+  }
+
+  /* ==================================================================
+   * 5.5) 事件卡：把「一次采集里最劲爆的变化」提到选择器上方
+   * ================================================================== */
+  var EVENT_PAIR = null;
+  var COMBO_WORDS = ['套餐', '组合', '双人', '分享餐', '三件套', '四件套', '随心', '精选', '拼', '盒'];
+
+  function minutesBetween(a, b) {
+    var ta = Date.parse(String(a || '')), tb = Date.parse(String(b || ''));
+    if (isNaN(ta) || isNaN(tb)) return null;
+    return Math.round((tb - ta) / 60000);
+  }
+  function durationText(mins) {
+    if (mins === null) return '这次采集';
+    if (mins < 1) return '不到 1 分钟';
+    if (mins < 120) return mins + ' 分钟';
+    if (mins < 2880) return Math.round(mins / 60) + ' 小时';
+    return Math.round(mins / 1440) + ' 天';
+  }
+  // 挑「最有记忆点」的那一个：偏贵、名字短、不是套餐
+  function heroScore(ch, side) {
+    var m = side === 'before' ? ch.before : ch.after;
+    var price = (m && Number(m[1])) || 0;
+    var name = String(ch.name || '');
+    var combo = 0;
+    for (var i = 0; i < COMBO_WORDS.length; i++) if (name.indexOf(COMBO_WORDS[i]) >= 0) { combo = 1; break; }
+    return price - (combo ? 1200 : 0) - 400 * Math.max(0, name.length - 4);
+  }
+  function heroOf(list, side) {
+    if (!list.length) return null;
+    var best = list[0], bestScore = -Infinity;
+    for (var i = 0; i < list.length; i++) {
+      var s = heroScore(list[i], side);
+      if (s > bestScore) { bestScore = s; best = list[i]; }
+    }
+    return best;
+  }
+
+  function pickEventPair() {
+    var best = -1, bestChanged = -1;
+    for (var i = 1; i < SNAPS.length; i++) {
+      var r = PAIR_DIFFS[i];
+      if (!r) continue;
+      if (r.summary.changed > bestChanged) { bestChanged = r.summary.changed; best = i; }
+    }
+    if (best <= 0 || bestChanged <= 0) return null;
+    return { bi: best - 1, ti: best, result: PAIR_DIFFS[best] };
+  }
+
+  function renderEventCard() {
+    var card = $('#event-card');
+    if (!card) return;
+    var ev = pickEventPair();
+    EVENT_PAIR = ev;
+    if (!ev) { card.hidden = true; return; }
+
+    var before = SNAPS[ev.bi], after = SNAPS[ev.ti];
+    var sum = ev.result.summary;
+    var mins = minutesBetween(before.captured_at, after.captured_at);
+    var removed = [], added = [];
+    for (var i = 0; i < ev.result.changes.length; i++) {
+      var c = ev.result.changes[i];
+      if (c.kind === 'removed') removed.push(c);
+      else if (c.kind === 'added') added.push(c);
+    }
+    var heroRemoved = heroOf(removed, 'before');
+    var heroAdded = heroOf(added, 'after');
+
+    var txt = $('#event-text');
+    txt.textContent = '';
+    var t = parseTs(after.captured_at);
+    txt.appendChild(el('span', 'time', t ? t.hm : shortStamp(after.captured_at)));
+    txt.appendChild(document.createTextNode(' '));
+    txt.appendChild(el('span', 'trans', (before.daypart_label || '') + ' → ' + (after.daypart_label || '')));
+    txt.appendChild(document.createTextNode(' · 这家门店在 '));
+    txt.appendChild(el('b', '', durationText(mins)));
+    txt.appendChild(document.createTextNode('里'));
+
+    if (removed.length && added.length) {
+      txt.appendChild(document.createTextNode('换掉了 '));
+      txt.appendChild(el('b', '', String(removed.length)));
+      txt.appendChild(document.createTextNode(' 个 SKU：'));
+      txt.appendChild(el('b', '', heroRemoved.name));
+      txt.appendChild(document.createTextNode(' 下架，'));
+      txt.appendChild(el('b', '', heroAdded.name));
+      txt.appendChild(document.createTextNode(' 上架'));
+    } else if (removed.length) {
+      txt.appendChild(document.createTextNode('下架了 '));
+      txt.appendChild(el('b', '', String(removed.length)));
+      txt.appendChild(document.createTextNode(' 个 SKU：'));
+      txt.appendChild(el('b', '', heroRemoved.name));
+      txt.appendChild(document.createTextNode(' 没了'));
+    } else if (added.length) {
+      txt.appendChild(document.createTextNode('新上了 '));
+      txt.appendChild(el('b', '', String(added.length)));
+      txt.appendChild(document.createTextNode(' 个 SKU：'));
+      txt.appendChild(el('b', '', heroAdded.name));
+      txt.appendChild(document.createTextNode(' 来了'));
+    } else {
+      var modified = ev.result.changes.length;
+      var ch0 = ev.result.changes[0];
+      txt.appendChild(document.createTextNode('调整了 '));
+      txt.appendChild(el('b', '', String(modified)));
+      txt.appendChild(document.createTextNode(' 处：'));
+      txt.appendChild(el('b', '', ch0.name));
+      if (ch0.price_cents !== undefined && ch0.delta_cents !== undefined) {
+        txt.appendChild(document.createTextNode(' ' + centsToText(ch0.before[1]) + ' → ' + centsToText(ch0.after[1])));
+      }
+    }
+
+    var delta = $('#event-delta');
+    delta.textContent = '';
+    if (sum.added || !sum.removed) {
+      delta.appendChild(el('span', 'up', '+' + sum.added));
+      delta.appendChild(el('span', 'sep', ' / '));
+    }
+    delta.appendChild(el('span', 'down', '-' + sum.removed));
+    if (!sum.added && !sum.removed) {
+      delta.textContent = '';
+      delta.appendChild(el('span', 'up', '↑' + sum.price_up));
+      delta.appendChild(el('span', 'sep', ' / '));
+      delta.appendChild(el('span', 'down', '↓' + sum.price_down));
+    }
+
+    var btn = $('#event-btn');
+    if (btn) {
+      btn.textContent = '看这组 diff →';
+      btn.onclick = function () {
+        state.base = ev.bi;
+        state.tgt = ev.ti;
+        state.expanded = false;
+        $('#sel-base').value = String(state.base);
+        $('#sel-tgt').value = String(state.tgt);
+        renderDiff();
+        var consoleEl = document.querySelector('.console');
+        if (consoleEl) {
+          var r = consoleEl.getBoundingClientRect();
+          if (r.top < 0 || r.bottom > (window.innerHeight || 0)) {
+            try {
+              var smooth = !window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+              consoleEl.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+            } catch (e) { consoleEl.scrollIntoView(); }
+          }
+        }
+      };
+    }
+    card.hidden = false;
   }
 
   /* ==================================================================
@@ -1083,12 +1293,14 @@
   function setBase(i) {
     if (i < 0 || i >= SNAPS.length) return;
     state.base = i;
+    state.expanded = false;
     $('#sel-base').value = String(i);
     renderDiff();
   }
   function setTarget(i) {
     if (i < 0 || i >= SNAPS.length) return;
     state.tgt = i;
+    state.expanded = false;
     $('#sel-tgt').value = String(i);
     renderDiff();
   }
@@ -1206,8 +1418,6 @@
         }
       });
       foot.appendChild(expandBtn);
-    } else {
-      foot.appendChild(el('span', 'ok', '全部 ' + cards.length + ' 块墓碑已展示'));
     }
   }
 
@@ -1243,6 +1453,7 @@
     $('#btn-latest').addEventListener('click', function () {
       state.base = Math.max(0, SNAPS.length - 2);
       state.tgt = Math.max(0, SNAPS.length - 1);
+      state.expanded = false;
       $('#sel-base').value = String(state.base);
       $('#sel-tgt').value = String(state.tgt);
       renderDiff();
@@ -1311,6 +1522,7 @@
     defaultsFromPayload();
     fillSelects();
     renderTimeline();
+    renderEventCard();
     renderDiff();
     renderMuseum();
     renderGitlog();
