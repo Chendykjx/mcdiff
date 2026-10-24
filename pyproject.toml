@@ -21,6 +21,9 @@ dependencies = []
 [project.urls]
 Homepage = "https://github.com/Chendykjx/mcdiff"
 
+[project.optional-dependencies]
+gif = ["pillow>=9.0"]
+
 [project.scripts]
 mcdiff = "mcdiff.cli:main"
 
