@@ -1,6 +1,8 @@
 # 🍟 McDiff — 给麦当劳菜单建一个 git 仓库
 
 > **每天给菜单打一次 commit：`git diff` 出今天谁涨价、谁下架。**
+>
+> 实测抓到：**2026-10-25 05:05，一家门店在 23 分钟里把菜单换了** —— 巨无霸、双层吉士汉堡"下架"，猪柳蛋麦满分、豆浆"上架"，`+61 / -64`。
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![零依赖](https://img.shields.io/badge/dependencies-0-brightgreen)](pyproject.toml)
