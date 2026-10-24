@@ -126,7 +126,7 @@ def build_demo_payload(
         "project": {
             "name": "McDiff",
             "tagline": "给麦当劳菜单建一个 git 仓库",
-            "repo": "https://github.com/你的账号/mcdiff",
+            "repo": "https://github.com/Chendykjx/mcdiff",
         },
         "totals": totals,
         "stores": sorted(stores.values(), key=lambda item: str(item["last_at"]), reverse=True),

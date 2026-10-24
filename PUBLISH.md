@@ -15,8 +15,8 @@ grep -rn "MCD_MCP_TOKEN=" --include="*.json" .   # 仓库里不能出现真实 t
 
 | 文件 | 替换 |
 |---|---|
-| `README.md` | `https://你的账号.github.io/mcdiff/` → 你的 Pages 地址 |
-| `pyproject.toml` | `Homepage = "https://github.com/你的账号/mcdiff"` |
+| `README.md` | `https://Chendykjx.github.io/mcdiff/` → 你的 Pages 地址 |
+| `pyproject.toml` | `Homepage = "https://github.com/Chendykjx/mcdiff"` |
 | `docs/index.html` | 页脚 GitHub 链接（如果页面里写死了占位符） |
 
 ## 2. 建仓库并推送
@@ -29,14 +29,14 @@ gh repo create mcdiff --public --source=. --remote=origin --push
 git add -A
 git commit -m "feat: McDiff v0.1.0 — 给麦当劳菜单建一个 git 仓库"
 git branch -M main
-git remote add origin https://github.com/<你的账号>/mcdiff.git
+git remote add origin https://github.com/<Chendykjx>/mcdiff.git
 git push -u origin main
 ```
 
 ## 3. 打开 GitHub Pages
 
 Settings → Pages → Source: `Deploy from a branch` → Branch: `main` / folder: `/docs` → Save。
-等 1–2 分钟，访问 `https://<你的账号>.github.io/mcdiff/` 确认演示页可用。
+等 1–2 分钟，访问 `https://<Chendykjx>.github.io/mcdiff/` 确认演示页可用。
 
 ## 4. 配置定时采集（可选，但很加分）
 
@@ -55,7 +55,7 @@ Settings → Secrets and variables → Actions：
 ```
 【参赛申请】
 项目名称：McDiff
-项目地址：https://github.com/<你的账号>/mcdiff
+项目地址：https://github.com/<Chendykjx>/mcdiff
 项目简介：每天给麦当劳菜单打一次 commit，git diff 出今天谁涨价、谁下架；消失的餐品进"麦门考古博物馆"。
 ```
 

@@ -4,13 +4,13 @@
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![零依赖](https://img.shields.io/badge/dependencies-0-brightgreen)](pyproject.toml)
-[![测试](https://img.shields.io/badge/tests-61%20passed-success)](tests/)
+[![测试](https://img.shields.io/badge/tests-63%20passed-success)](tests/)
 [![MCP](https://img.shields.io/badge/MCP-mcd.cn-DA291C)](https://github.com/M-China/mcd-mcp-server)
 [![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 ![demo](docs/media/demo.gif)
 
-**[🎮 30 秒在线体验（免登录）](https://你的账号.github.io/mcdiff/)** · [快速开始](#-快速开始) · [它用到的 MCP 工具](#-它用到的-mcp-工具) · [数据与边界](#-数据与边界)
+**[🎮 30 秒在线体验（免登录）](https://Chendykjx.github.io/mcdiff/)** · [快速开始](#-快速开始) · [它用到的 MCP 工具](#-它用到的-mcp-工具) · [数据与边界](#-数据与边界)
 
 > 麦当劳程序员创意开发大赛参赛作品 · 非麦当劳官方产品
 
@@ -28,6 +28,12 @@ McDiff 把一家麦当劳门店的菜单当成代码仓库来管理：
 4. **考古**：消失的 SKU 进「麦门考古博物馆」，每块墓碑记着它在架多少天、最后卖多少钱、最后一次出现在哪天。
 
 一句话：**别人教你今天怎么点省钱，McDiff 记录菜单怎么变。**
+
+### 为什么不是又一个「省钱助手」
+
+- 省钱助手回答「今天怎么点最划算」——这个问题每天都有答案，而且答案会过时；
+- McDiff 回答「菜单什么时候变的、变了什么」——这个问题**没有公开答案**，只能靠自己一天天攒快照；
+- 快照越久越值钱：第 1 天的项目只能 diff 一次，第 100 天的项目拥有一条没人有的价格曲线。
 
 ## 👀 输出长这样
 
@@ -163,7 +169,7 @@ mcdiff/
 │   └── make_gif.py         # 生成 README 的 GIF 与社交图
 ├── data/snapshots/         # 快照数据（按门店分目录）
 ├── docs/                   # 单页演示（file:// 可开，GitHub Pages 可托管）
-├── tests/                  # 61 个单元测试，全部 stdlib unittest
+├── tests/                  # 63 个单元测试，全部 stdlib unittest
 └── .github/workflows/snapshot.yml   # 每天定时采集并 commit
 ```
 
@@ -171,7 +177,7 @@ mcdiff/
 
 ```bash
 python -m unittest discover -s tests -v
-# Ran 61 tests ... OK
+# Ran 63 tests ... OK
 ```
 
 覆盖：MCP 协议层（本地起 HTTP server 模拟初始化 / 业务错误 / 401 / 429 重试 / SSE 帧）、价格单位换算、餐段边界、校验和稳定性、diff 六类变更与渲染、博物馆生命周期、合成数据确定性、CLI 端到端（含 `report` 产物）。

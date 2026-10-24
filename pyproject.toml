@@ -19,7 +19,7 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/你的账号/mcdiff"
+Homepage = "https://github.com/Chendykjx/mcdiff"
 
 [project.scripts]
 mcdiff = "mcdiff.cli:main"

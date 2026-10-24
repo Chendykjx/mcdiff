@@ -942,10 +942,14 @@ def palette_source(frames: list[Image.Image]) -> Image.Image:
 
 
 def save_gif(frames: list[Image.Image], path: Path) -> dict:
-    """所有帧共用一份调色板 + 关闭抖动：相邻帧只有变化区域会被重写，体积才压得住。"""
+    """所有帧共用一份调色板 + 关闭抖动：相邻帧只有变化区域会被重写，体积才压得住。
+
+    调色板从 192 色往下试（本片实测 192 色也只有 ~190 KB，远低于 2 MB 上限，
+    所以优先保证文字抗锯齿和渐变的质量；真超了再逐档降）。
+    """
     source = palette_source(frames)
     last_size = 0
-    for colors in (96, 72, 56, 40):
+    for colors in (192, 144, 112, 96, 64, 48, 32):
         palette_img = source.quantize(colors=colors, method=Image.Quantize.MEDIANCUT,
                                       dither=Image.Dither.NONE)
         palette_bytes = bytes(palette_img.getpalette())
