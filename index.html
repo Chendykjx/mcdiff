@@ -251,6 +251,23 @@
   .chip.mod{color:var(--fg-dim);background:#faf7f1}
   .chip.tot{color:#1a1a1a;border-color:#e2d6bd;background:#fffbf3;margin-left:auto}
   .chip.zero{opacity:.62}
+  .chip.rot{color:var(--fg-dim);border-color:#ddd6c8;background:#faf7f1;cursor:pointer}
+  .chip.rot:hover{color:var(--red);border-color:#e8c9c3}
+  .chip.act{color:var(--red);border-color:#f0cfc9;background:#fff;cursor:pointer}
+  .chip.act:hover{background:var(--red);border-color:var(--red);color:#fff}
+  button.chip{font-family:var(--mono);font-size:12px;line-height:1.5;box-shadow:none}
+  /* 折叠的「餐段轮换」分组行 */
+  .d-line.grp{background:#fbf9f4}
+  .d-line.grp .d-txt{
+    grid-column:2 / -1;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    white-space:normal;color:var(--fg-dim);
+  }
+  .d-line.grp .d-mark{font-weight:700}
+  .d-line.grp .pill{
+    font-family:var(--mono);font-size:11px;line-height:1.5;padding:1px 8px;border-radius:4px;
+    border:1px solid var(--line);background:#fff;color:var(--fg);cursor:pointer;
+  }
+  .d-line.grp .pill:hover{color:var(--red);border-color:#e8c9c3}
 
   .console{border:1px solid var(--line);border-top:0;border-radius:0 0 var(--radius) var(--radius);background:#fff;box-shadow:var(--shadow);overflow:hidden}
   .console::before{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--gold) 0 50%,var(--red) 50% 100%)}
@@ -928,7 +945,7 @@
    * ================================================================== */
   var COLLAPSE_THRESHOLD = 40;   // 一次 diff 超过这么多行就折叠
   var COLLAPSE_SHOW = 30;        // 折叠时先渲染这么多行
-  var state = { base: 0, tgt: 0, expanded: false };
+  var state = { base: 0, tgt: 0, expanded: false, showRot: false };
   var CHANGED_BY_INDEX = [];   // 第 i 个节点相对前一个快照的变化数，用于时间线深浅
   var PAIR_DIFFS = [];         // PAIR_DIFFS[i] = 快照 i-1 → i 的 diff 结果（i>=1）
 
@@ -1024,12 +1041,59 @@
     return [{ t: 'plain', s: String(ch.before[2] || '—') + ' → ' + String(ch.after[2] || '—') }];
   }
 
+  /* ==================================================================
+   * 4.5) 变化分桶：把「餐段轮换」从「真变化」里摘出来
+   *   - 永久下架 = museum 里 status 为 gone 的 SKU（Python 的判定：它出现过的每个餐段的最新快照都不再上架）
+   *   - 真新上架 = 同一餐段内、本轮才第一次出现的 SKU
+   *   - 餐段轮换 = 基线/目标属于不同餐段（早餐↔午餐↔深夜）时整批上/下架，或同餐段内「暂离又回来」
+   * ================================================================== */
+  var MUSEUM_BY_CODE = {};
+  function buildMuseumIndex() {
+    MUSEUM_BY_CODE = {};
+    var items = (D.museum && D.museum.items) || [];
+    for (var i = 0; i < items.length; i++) {
+      if (items[i] && items[i].code) MUSEUM_BY_CODE[String(items[i].code)] = items[i];
+    }
+  }
+
+  function bucketChanges(changes, base, tgt) {
+    var samePart = String(base.daypart || '') === String(tgt.daypart || '');
+    var out = { real: [], gone: [], fresh: [], rotAdded: [], rotRemoved: [], samePart: samePart };
+    for (var i = 0; i < changes.length; i++) {
+      var ch = changes[i];
+      if (ch.kind !== 'added' && ch.kind !== 'removed') { out.real.push(ch); continue; }
+      var meta = MUSEUM_BY_CODE[String(ch.code)];
+      if (!meta) { out.real.push(ch); continue; }          // 没有元数据就别藏
+      if (!samePart) {                                       // 不同餐段：整批计为餐段差异
+        (ch.kind === 'added' ? out.rotAdded : out.rotRemoved).push(ch);
+      } else if (ch.kind === 'removed') {
+        (meta.status === 'gone' ? out.gone : out.rotRemoved).push(ch);
+      } else {
+        var first = Date.parse(String(meta.first_seen || ''));
+        var tgtTs = Date.parse(String(tgt.captured_at || ''));
+        ((!isNaN(first) && first >= tgtTs) ? out.fresh : out.rotAdded).push(ch);
+      }
+    }
+    return out;
+  }
+
+  // 同一餐段的「上一次」快照下标（没有就返回 -1），给「只看同餐段」用
+  function previousSameDaypart(i) {
+    var part = String((SNAPS[i] || {}).daypart || '');
+    for (var j = i - 1; j >= 0; j--) if (String(SNAPS[j].daypart || '') === part) return j;
+    return -1;
+  }
+
   function renderDiff() {
     var base = SNAPS[state.base], tgt = SNAPS[state.tgt];
     if (!base || !tgt) return;
     var result = diffMeals(MENUS[base.id], MENUS[tgt.id]);
     var sum = result.summary;
     var changedCount = result.changes.length;
+    var bucket = bucketChanges(result.changes, base, tgt);
+    var rotTotal = bucket.rotAdded.length + bucket.rotRemoved.length;
+    var realCount = bucket.real.length + bucket.gone.length + bucket.fresh.length;
+    var rotOpen = !!state.showRot;
 
     var body = $('#diff-body');
     body.textContent = '';
@@ -1056,7 +1120,7 @@
     t3.appendChild(document.createTextNode(
       (tgt.storeName || STORE_NAME) + '（' + (tgt.store || STORE_CODE) + '） ' +
       sum.total_before + ' → ' + sum.total_after + ' 个 SKU · ' +
-      '+' + sum.added + ' -' + sum.removed + ' ↑' + sum.price_up + ' ↓' + sum.price_down +
+      '+' + bucket.fresh.length + ' -' + bucket.gone.length + ' ↑' + sum.price_up + ' ↓' + sum.price_down +
       ' ~' + (sum.renamed + sum.tags + sum.moved) + ' '
     ));
     t3.appendChild(el('b', '', '@@'));
@@ -1068,11 +1132,27 @@
       empty.appendChild(et);
       body.appendChild(empty);
     } else {
-      // 大 diff 折叠：超过 COLLAPSE_THRESHOLD 行时先给 COLLAPSE_SHOW 行，避免刷屏
-      var total = result.changes.length;
+      // 默认只渲染「实质变化」；餐段轮换折叠成一行，避免一次刷出 60 多条上/下架
+      var showAll = rotOpen ? result.changes.slice() : bucket.real.concat(bucket.gone, bucket.fresh);
+      if (!rotOpen) {
+        var order = {};
+        for (var oi = 0; oi < result.changes.length; oi++) order[result.changes[oi].code + ':' + result.changes[oi].kind] = oi;
+        showAll.sort(function (a, b) {
+          return order[a.code + ':' + a.kind] - order[b.code + ':' + b.kind];
+        });
+      }
+      // 大 diff 折叠：超过 COLLAPSE_THRESHOLD 行时先给 COLLAPSE_SHOW 行
+      var total = showAll.length;
       var clipped = !state.expanded && total > COLLAPSE_THRESHOLD;
       var shownN = clipped ? COLLAPSE_SHOW : Math.min(total, 400);
-      var list = result.changes.slice(0, shownN);
+      var list = showAll.slice(0, shownN);
+
+      if (!list.length && rotTotal) {
+        var nothing = el('div', 'd-line d-empty');
+        nothing.appendChild(el('span', 'd-txt', '（没有实质变化：' + rotTotal + ' 处差异全部来自餐段切换）'));
+        body.appendChild(nothing);
+      }
+
       for (var i = 0; i < list.length; i++) {
         var ch = list[i];
         var mark = ch.kind === 'added' ? '+' : (ch.kind === 'removed' ? '-' : '~');
@@ -1088,6 +1168,57 @@
         }
         row.appendChild(det);
         pushLine(row);
+      }
+
+      // 餐段轮换：折叠时给两行分组，展开时给一行「收起」
+      function rotRow(sign, count, text, cls2) {
+        var g = el('div', 'd-line grp');
+        var gt = el('span', 'd-txt');
+        gt.appendChild(el('span', 'd-mark ' + (cls2 || ''), sign));
+        gt.appendChild(document.createTextNode(text));
+        var pill = el('button', 'pill', '展开');
+        pill.type = 'button';
+        pill.setAttribute('aria-expanded', 'false');
+        pill.addEventListener('click', function () {
+          state.showRot = true;
+          state.expanded = false;
+          renderDiff();
+        });
+        gt.appendChild(pill);
+        g.appendChild(gt);
+        body.appendChild(g);
+      }
+
+      if (rotTotal && !rotOpen && !clipped) {
+        if (bucket.rotRemoved.length) {
+          rotRow('-', bucket.rotRemoved.length,
+            ' ' + bucket.rotRemoved.length + ' 个 SKU 随餐段让位（不计入永久下架）', 'del');
+        }
+        if (bucket.rotAdded.length) {
+          rotRow('+', bucket.rotAdded.length,
+            ' ' + bucket.rotAdded.length + ' 个 SKU 随餐段上架（不计入新上架）', 'add');
+        }
+      } else if (rotTotal && !rotOpen && clipped) {
+        var gt2 = el('div', 'd-line grp');
+        var gt2t = el('span', 'd-txt');
+        gt2t.appendChild(document.createTextNode('另有 ' + rotTotal + ' 处餐段轮换未显示'));
+        var pill2 = el('button', 'pill', '展开餐段轮换');
+        pill2.type = 'button';
+        pill2.addEventListener('click', function () { state.showRot = true; state.expanded = false; renderDiff(); });
+        gt2t.appendChild(pill2);
+        gt2.appendChild(gt2t);
+        body.appendChild(gt2);
+      } else if (rotTotal && rotOpen) {
+        var gt3 = el('div', 'd-line grp');
+        var gt3t = el('span', 'd-txt');
+        gt3t.appendChild(document.createTextNode('餐段轮换已展开：共 ' + rotTotal + ' 处'));
+        var pill3 = el('button', 'pill', '收起餐段轮换');
+        pill3.type = 'button';
+        pill3.setAttribute('aria-expanded', 'true');
+        pill3.addEventListener('click', function () { state.showRot = false; state.expanded = false; renderDiff(); });
+        gt3t.appendChild(pill3);
+        gt3.appendChild(gt3t);
+        body.appendChild(gt3);
       }
 
       if (total > COLLAPSE_THRESHOLD) {
@@ -1106,21 +1237,41 @@
       }
     }
 
-    // summary chips
+    // summary chips：add/del 只算「实质变化」，餐段轮换单独一枚可点的 chip
     var chips = $('#chips');
     chips.textContent = '';
     var defs = [
-      { c: 'add', txt: '+' + sum.added + ' 新上', zero: !sum.added },
-      { c: 'del', txt: '-' + sum.removed + ' 下架', zero: !sum.removed },
+      { c: 'add', txt: (bucket.fresh.length ? '+' : '') + bucket.fresh.length + ' 新上架', zero: !bucket.fresh.length },
+      { c: 'del', txt: (bucket.gone.length ? '-' : '') + bucket.gone.length + ' 永久下架', zero: !bucket.gone.length },
       { c: 'up', txt: '↑' + sum.price_up + ' 涨价', zero: !sum.price_up },
       { c: 'down', txt: '↓' + sum.price_down + ' 降价', zero: !sum.price_down },
-      { c: 'mod', txt: '~' + (sum.renamed + sum.tags + sum.moved) + ' 改名/标签/分类', zero: !(sum.renamed + sum.tags + sum.moved) },
-      { c: 'tot', txt: '共 ' + sum.total_after + ' 个 SKU', zero: false }
+      { c: 'mod', txt: '~' + (sum.renamed + sum.tags + sum.moved) + ' 改名/标签/分类', zero: !(sum.renamed + sum.tags + sum.moved) }
     ];
     for (var c = 0; c < defs.length; c++) {
-      var chip = el('span', 'chip ' + defs[c].c + (defs[c].zero ? ' zero' : ''), defs[c].txt);
-      chips.appendChild(chip);
+      chips.appendChild(el('span', 'chip ' + defs[c].c + (defs[c].zero ? ' zero' : ''), defs[c].txt));
     }
+    if (rotTotal) {
+      var rotChip = el('button', 'chip rot', '⇄ ' + rotTotal + ' 餐段轮换');
+      rotChip.type = 'button';
+      rotChip.setAttribute('aria-expanded', String(rotOpen));
+      rotChip.title = '基线/目标属于不同餐段，或这些 SKU 只是短暂不在架；点一下' + (rotOpen ? '收起' : '展开') + '逐条查看';
+      rotChip.addEventListener('click', function () {
+        state.showRot = !state.showRot;
+        state.expanded = false;
+        renderDiff();
+      });
+      chips.appendChild(rotChip);
+    }
+    // 「只看同餐段」：把基线换成同餐段的上一次快照（有才显示）
+    var samePartPrev = !bucket.samePart ? previousSameDaypart(state.tgt) : -1;
+    if (samePartPrev >= 0) {
+      var spBtn = el('button', 'chip act', '只看同餐段');
+      spBtn.type = 'button';
+      spBtn.title = '把基线换成 ' + labelFor(SNAPS[samePartPrev]) + '（同为' + (SNAPS[samePartPrev].daypart_label || '') + '）';
+      spBtn.addEventListener('click', function () { setBase(samePartPrev); });
+      chips.appendChild(spBtn);
+    }
+    chips.appendChild(el('span', 'chip tot', '共 ' + sum.total_after + ' 个 SKU'));
 
     // 底部 range 信息
     var range = $('#range-line');
@@ -1130,7 +1281,10 @@
     range.appendChild(document.createTextNode(' → '));
     range.appendChild(el('b', '', longStamp(tgt.captured_at) + ' ' + (tgt.daypart_label || '')));
     range.appendChild(document.createTextNode(
-      '  ·  ' + changedCount + ' 处变化  ·  ' + sum.unchanged + ' 个 SKU 未变' +
+      '  ·  ' + realCount + ' 处实质变化' +
+      (rotTotal ? '（另有 ' + rotTotal + ' 处餐段轮换）' : '') +
+      '  ·  ' + sum.unchanged + ' 个 SKU 未变' +
+      (bucket.samePart ? '' : '  ·  不同餐段：' + (base.daypart_label || '') + ' → ' + (tgt.daypart_label || '')) +
       (base.synthetic || tgt.synthetic ? '  ·  含示例快照' : '')
     ));
     range.appendChild(document.createTextNode(' @@'));
@@ -1298,6 +1452,7 @@
         state.base = ev.bi;
         state.tgt = ev.ti;
         state.expanded = false;
+        state.showRot = false;
         $('#sel-base').value = String(state.base);
         $('#sel-tgt').value = String(state.tgt);
         renderDiff();
@@ -1385,6 +1540,7 @@
     if (i < 0 || i >= SNAPS.length) return;
     state.base = i;
     state.expanded = false;
+    state.showRot = false;
     $('#sel-base').value = String(i);
     renderDiff();
   }
@@ -1392,6 +1548,7 @@
     if (i < 0 || i >= SNAPS.length) return;
     state.tgt = i;
     state.expanded = false;
+    state.showRot = false;
     $('#sel-tgt').value = String(i);
     renderDiff();
   }
@@ -1545,6 +1702,7 @@
       state.base = Math.max(0, SNAPS.length - 2);
       state.tgt = Math.max(0, SNAPS.length - 1);
       state.expanded = false;
+      state.showRot = false;
       $('#sel-base').value = String(state.base);
       $('#sel-tgt').value = String(state.tgt);
       renderDiff();
@@ -1611,6 +1769,7 @@
     renderStatic();
     computeConsecutiveDiffs();
     computePresence();
+    buildMuseumIndex();
     defaultsFromPayload();
     fillSelects();
     renderTimeline();
