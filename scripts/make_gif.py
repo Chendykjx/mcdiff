@@ -89,35 +89,37 @@ def _hex(value: str) -> tuple[int, int, int]:
     return (int(value[0:2], 16), int(value[2:4], 16), int(value[4:6], 16))
 
 
-BG = _hex("0b0c0e")        # 终端正文底色 / 结论卡底色（规范值）
-OUTER = _hex("07080a")     # 第一幕窗口外的画布（比窗口更暗，窗口才浮得起来）
-SURF = _hex("0d0f13")
-SURF2 = _hex("12141a")
-BORDER = _hex("21242a")
-TEXT = _hex("e6edf3")
-TEXT2 = _hex("c9d1d9")
-DIM = _hex("8b949e")
-DIM2 = _hex("6e7681")
-GREEN = _hex("3fb950")
-GREEN_T = _hex("56d364")
-RED = _hex("f85149")
-RED_T = _hex("ff7b72")
-YELLOW = _hex("d29922")
-YELLOW_T = _hex("e3b341")
-BLUE = _hex("58a6ff")
-PURPLE = _hex("a371f7")
+# --- 白底 + 麦当劳经典配色（红 #DA291C / 金 #FFC72C）---
+BG = _hex("ffffff")        # 终端正文底色 / 结论卡底色
+OUTER = _hex("f6f1e7")     # 第一幕窗口外的画布（暖白，窗口才浮得起来）
+SURF = _hex("faf7f1")      # 标题栏
+SURF2 = _hex("f3eee4")     # 状态栏
+BORDER = _hex("e2dacb")
+TEXT = _hex("1a1a1a")
+TEXT2 = _hex("333333")
+DIM = _hex("6b6b6b")
+DIM2 = _hex("8a8a8a")
+GREEN = _hex("1b7a38")
+GREEN_T = _hex("146b30")
+RED = _hex("c62828")
+RED_T = _hex("a61b1b")
+YELLOW = _hex("8a5a00")
+YELLOW_T = _hex("7a4f00")
+BLUE = _hex("da291c")      # 品牌红：hunk / 光标
+PURPLE = _hex("b07a00")
+GOLD = _hex("ffc72c")      # 品牌金：装饰条
 
 ROW_TINT = {
-    "removed": _hex("190e10"),
-    "added": _hex("0e1911"),
-    "modified": _hex("1b1608"),
+    "removed": _hex("fdecec"),
+    "added": _hex("edf8f0"),
+    "modified": _hex("fff7e3"),
 }
 
 DIFF_GRADIENT_STOPS = [
     (0.00, RED),
-    (0.34, YELLOW),
-    (0.62, GREEN),
-    (1.00, BLUE),
+    (0.34, GOLD),
+    (0.62, RED),
+    (1.00, GOLD),
 ]
 
 # --------------------------------------------------------------------------- #
