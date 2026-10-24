@@ -967,7 +967,17 @@
   }
 
   function defaultsFromPayload() {
-    // 默认展示 diffs[0]（变化最多的一组）。但如果这一组是"整份菜单换掉"（比如餐段切换，
+    // 1) 优先用 data.js 里的 `default`（Python 端已按「同餐段 → 有实质变化 → 变化最多 → 尽量新」挑好）
+    var pref = D.default;
+    if (pref && pref.before_id && pref.after_id) {
+      var pbi = idxOf(pref.before_id), pti = idxOf(pref.after_id);
+      if (pbi >= 0 && pti >= 0) {
+        state.base = pbi;
+        state.tgt = pti;
+        return;
+      }
+    }
+    // 2) 退回到 diffs[0]（变化最多的一组）。但如果这一组是"整份菜单换掉"（比如餐段切换，
     // 一个新早餐菜单会让每条 SKU 都变成 +/-），首屏就没有可读性了 —— 这时退回到
     // "有价格/改名等实质变化、改动量适中"的那一组，保证首屏是一个能看懂的 diff。
     var bi = -1, ti = -1;

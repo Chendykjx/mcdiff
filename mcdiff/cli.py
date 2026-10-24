@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 from . import __version__
+from .bucket import render_bucketed
 from .diff import diff_snapshots
 from .mcp import (
     DEFAULT_TOKEN_ENV,
@@ -143,10 +144,21 @@ def cmd_list(args: argparse.Namespace) -> int:
     return 0
 
 
+def _store_series(root: str, store: str | None) -> list[dict]:
+    """Load snapshots, scoped to one store (never mix stores in a diff)."""
+    series = load_series(root, store)
+    if store is None and series:
+        from .report import pick_primary_store
+
+        primary = pick_primary_store(series)
+        series = [snap for snap in series if str((snap.get("store") or {}).get("storeCode")) == primary]
+    return sorted(series, key=lambda snap: str(snap.get("captured_at")))
+
+
 def _pick_pair(args: argparse.Namespace) -> tuple[dict, dict]:
     if args.from_path and args.to_path:
         return load(args.from_path), load(args.to_path)
-    series = load_series(args.root, args.store)
+    series = _store_series(args.root, args.store)
     if len(series) < 2:
         raise SystemExit("至少需要两次快照才能 diff。先多跑几次 capture，或 `python -m mcdiff seed`。")
     return series[-2], series[-1]
@@ -163,13 +175,60 @@ def cmd_diff(args: argparse.Namespace) -> int:
         print(diff.to_json())
     elif args.markdown:
         print(diff.render_markdown())
+    elif args.buckets:
+        from .bucket import bucketize, museum_indexes
+
+        series = _store_series(args.root, args.store)
+        status, first_seen = museum_indexes(series) if len(series) > 1 else ({}, {})
+        bucket = bucketize(before, after, diff, status=status, first_seen=first_seen)
+        print(render_bucketed(before, after, diff, bucket))
     else:
         print(diff.render_git())
-    return 0 if diff.changes else 0
+    return 0
+
+
+def cmd_gif(args: argparse.Namespace) -> int:
+    from .gifexport import GifUnavailable, default_pair, render_gif
+
+    try:
+        if args.from_path and args.to_path:
+            before, after = load(args.from_path), load(args.to_path)
+            summary = None
+        else:
+            series = _store_series(args.root, args.store)
+            if len(series) < 2:
+                print("至少需要两次快照才能导出 GIF。", file=sys.stderr)
+                return 1
+            before, after = default_pair(series)
+            from .bucket import bucketize, museum_indexes
+
+            status, first_seen = museum_indexes(series)
+            diff = diff_snapshots(before, after)
+            bucket = bucketize(before, after, diff, status=status, first_seen=first_seen)
+            summary = {**diff.summary, **{key: bucket.summary[key] for key in ("real", "rotation", "fresh", "gone")}}
+        out = args.out or f"menu-diff-{after.get('store', {}).get('storeCode', 'store')}.gif"
+        path = render_gif(
+            before,
+            after,
+            out,
+            width=args.width,
+            theme=args.theme,
+            max_rows=args.rows,
+            summary=summary,
+        )
+    except GifUnavailable as exc:
+        print(f"{exc}", file=sys.stderr)
+        return 2
+    except ValueError as exc:
+        print(f"{exc}", file=sys.stderr)
+        return 1
+    size = path.stat().st_size
+    print(f"已导出 GIF：{path}（{size / 1024:.0f} KB，{args.width}px 宽，{args.theme} 主题）")
+    return 0 if size else 1
 
 
 def cmd_museum(args: argparse.Namespace) -> int:
-    series = load_series(args.root, args.store)
+    series = _store_series(args.root, args.store)
     if not series:
         print("还没有快照。", file=sys.stderr)
         return 1
@@ -264,6 +323,7 @@ def build_parser() -> argparse.ArgumentParser:
     diff.add_argument("--to", dest="to_path", default=None)
     diff.add_argument("--json", action="store_true")
     diff.add_argument("--markdown", action="store_true")
+    diff.add_argument("--buckets", action="store_true", help="把餐段轮换与实质变化分开显示")
     diff.set_defaults(func=cmd_diff)
 
     museum = sub.add_parser("museum", help="麦门考古：列出已下架的餐品")
@@ -280,6 +340,16 @@ def build_parser() -> argparse.ArgumentParser:
     report = sub.add_parser("report", help="生成演示页数据 docs/data.js")
     report.add_argument("--store", default=None)
     report.set_defaults(func=cmd_report)
+
+    gif = sub.add_parser("gif", help="把两组快照的 diff 导出成 GIF")
+    gif.add_argument("--from", dest="from_path", default=None)
+    gif.add_argument("--to", dest="to_path", default=None)
+    gif.add_argument("--store", default=None)
+    gif.add_argument("--out", default=None, help="输出文件（默认 menu-diff-<storeCode>.gif）")
+    gif.add_argument("--width", type=int, default=800)
+    gif.add_argument("--theme", choices=["light", "dark"], default="light")
+    gif.add_argument("--rows", type=int, default=9, help="正文最多展示几行变化")
+    gif.set_defaults(func=cmd_gif)
 
     demo = sub.add_parser("demo", help="打印演示页路径")
     demo.set_defaults(func=cmd_demo)

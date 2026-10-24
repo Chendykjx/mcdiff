@@ -7,6 +7,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable, Mapping
 
+from .bucket import bucketize
 from .diff import diff_snapshots
 from .museum import build_museum
 from .snapshot import TZ, load_series, now_local
@@ -56,6 +57,32 @@ def pick_primary_store(series: list[dict[str, Any]]) -> str:
     return max(counts, key=lambda code: (counts[code], latest[code]))
 
 
+def _pick_default(diffs: list[dict[str, Any]]) -> dict[str, Any] | None:
+    """默认展示哪一组：同餐段、有实质变化、实质变化最多、且尽量新。"""
+    if not diffs:
+        return None
+
+    def score(item: dict[str, Any]) -> tuple[int, int, int, str]:
+        bucket = item["bucket"]["summary"]
+        return (
+            1 if item.get("same_daypart") else 0,
+            1 if bucket["real"] else 0,
+            bucket["real"],
+            str(item["after"]["captured_at"]),
+        )
+
+    best = max(diffs, key=score)
+    bucket = best["bucket"]["summary"]
+    return {
+        "before_id": best["before_id"],
+        "after_id": best["after_id"],
+        "same_daypart": best.get("same_daypart", False),
+        "real": bucket["real"],
+        "rotation": bucket["rotation"],
+        "label": best["label"],
+    }
+
+
 def build_demo_payload(
     root: str | Path = ".",
     store_code: str | None = None,
@@ -78,23 +105,34 @@ def build_demo_payload(
     series.sort(key=lambda snap: str(snap.get("captured_at")))
     metas = [_snapshot_meta(snapshot, index) for index, snapshot in enumerate(series)]
 
+    museum_obj = build_museum(series)
+    museum = museum_obj.to_dict()
+    status = dict(museum_obj.status)
+    first_seen = {item.code: item.first_seen for item in museum_obj.items}
+
     diffs: list[dict[str, Any]] = []
+    all_diffs: list[dict[str, Any]] = []
     for index, (before, after) in enumerate(_consecutive_pairs(series)):
         diff = diff_snapshots(before, after)
         payload = diff.to_dict()
         payload["id"] = f"{metas[index]['id']}__{metas[index + 1]['id']}"
+        payload["before_id"] = metas[index]["id"]
+        payload["after_id"] = metas[index + 1]["id"]
         payload["changes"] = payload["changes"][:MAX_CHANGES_PER_DIFF]
         payload["label"] = (
             f"{before.get('daypart_label', '')} → {after.get('daypart_label', '')}"
             f" · {str(after.get('captured_at'))[5:16].replace('T', ' ')}"
         )
+        bucket = bucketize(before, after, diff, status=status, first_seen=first_seen)
+        payload["bucket"] = bucket.to_dict()
+        payload["same_daypart"] = not bucket.cross_daypart
+        all_diffs.append(payload)
         if payload["summary"]["changed"] or payload["summary"]["total_before"] != payload["summary"]["total_after"]:
             diffs.append(payload)
 
+    default = _pick_default(all_diffs)
     diffs.sort(key=lambda item: item["summary"]["changed"], reverse=True)
     diffs = diffs[:max_diffs]
-
-    museum = build_museum(series).to_dict()
 
     stores: dict[str, dict[str, Any]] = {}
     for meta in metas:
@@ -123,6 +161,8 @@ def build_demo_payload(
         "price_down": sum(item["summary"]["price_down"] for item in diffs),
         "added": sum(item["summary"]["added"] for item in diffs),
         "removed": sum(item["summary"]["removed"] for item in diffs),
+        "real_changes": sum(item["bucket"]["summary"]["real"] for item in all_diffs),
+        "rotation_changes": sum(item["bucket"]["summary"]["rotation"] for item in all_diffs),
         "synthetic": any(meta["synthetic"] for meta in metas),
     }
 
@@ -164,6 +204,7 @@ def build_demo_payload(
         "snapshots": metas,
         "detail": detail,
         "diffs": diffs,
+        "default": default,
         "museum": museum,
     }
 

@@ -39,7 +39,10 @@ python -m mcdiff diff --markdown # 表格
 # 4) 博物馆：所有已下架的餐品
 python -m mcdiff museum
 
-# 5) 导出静态演示数据（给 docs/index.html）
+# 5) 把两组快照导出成 GIF（终端打字 + 结论卡）
+python -m mcdiff gif --out menu-diff.gif
+
+# 6) 导出静态演示数据（给 docs/index.html）
 python -m mcdiff report
 ```
 
@@ -63,4 +66,5 @@ python -m mcdiff report
 | `600057 门店可能已关闭或不在营业时间` | 门店打烊 | 换 24h 店，或等到营业时段 |
 | `600058 城市名或者关键词不能为空` | 只给了 `city` | `city` + `keyword` 同时给 |
 | 核价少算钱 | 非法 `productCode` 被静默丢弃 | 校验 `productList` 长度 |
+| diff 里几十个「新品」 | 其实是餐段切换（早/午/夜菜单不同） | 用 `diff --buckets` 或页面上的「餐段轮换」分组 |
 | 营养数据对不上 | 营养表按名称、菜单按 code | 按名称归一化，缺就明说 |

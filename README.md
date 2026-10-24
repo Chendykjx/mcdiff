@@ -6,7 +6,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![零依赖](https://img.shields.io/badge/dependencies-0-brightgreen)](pyproject.toml)
-[![测试](https://img.shields.io/badge/tests-69%20passed-success)](tests/)
+[![测试](https://img.shields.io/badge/tests-81%20passed-success)](tests/)
 [![MCP](https://img.shields.io/badge/MCP-mcd.cn-DA291C)](https://github.com/M-China/mcd-mcp-server)
 [![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 [![demo](https://img.shields.io/badge/demo-live%20%E2%86%92-brightgreen)](https://chendykjx.github.io/mcdiff/)
@@ -77,6 +77,7 @@ McDiff 把一家麦当劳门店的菜单当成代码仓库来管理：
 | 券与促销留痕 | 每次快照同时记录当前门店可用券、满减/折扣规则，方便日后做「券的门槛降了没」 | `query-store-coupons`、`query-promotions` |
 | 门店选择 | 按城市 + 关键词找店，自动跳过未营业门店 | `query-nearby-stores` |
 | 时间基准 | 所有快照带服务器时间与餐段（早餐/午餐/下午茶/夜市/深夜）标签 | `now-time-info` |
+| 导出 GIF | 任意两次快照 → 终端打字 + 结论卡的动画 GIF，`--theme light\|dark`、`--width`、`--rows` 可调 | — |
 | 静态演示 | 一条命令导出 `docs/data.js`，纯前端页面可以 diff 任意两个时间点，**不需要 Token** | — |
 
 ## 🚀 快速开始
@@ -115,6 +116,8 @@ python -m mcdiff list                   # 列出本地快照
 python -m mcdiff diff --json            # 机器可读的 diff
 python -m mcdiff diff --from a.json --to b.json
 python -m mcdiff capture --store 1420576 --anchors 9900013304,9900015568   # 顺带官方核价
+python -m mcdiff diff --buckets   # 把「实质变化」和「餐段轮换」分开显示
+python -m mcdiff gif             # 把最值得看的一组 diff 导出成 GIF
 ```
 
 ## 💬 可以直接这么说
@@ -176,7 +179,7 @@ mcdiff/
 │   └── make_gif.py         # 生成 README 的 GIF 与社交图
 ├── data/snapshots/         # 快照数据（按门店分目录）
 ├── docs/                   # 单页演示（file:// 可开，GitHub Pages 可托管）
-├── tests/                  # 69 个单元测试，全部 stdlib unittest
+├── tests/                  # 81 个单元测试，全部 stdlib unittest
 └── .github/workflows/snapshot.yml   # 每天定时采集并 commit
 ```
 
@@ -184,7 +187,7 @@ mcdiff/
 
 ```bash
 python -m unittest discover -s tests -v
-# Ran 69 tests ... OK
+# Ran 81 tests ... OK
 ```
 
 覆盖：MCP 协议层（本地起 HTTP server 模拟初始化 / 业务错误 / 401 / 429 重试 / SSE 帧）、价格单位换算、餐段边界、校验和稳定性、diff 六类变更与渲染、博物馆生命周期、合成数据确定性、CLI 端到端（含 `report` 产物）。
