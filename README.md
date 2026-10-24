@@ -9,6 +9,7 @@
 [![测试](https://img.shields.io/badge/tests-63%20passed-success)](tests/)
 [![MCP](https://img.shields.io/badge/MCP-mcd.cn-DA291C)](https://github.com/M-China/mcd-mcp-server)
 [![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
+[![demo](https://img.shields.io/badge/demo-live%20%E2%86%92-brightgreen)](https://chendykjx.github.io/mcdiff/)
 
 ![demo](docs/media/demo.gif)
 
@@ -128,6 +129,8 @@ python -m mcdiff capture --store 1420576 --anchors 9900013304,9900015568   # 顺
 - 「这个门店现在有哪些券？和促销规则一起记下来」
 - 「把最近 30 天的价格变化导成一张 diff 长图」
 - 「核一下这两个组合的官方价格，菜单价和 calculate-price 对不对得上」
+
+> 也可以当作 Agent Skill 用：仓库根目录的 [SKILL.md](SKILL.md) 写了模型该怎么调用它。
 
 ## 🧠 它是怎么算的
 
