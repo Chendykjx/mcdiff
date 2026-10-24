@@ -35,15 +35,45 @@ def _consecutive_pairs(series: list[dict[str, Any]]) -> Iterable[tuple[dict[str,
         yield before, after
 
 
+def pick_primary_store(series: list[dict[str, Any]]) -> str:
+    """Choose the store with the most snapshots (ties → the most recently seen).
+
+    A demo payload must never mix stores: pairing store A's snapshot with store
+    B's would report the whole menu as removed/added.
+    """
+    counts: dict[str, int] = {}
+    latest: dict[str, str] = {}
+    for snapshot in series:
+        code = str((snapshot.get("store") or {}).get("storeCode") or "")
+        if not code:
+            continue
+        counts[code] = counts.get(code, 0) + 1
+        captured = str(snapshot.get("captured_at") or "")
+        if captured > latest.get(code, ""):
+            latest[code] = captured
+    if not counts:
+        raise SystemExit("快照里没有 storeCode，无法导出演示数据。")
+    return max(counts, key=lambda code: (counts[code], latest[code]))
+
+
 def build_demo_payload(
     root: str | Path = ".",
     store_code: str | None = None,
     *,
     max_diffs: int = 16,
 ) -> dict[str, Any]:
-    series = load_series(root, store_code)
-    if not series:
+    all_series = load_series(root)
+    if not all_series:
         raise SystemExit("没有快照可导出。先运行 `python -m mcdiff capture --store <门店编号>` 或 `python -m mcdiff seed`。")
+
+    store_code = store_code or pick_primary_store(all_series)
+    series = [
+        snapshot
+        for snapshot in all_series
+        if str((snapshot.get("store") or {}).get("storeCode")) == store_code
+    ]
+    if not series:
+        raise SystemExit(f"门店 {store_code} 没有快照。")
 
     series.sort(key=lambda snap: str(snap.get("captured_at")))
     metas = [_snapshot_meta(snapshot, index) for index, snapshot in enumerate(series)]
