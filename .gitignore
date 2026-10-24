@@ -1,0 +1,15 @@
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# local secrets & personal data
+.env
+*.token
+docs/raw/
+data/private/
+
+# os
+.DS_Store
+Thumbs.db

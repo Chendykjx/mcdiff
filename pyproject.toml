@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcdiff"
+version = "0.1.0"
+description = "给麦当劳菜单建一个 git 仓库 —— 每天 commit，diff 涨价与下架"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "McDiff contributors" }]
+keywords = ["mcp", "mcdonalds", "mcd", "diff", "menu", "snapshot"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/你的账号/mcdiff"
+
+[project.scripts]
+mcdiff = "mcdiff.cli:main"
+
+[tool.setuptools]
+packages = ["mcdiff"]
