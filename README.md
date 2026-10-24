@@ -208,6 +208,17 @@ python -m unittest discover -s tests -v
 - [ ] 和你的历史订单打通：这件下架的餐品，你最后一次吃它是什么时候
 - [ ] RSS / 邮件订阅：今日 diff 推送
 
+## English TL;DR
+
+McDiff treats a McDonald's China store menu as a versioned repository. Every capture via the official
+MCP server (`query-meals`, `calculate-price`, `query-store-coupons`, `query-promotions`,
+`query-nearby-stores`, `now-time-info`) becomes an immutable snapshot; any two snapshots can be diffed
+into a git-style changelog (`+ added / - removed / ~ price change`); retired SKUs go to a "menu museum"
+with lifespan, last price and an epitaph.
+
+Zero runtime dependencies, 63 stdlib tests, a single-file static demo (works from `file://`), and a
+GitHub Action that snapshots daily and commits the diff.
+
 ## License
 
 MIT
