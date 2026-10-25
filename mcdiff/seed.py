@@ -76,6 +76,11 @@ def generate_history(
     today_meals = copy.deepcopy(base_snapshot.get("meals") or {})
     categories_now = [c.get("name") for c in base_snapshot.get("menu", {}).get("categories") or []]
 
+    if days <= 1:
+        only = copy.deepcopy(dict(base_snapshot))
+        only["synthetic"] = False
+        return [only]
+
     rng = _rng(seed_text, "plan")
     total_days = max(2, days)
     # historical price drift: 20% of real SKUs jump by ±1–3 元 on one specific day
@@ -84,7 +89,10 @@ def generate_history(
     for index, code in enumerate(rng.sample(codes, k=max(1, len(codes) // 5))):
         delta = rng.choice([-300, -200, -100, 100, 200, 300])
         # the newest step always carries a couple of movements, so "today" has news
-        change_day = 1 if index < 3 else rng.randint(2, total_days - 2)
+        if index < 3 or total_days <= 4:
+            change_day = 1
+        else:
+            change_day = rng.randint(2, total_days - 2)
         drifted[code] = (delta, change_day)
 
     legacy = [

@@ -80,6 +80,27 @@ class ReportTests(unittest.TestCase):
         gone = [item for item in payload["museum"]["items"] if item["status"] == "gone"]
         self.assertEqual([item["code"] for item in gone], ["2"])
 
+    def test_ids_are_unique_for_same_second_snapshots(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base = snapshot("A", "2026-10-25T05:05:00+08:00", {"1": meal("a", 100)})
+            save(base, tmp)
+            twin = snapshot("A", "2026-10-25T05:05:00.500000+08:00", {"1": meal("a", 200)})
+            save(twin, tmp)
+            payload = build_demo_payload(tmp)
+        ids = [item["id"] for item in payload["snapshots"]]
+        self.assertEqual(len(ids), len(set(ids)))
+        self.assertEqual(len(ids), 2)
+
+    def test_totals_cover_every_pair(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            save(snapshot("A", "2026-10-01T12:00:00+08:00", {"1": meal("a", 100)}), tmp)
+            save(snapshot("A", "2026-10-02T12:00:00+08:00", {"1": meal("a", 100), "2": meal("b", 200)}), tmp)
+            save(snapshot("A", "2026-10-03T12:00:00+08:00", {"1": meal("a", 100)}), tmp)
+            payload = build_demo_payload(tmp, max_diffs=1)
+        self.assertEqual(len(payload["diffs"]), 1)  # only one pair is exported…
+        self.assertEqual(payload["totals"]["added"], 1)   # …but totals see both
+        self.assertEqual(payload["totals"]["removed"], 1)
+
     def test_empty_repository_exits(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(SystemExit):

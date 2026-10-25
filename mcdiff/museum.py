@@ -40,6 +40,7 @@ class ItemHistory:
     last_seen: str = ""
     prices: list[tuple[str, int]] = field(default_factory=list)
     synthetic: bool = False
+    last_daypart_label: str = ""
     dayparts: set[str] = field(default_factory=set)
 
     @property
@@ -69,7 +70,7 @@ class ItemHistory:
 
     def epitaph(self) -> str:
         template = EPITAPHS[sum(ord(ch) for ch in self.code) % len(EPITAPHS)]
-        return template.format(daypart="午后" if self.last_price else "傍晚")
+        return template.format(daypart=self.last_daypart_label or "午后")
 
     def to_dict(self, *, status: str) -> dict[str, Any]:
         return {
@@ -182,6 +183,7 @@ def build_museum(snapshots: Iterable[Mapping[str, Any]], *, store: Mapping[str, 
                     last_seen=captured_at,
                     prices=[(captured_at, price)],
                     synthetic=synthetic,
+                    last_daypart_label=str(snap.get("daypart_label") or ""),
                     dayparts={daypart},
                 )
             else:
@@ -189,6 +191,7 @@ def build_museum(snapshots: Iterable[Mapping[str, Any]], *, store: Mapping[str, 
                 history.category = meal.get("category", history.category)
                 history.tags = list(meal.get("tags") or history.tags)
                 history.last_seen = captured_at
+                history.last_daypart_label = str(snap.get("daypart_label") or history.last_daypart_label)
                 history.synthetic = history.synthetic or synthetic
                 history.dayparts.add(daypart)
                 if not history.prices or history.prices[-1][1] != price:

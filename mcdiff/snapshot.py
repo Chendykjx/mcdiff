@@ -237,12 +237,35 @@ def capture(
 
 
 def save(snapshot: Mapping[str, Any], root: str | Path = ".") -> Path:
-    store_code = str(snapshot["store"]["storeCode"])
+    store_code = str((snapshot.get("store") or {}).get("storeCode") or "").strip()
+    if not store_code:
+        raise ValueError("快照缺少 store.storeCode，无法保存")
+    if not snapshot.get("captured_at"):
+        raise ValueError("快照缺少 captured_at，无法保存")
     moment = datetime.fromisoformat(str(snapshot["captured_at"])).astimezone(TZ)
     folder = snapshot_dir(root, store_code)
     folder.mkdir(parents=True, exist_ok=True)
-    filename = f"{moment.strftime('%Y%m%dT%H%M')}-{snapshot.get('daypart', 'x')}.json"
-    path = folder / filename
+    daypart = snapshot.get("daypart", "x")
+    path = folder / f"{moment.strftime('%Y%m%dT%H%M')}-{daypart}.json"
+    if path.exists():
+        # Two captures can land in the same minute (manual runs, retries). Never silently
+        # overwrite: keep identical captures idempotent, give different ones their own file.
+        try:
+            existing = load(path)
+        except (OSError, ValueError):
+            existing = {}
+        if existing.get("checksum") == snapshot.get("checksum"):
+            return path
+        path = folder / f"{moment.strftime('%Y%m%dT%H%M%S')}-{daypart}.json"
+        suffix = 2
+        while path.exists():
+            try:
+                if load(path).get("checksum") == snapshot.get("checksum"):
+                    return path
+            except (OSError, ValueError):
+                pass
+            path = folder / f"{moment.strftime('%Y%m%dT%H%M%S')}-{daypart}-{suffix}.json"
+            suffix += 1
     path.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2, sort_keys=False), encoding="utf-8")
     return path
 

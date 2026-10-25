@@ -21,7 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from mcdiff.mcp import McdMCPClient, McdMCPError  # noqa: E402
+from mcdiff.mcp import McdAuthError, McdMCPClient, McdMCPError  # noqa: E402
 from mcdiff.report import build_demo_payload, write_demo_data  # noqa: E402
 from mcdiff.snapshot import capture, describe, load_series, now_local, save  # noqa: E402
 
@@ -96,12 +96,23 @@ def main() -> int:
     args = parser.parse_args()
 
     stores = [code.strip() for code in args.stores.split(",") if code.strip()]
-    client = McdMCPClient()
+    if not stores:
+        print("--stores 不能为空", file=sys.stderr)
+        return 2
+    if args.every and args.every < 10:
+        print("--every 至少 10 秒（接口限流 600 次/分钟）", file=sys.stderr)
+        return 2
+    try:
+        client = McdMCPClient()
+    except McdAuthError as exc:
+        print(f"{exc}", file=sys.stderr)
+        print("提示：Token 从 https://open.mcd.cn/mcp 申请，写入环境变量 MCD_MCP_TOKEN。", file=sys.stderr)
+        return 2
     deadline = time.time() + args.hours * 3600 if args.every and args.hours else None
     while True:
         try:
             written = capture_stores(client, stores, args.city, args.keyword, extras=not args.no_extras)
-            if written or not args.every:
+            if (written or not args.every) and args.report:
                 rebuild_report()
             if written and args.git:
                 git_commit(",".join(stores))

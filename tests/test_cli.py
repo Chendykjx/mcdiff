@@ -126,3 +126,30 @@ class CliTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RegressionTests(unittest.TestCase):
+    def test_diff_missing_file_is_friendly(self):
+        from mcdiff.cli import main
+        import contextlib, io
+
+        buffer = io.StringIO()
+        with contextlib.redirect_stdout(buffer), contextlib.redirect_stderr(buffer):
+            code = main(["--root", ".", "diff", "--from", "definitely-missing.json", "--to", "also-missing.json"])
+        self.assertEqual(code, 1)
+        self.assertIn("读不到快照文件", buffer.getvalue())
+
+    def test_collect_rejects_tiny_interval(self):
+        import subprocess, sys
+        from pathlib import Path as P
+
+        root = P(__file__).resolve().parents[1]
+        result = subprocess.run(
+            [sys.executable, str(root / "scripts" / "collect.py"), "--every", "5"],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("至少 10 秒", result.stderr)

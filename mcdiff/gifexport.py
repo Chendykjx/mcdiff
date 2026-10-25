@@ -175,7 +175,10 @@ def _scene_frames(
             visible_rows = rows[: max(0, lines - len(header) - 1)]
             if lines > len(header):
                 y += r(10)
+            row_bottom = win[3] - r(48)
             for row in visible_rows:
+                if y > row_bottom:
+                    break
                 color = palette[row.color_key]
                 draw.text((win[0] + r(20), y), row.marker, font=font_line, fill=color)
                 draw.text((win[0] + r(44), y), row.text, font=font_line, fill=color)
@@ -231,6 +234,8 @@ def render_gif(
 ) -> Path:
     """Render ``before → after`` as a GIF and return the written path."""
     _require_pillow()
+    width = max(320, min(int(width), 1600))
+    max_rows = max(1, min(int(max_rows), 12))
     palette = LIGHT if theme == "light" else DARK
     diff = diff_snapshots(before, after)
     rows = _rows_for(diff.changes, max_rows)

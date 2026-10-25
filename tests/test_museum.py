@@ -15,7 +15,7 @@ def snap(meals, captured_at, synthetic=False, daypart="lunch"):
     return {
         "captured_at": captured_at,
         "daypart": daypart,
-        "daypart_label": "午餐",
+        "daypart_label": {"breakfast": "早餐", "lunch": "午餐", "late-night": "深夜"}.get(daypart, daypart),
         "store": {"storeCode": "1", "storeName": "测试店"},
         "synthetic": synthetic,
         "menu": {"meal_count": len(meals)},
@@ -109,3 +109,17 @@ class MuseumTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class EpitaphTests(unittest.TestCase):
+    def test_epitaph_uses_last_daypart(self):
+        series = [
+            snap({"1": meal("猪柳麦满分", 1400), "2": meal("巨无霸", 2500)}, "2026-10-01T05:00:00+08:00", daypart="breakfast"),
+            snap({"2": meal("巨无霸", 2500)}, "2026-10-02T05:00:00+08:00", daypart="breakfast"),
+            snap({"2": meal("巨无霸", 2500)}, "2026-10-03T12:00:00+08:00", daypart="lunch"),
+        ]
+        museum = build_museum(series)
+        gone = museum.gone[0]
+        self.assertEqual(gone.name, "猪柳麦满分")
+        self.assertTrue(gone.epitaph())
+        self.assertEqual(gone.last_daypart_label, "早餐")

@@ -171,3 +171,40 @@ class SnapshotTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SaveRegressionTests(unittest.TestCase):
+    def setUp(self):
+        self.snapshot = {
+            "schema": "mcdiff/snapshot@1",
+            "captured_at": "2026-10-25T05:05:00+08:00",
+            "captured_ts": 0,
+            "daypart": "breakfast",
+            "daypart_label": "早餐",
+            "synthetic": False,
+            "store": {"storeCode": "S1", "storeName": "S"},
+            "menu": {"meal_count": 1, "categories": []},
+            "meals": {"1": {"name": "A", "price_cents": 100, "tags": [], "category": "c"}},
+            "extras": {},
+            "checksum": "sha256:aaa",
+        }
+
+    def test_same_minute_captures_are_both_kept(self):
+        import tempfile
+        from pathlib import Path as P
+
+        with tempfile.TemporaryDirectory() as tmp:
+            first = save(self.snapshot, tmp)
+            second_snapshot = dict(self.snapshot)
+            second_snapshot["checksum"] = "sha256:bbb"
+            second = save(second_snapshot, tmp)
+            self.assertNotEqual(first, second)
+            self.assertEqual(len(list(P(tmp).rglob("*.json"))), 2)
+
+    def test_identical_capture_is_idempotent(self):
+        import tempfile
+        from pathlib import Path as P
+
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual(save(self.snapshot, tmp), save(self.snapshot, tmp))
+            self.assertEqual(len(list(P(tmp).rglob("*.json"))), 1)

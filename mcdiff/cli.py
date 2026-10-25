@@ -133,11 +133,12 @@ def cmd_list(args: argparse.Namespace) -> int:
     if not paths:
         print("还没有快照。")
         return 1
-    print(f"{'captured_at':<26} {'daypart':<12} {'SKU':>4}  {'synthetic':<9} file")
+    print(f"{'captured_at':<26} {'store':<10} {'daypart':<12} {'SKU':>4}  {'synthetic':<9} file")
     for path in paths:
         snap = load(path)
         print(
-            f"{snap.get('captured_at', ''):<26} {snap.get('daypart_label', ''):<12} "
+            f"{snap.get('captured_at', ''):<26} {str((snap.get('store') or {}).get('storeCode', '')):<10} "
+            f"{snap.get('daypart_label', ''):<12} "
             f"{snap.get('menu', {}).get('meal_count', 0):>4}  "
             f"{'yes' if snap.get('synthetic') else 'no':<9} {path.name}"
         )
@@ -169,6 +170,12 @@ def cmd_diff(args: argparse.Namespace) -> int:
         before, after = _pick_pair(args)
     except SystemExit as exc:
         print(str(exc), file=sys.stderr)
+        return 1
+    except OSError as exc:
+        print(f"读不到快照文件：{exc.filename or exc}", file=sys.stderr)
+        return 1
+    except ValueError as exc:
+        print(f"快照文件不是合法的 JSON：{exc}", file=sys.stderr)
         return 1
     diff = diff_snapshots(before, after)
     if args.json:

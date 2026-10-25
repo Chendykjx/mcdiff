@@ -72,6 +72,14 @@ class GifExportTests(unittest.TestCase):
         before, after = default_pair(series)
         self.assertEqual(before["store"]["storeCode"], after["store"]["storeCode"])
 
+    def test_clamps_absurd_options(self):
+        before = snap("A", "2026-10-25T05:05:00+08:00", {"1": meal("a", 100)})
+        after = snap("A", "2026-10-25T07:05:00+08:00", {"1": meal("a", 200)})
+        with tempfile.TemporaryDirectory() as tmp:
+            path = render_gif(before, after, Path(tmp) / "tiny.gif", width=120, max_rows=50)
+            with Image.open(path) as image:
+                self.assertEqual(image.size[0], 320)
+
     def test_single_snapshot_raises(self):
         with self.assertRaises(ValueError):
             default_pair([snap("A", "2026-10-25T05:05:00+08:00", {"1": meal("a", 100)})])

@@ -29,6 +29,16 @@ KIND_LABELS = {
 }
 
 
+def _safe_moment(value: object) -> datetime | None:
+    """Parse an ISO timestamp, tolerating missing/broken values in hand-built snapshots."""
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(str(value))
+    except ValueError:
+        return None
+
+
 def _width(text: str) -> int:
     return sum(2 if unicodedata.east_asian_width(ch) in "WF" else 1 for ch in text)
 
@@ -122,13 +132,13 @@ class Diff:
     # ------------------------------------------------------------------ renderers
     def render_git(self) -> str:
         store = self.after.get("store", {})
-        before_moment = datetime.fromisoformat(str(self.before["captured_at"]))
-        after_moment = datetime.fromisoformat(str(self.after["captured_at"]))
+        before_moment = _safe_moment(self.before.get("captured_at"))
+        after_moment = _safe_moment(self.after.get("captured_at"))
         summary = self.summary
 
         header = [
-            f"--- {before_moment.strftime('%Y-%m-%d %H:%M')} {self.before.get('daypart_label', '')}",
-            f"+++ {after_moment.strftime('%Y-%m-%d %H:%M')} {self.after.get('daypart_label', '')}",
+            f"--- {before_moment.strftime('%Y-%m-%d %H:%M') if before_moment else '?'} {self.before.get('daypart_label', '')}",
+            f"+++ {after_moment.strftime('%Y-%m-%d %H:%M') if after_moment else '?'} {self.after.get('daypart_label', '')}",
             f"@@ {store.get('storeName', '')}（{store.get('storeCode', '')}） "
             f"{summary['total_before']} → {summary['total_after']} 个 SKU "
             f"· +{summary[ADDED]} -{summary[REMOVED]} ↑{summary[PRICE_UP]} ↓{summary[PRICE_DOWN]} "

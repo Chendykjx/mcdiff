@@ -18,7 +18,7 @@ MAX_CHANGES_PER_DIFF = 60
 def _snapshot_meta(snapshot: Mapping[str, Any], index: int) -> dict[str, Any]:
     store = snapshot.get("store", {})
     return {
-        "id": f"{store.get('storeCode')}-{snapshot.get('captured_at', '')[:16]}",
+        "id": f"{store.get('storeCode')}-{str(snapshot.get('captured_at', ''))[:19]}",
         "index": index,
         "store": store.get("storeCode"),
         "storeName": store.get("storeName"),
@@ -65,8 +65,8 @@ def _pick_default(diffs: list[dict[str, Any]]) -> dict[str, Any] | None:
     def score(item: dict[str, Any]) -> tuple[int, int, int, str]:
         bucket = item["bucket"]["summary"]
         return (
-            1 if item.get("same_daypart") else 0,
             1 if bucket["real"] else 0,
+            1 if item.get("same_daypart") else 0,
             bucket["real"],
             str(item["after"]["captured_at"]),
         )
@@ -104,6 +104,12 @@ def build_demo_payload(
 
     series.sort(key=lambda snap: str(snap.get("captured_at")))
     metas = [_snapshot_meta(snapshot, index) for index, snapshot in enumerate(series)]
+    seen_ids: dict[str, int] = {}
+    for meta in metas:  # same-second captures are rare but must stay addressable
+        base_id = str(meta["id"])
+        seen_ids[base_id] = seen_ids.get(base_id, 0) + 1
+        if seen_ids[base_id] > 1:
+            meta["id"] = f"{base_id}-{seen_ids[base_id]}"
 
     museum_obj = build_museum(series)
     museum = museum_obj.to_dict()
@@ -157,10 +163,10 @@ def build_demo_payload(
         "stores": len(stores),
         "skus_tracked": museum["stats"]["tracked"],
         "gone": museum["stats"]["gone"],
-        "price_up": sum(item["summary"]["price_up"] for item in diffs),
-        "price_down": sum(item["summary"]["price_down"] for item in diffs),
-        "added": sum(item["summary"]["added"] for item in diffs),
-        "removed": sum(item["summary"]["removed"] for item in diffs),
+        "price_up": sum(item["summary"]["price_up"] for item in all_diffs),
+        "price_down": sum(item["summary"]["price_down"] for item in all_diffs),
+        "added": sum(item["summary"]["added"] for item in all_diffs),
+        "removed": sum(item["summary"]["removed"] for item in all_diffs),
         "real_changes": sum(item["bucket"]["summary"]["real"] for item in all_diffs),
         "rotation_changes": sum(item["bucket"]["summary"]["rotation"] for item in all_diffs),
         "synthetic": any(meta["synthetic"] for meta in metas),

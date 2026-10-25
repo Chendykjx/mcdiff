@@ -6,7 +6,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![零依赖](https://img.shields.io/badge/dependencies-0-brightgreen)](pyproject.toml)
-[![测试](https://img.shields.io/badge/tests-81%20passed-success)](tests/)
+[![测试](https://img.shields.io/badge/tests-89%20passed-success)](tests/)
 [![MCP](https://img.shields.io/badge/MCP-mcd.cn-DA291C)](https://github.com/M-China/mcd-mcp-server)
 [![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 [![demo](https://img.shields.io/badge/demo-live%20%E2%86%92-brightgreen)](https://chendykjx.github.io/mcdiff/)
@@ -179,7 +179,7 @@ mcdiff/
 │   └── make_gif.py         # 生成 README 的 GIF 与社交图
 ├── data/snapshots/         # 快照数据（按门店分目录）
 ├── docs/                   # 单页演示（file:// 可开，GitHub Pages 可托管）
-├── tests/                  # 81 个单元测试，全部 stdlib unittest
+├── tests/                  # 89 个单元测试，全部 stdlib unittest
 └── .github/workflows/snapshot.yml   # 每天定时采集并 commit
 ```
 
@@ -187,7 +187,7 @@ mcdiff/
 
 ```bash
 python -m unittest discover -s tests -v
-# Ran 81 tests ... OK
+# Ran 89 tests ... OK
 ```
 
 覆盖：MCP 协议层（本地起 HTTP server 模拟初始化 / 业务错误 / 401 / 429 重试 / SSE 帧）、价格单位换算、餐段边界、校验和稳定性、diff 六类变更与渲染、博物馆生命周期、合成数据确定性、CLI 端到端（含 `report` 产物）。

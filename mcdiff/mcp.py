@@ -120,8 +120,8 @@ class McdMCPClient:
         """Accept both plain JSON and a JSON-RPC message framed as SSE."""
         stripped = raw.lstrip()
         if stripped.startswith("event:") or stripped.startswith("data:"):
-            chunks = [line[5:].strip() for line in raw.splitlines() if line.startswith("data:")]
-            raw = chunks[-1] if chunks else raw
+            chunks = [line[5:].lstrip() for line in raw.splitlines() if line.startswith("data:")]
+            raw = "\n".join(chunks) if chunks else raw
         return json.loads(raw)
 
     def _request(self, payload: Mapping[str, Any]) -> dict[str, Any]:
