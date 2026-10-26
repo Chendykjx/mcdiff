@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-10-26T20:48:47+08:00",
+  "generated_at": "2026-10-27T01:32:28+08:00",
   "project": {
     "name": "McDiff",
     "tagline": "给麦当劳菜单建一个 git 仓库",
     "repo": "https://github.com/Chendykjx/mcdiff"
   },
   "totals": {
-    "snapshots": 37,
+    "snapshots": 38,
     "stores": 1,
-    "skus_tracked": 199,
-    "gone": 6,
-    "price_up": 11,
+    "skus_tracked": 202,
+    "gone": 13,
+    "price_up": 13,
     "price_down": 9,
-    "added": 177,
-    "removed": 149,
-    "real_changes": 50,
-    "rotation_changes": 304,
+    "added": 191,
+    "removed": 192,
+    "real_changes": 54,
+    "rotation_changes": 361,
     "synthetic": true
   },
   "stores": [
     {
       "storeCode": "1420576",
       "storeName": "麦当劳深圳湾一店餐厅",
-      "snapshots": 37,
+      "snapshots": 38,
       "first_at": "2026-09-26T12:00:00+08:00",
-      "last_at": "2026-10-26T20:48:47+08:00",
+      "last_at": "2026-10-27T01:32:28+08:00",
       "synthetic_days": 29
     }
   ],
@@ -472,6 +472,18 @@
       "synthetic": false,
       "meal_count": 109,
       "checksum": "sha256:43e2780d6a39e2e44a4b78a133d7e3b0"
+    },
+    {
+      "id": "1420576-2026-10-27T01:32:28",
+      "index": 37,
+      "store": "1420576",
+      "storeName": "麦当劳深圳湾一店餐厅",
+      "captured_at": "2026-10-27T01:32:28+08:00",
+      "daypart": "late-night",
+      "daypart_label": "深夜",
+      "synthetic": false,
+      "meal_count": 80,
+      "checksum": "sha256:f5cda2543693b56088a4ff7f04ded27a"
     }
   ],
   "detail": [
@@ -33343,6 +33355,857 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1420576-2026-10-27T01:32:28",
+      "meals": {
+        "9900005456": [
+          "麦辣鸡腿汉堡三件套",
+          3350,
+          "鸡肉汉堡 /卷",
+          [
+            "套餐",
+            "立省10.5元起"
+          ]
+        ],
+        "2430": [
+          "【美汁源】“黄金橙橙”",
+          1300,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900016309": [
+          "龙焰鸡腿堡四件套",
+          2900,
+          "鸡肉汉堡 /卷",
+          [
+            "麦金卡"
+          ]
+        ],
+        "521986": [
+          "马苏里拉拉丝芝士条",
+          1500,
+          "小食甜品 /其他",
+          [
+            "上新",
+            "趁热拉丝",
+            "奶香醇厚"
+          ]
+        ],
+        "9900011056": [
+          "全明星双人分享餐八件套",
+          4990,
+          "小食拼盘 /多人餐",
+          [
+            "麦金卡"
+          ]
+        ],
+        "9900015730": [
+          "BFF四宫格小食盘",
+          3980,
+          "小食拼盘 /多人餐",
+          [
+            "小食拼盘",
+            "随心拼"
+          ]
+        ],
+        "521901": [
+          "月下相思扭扭薯",
+          1500,
+          "小食甜品 /其他",
+          [
+            "上新",
+            "口口酥脆",
+            "薯香十足"
+          ]
+        ],
+        "9900016078": [
+          "蘸酱麦麦脆汁鸡",
+          1190,
+          "蘸酱炸鸡",
+          [
+            "蘸酱炸鸡",
+            "韩式芝士风味酱上新"
+          ]
+        ],
+        "9900015187": [
+          "人气经典随心配",
+          1490,
+          "随心配 1+1",
+          [
+            "超值百种组合随心配"
+          ]
+        ],
+        "9900016310": [
+          "龙焰芝士棒鸡腿堡四件套",
+          3200,
+          "鸡肉汉堡 /卷",
+          [
+            "麦金卡"
+          ]
+        ],
+        "9900015188": [
+          "精选超值随心配",
+          1490,
+          "随心配 1+1",
+          [
+            "超值百种组合随心配"
+          ]
+        ],
+        "9900016077": [
+          "蘸酱炸鸡",
+          1190,
+          "人气热卖",
+          [
+            "韩式芝士风味酱上新"
+          ]
+        ],
+        "9900015183": [
+          "精选单人餐三件套",
+          3450,
+          "精选单人餐",
+          [
+            "经典精选",
+            "爆款"
+          ]
+        ],
+        "9900016075": [
+          "龙焰芝士棒鸡腿堡三件套",
+          2990,
+          "人气热卖",
+          [
+            "浓郁奶香拉丝芝士"
+          ]
+        ],
+        "9900015184": [
+          "牛肉汉堡四件套随心选",
+          3200,
+          "人气热卖",
+          [
+            "麦金卡"
+          ]
+        ],
+        "9900016073": [
+          "龙焰鸡腿堡三件套",
+          2690,
+          "人气热卖",
+          [
+            "韩式辣椒黄油风味"
+          ]
+        ],
+        "9900004835": [
+          "麦乐鸡套餐",
+          2500,
+          "炸鸡",
+          [
+            "套餐",
+            "立省10.5元起"
+          ]
+        ],
+        "9900005462": [
+          "板烧鸡腿堡三件套",
+          3450,
+          "鸡肉汉堡 /卷",
+          [
+            "套餐",
+            "新升级",
+            "更多汁"
+          ]
+        ],
+        "3755": [
+          "纯牛奶(盒装)",
+          1050,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900005464": [
+          "双层吉士汉堡套餐",
+          3400,
+          "巨无霸 牛鱼肉堡",
+          [
+            "套餐",
+            "100%纯牛肉"
+          ]
+        ],
+        "9900004236": [
+          "人气超值四件套随心选",
+          2800,
+          "精选单人餐",
+          [
+            "麦金卡"
+          ]
+        ],
+        "3757": [
+          "纯悦",
+          750,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900005466": [
+          "巨无霸三件套",
+          3650,
+          "巨无霸 牛鱼肉堡",
+          [
+            "套餐",
+            "100%纯牛肉"
+          ]
+        ],
+        "6362": [
+          "100% 苹果汁(盒装)",
+          1150,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900000890": [
+          "板烧鸡腿堡四件套",
+          2800,
+          "鸡肉汉堡 /卷",
+          [
+            "麦金卡"
+          ]
+        ],
+        "9900015729": [
+          "蘸酱BFF四宫格小食盘",
+          4280,
+          "蘸酱炸鸡",
+          [
+            "蘸酱炸鸡",
+            "蘸酱炸鸡新吃法"
+          ]
+        ],
+        "9900012416": [
+          "麦炫酷",
+          1300,
+          "饮品",
+          [
+            "冷饮",
+            "人气"
+          ]
+        ],
+        "521950": [
+          "蓝莓爆爆珠麦旋风",
+          1650,
+          "人气热卖",
+          [
+            "蓝莓"
+          ]
+        ],
+        "9900015726": [
+          "韩式甜辣酱鸡块8块",
+          1990,
+          "小食拼盘 /多人餐",
+          [
+            "上新",
+            "韩式风味"
+          ]
+        ],
+        "521797": [
+          "北美招牌牧场酱",
+          300,
+          "蘸酱炸鸡",
+          [
+            "蘸酱",
+            "使用动物奶油"
+          ]
+        ],
+        "521951": [
+          "灰焰圆筒",
+          500,
+          "小食甜品 /其他",
+          [
+            "上新",
+            "灰焰"
+          ]
+        ],
+        "9900011126": [
+          "酥脆无双套餐",
+          2000,
+          "500 大卡套餐",
+          []
+        ],
+        "521952": [
+          "龙焰鸡腿堡",
+          1590,
+          "人气热卖",
+          [
+            "韩式辣椒黄油风味"
+          ]
+        ],
+        "521953": [
+          "龙焰芝士棒鸡腿堡",
+          2700,
+          "鸡肉汉堡 /卷",
+          [
+            "上新",
+            "浓郁奶香拉丝芝士"
+          ]
+        ],
+        "3010": [
+          "雪碧",
+          950,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "521316": [
+          "高达吉士双牛堡",
+          2250,
+          "巨无霸 牛鱼肉堡",
+          [
+            "单品",
+            "100%纯牛肉",
+            "人气"
+          ]
+        ],
+        "521955": [
+          "麦当劳联名徽章",
+          3490,
+          "小食甜品 /其他",
+          [
+            "上新"
+          ]
+        ],
+        "521956": [
+          "麦当劳限定丝巾",
+          3490,
+          "人气热卖",
+          [
+            "上新"
+          ]
+        ],
+        "9900011123": [
+          "“辣”么快乐套餐",
+          2400,
+          "500 大卡套餐",
+          []
+        ],
+        "1700": [
+          "麦辣鸡翅",
+          1500,
+          "炸鸡",
+          [
+            "单品",
+            "黄金酥脆",
+            "鲜嫩多汁"
+          ]
+        ],
+        "521881": [
+          "马来咖喱风味薄皮肉骨鸡3块",
+          1550,
+          "炸鸡",
+          [
+            "上新",
+            "浓郁咖喱飘香"
+          ]
+        ],
+        "9900000888": [
+          "巨无霸四件套",
+          3200,
+          "巨无霸 牛鱼肉堡",
+          [
+            "麦金卡"
+          ]
+        ],
+        "1100": [
+          "巨无霸",
+          2550,
+          "巨无霸 牛鱼肉堡",
+          [
+            "单品",
+            "100%纯牛肉"
+          ]
+        ],
+        "506189": [
+          "如意百宝袋",
+          1200,
+          "开心乐园",
+          []
+        ],
+        "9900005451": [
+          "麦辣鸡翅4块套餐",
+          3650,
+          "炸鸡",
+          [
+            "套餐",
+            "立省10.5元起"
+          ]
+        ],
+        "4810": [
+          "薯条",
+          1350,
+          "小食甜品 /其他",
+          [
+            "小食"
+          ]
+        ],
+        "9900005453": [
+          "麦香鸡套餐",
+          2800,
+          "鸡肉汉堡 /卷",
+          [
+            "套餐",
+            "立省10.5元起"
+          ]
+        ],
+        "9900008745": [
+          "新地",
+          1200,
+          "小食甜品 /其他",
+          [
+            "冰淇淋",
+            "第二份半价"
+          ]
+        ],
+        "9900004066": [
+          "堡堡随心拼（7件任选）",
+          7250,
+          "小食拼盘 /多人餐",
+          [
+            "小食拼盘",
+            "万种组合"
+          ]
+        ],
+        "515520": [
+          "怡泉+C",
+          1150,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "1440": [
+          "麦辣鸡腿汉堡",
+          2250,
+          "鸡肉汉堡 /卷",
+          [
+            "单品",
+            "人气经典",
+            "外酥里嫩"
+          ]
+        ],
+        "1120": [
+          "双层吉士汉堡",
+          2300,
+          "巨无霸 牛鱼肉堡",
+          [
+            "单品",
+            "100%纯牛肉"
+          ]
+        ],
+        "521966": [
+          "韩式烟熏芝士风味酱",
+          300,
+          "蘸酱炸鸡",
+          [
+            "蘸酱",
+            "韩式风味",
+            "浓郁芝香"
+          ]
+        ],
+        "9900016566": [
+          "心形薯饼8块",
+          2250,
+          "人气热卖",
+          [
+            "含一份蘸酱"
+          ]
+        ],
+        "515281": [
+          "阳光柠檬红茶",
+          1000,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900015165": [
+          "派",
+          850,
+          "小食甜品 /其他",
+          [
+            "派",
+            "第二份优惠"
+          ]
+        ],
+        "9900015164": [
+          "鸡肉堡单品精选",
+          2350,
+          "鸡肉汉堡 /卷",
+          [
+            "单品",
+            "人气"
+          ]
+        ],
+        "9900016096": [
+          "蘸酱韩式甜辣酱鸡块",
+          1190,
+          "蘸酱炸鸡",
+          [
+            "蘸酱炸鸡",
+            "韩式芝士风味酱上新"
+          ]
+        ],
+        "9900015162": [
+          "牛肉堡单品精选",
+          1400,
+          "巨无霸 牛鱼肉堡",
+          [
+            "单品",
+            "100%纯牛肉"
+          ]
+        ],
+        "521575": [
+          "锦州蜜烤风味肉骨鸡架",
+          1600,
+          "炸鸡",
+          [
+            "单品",
+            "炙烤风味",
+            "咸鲜带甜"
+          ]
+        ],
+        "9900015160": [
+          "大堡口福三件套",
+          2390,
+          "大堡口福 单人餐",
+          [
+            "大口吃肉好快乐"
+          ]
+        ],
+        "9900008751": [
+          "可乐",
+          950,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900006332": [
+          "薄皮V翅双拼十翅",
+          4990,
+          "小食拼盘 /多人餐",
+          [
+            "小食拼盘",
+            "超值"
+          ]
+        ],
+        "9900005321": [
+          "BFF四宫格小食盘双人餐",
+          6290,
+          "小食拼盘 /多人餐",
+          [
+            "麦金卡"
+          ]
+        ],
+        "9900000891": [
+          "麦辣鸡腿堡四件套",
+          2800,
+          "鸡肉汉堡 /卷",
+          [
+            "麦金卡"
+          ]
+        ],
+        "9900008754": [
+          "经典麦旋风",
+          1550,
+          "小食甜品 /其他",
+          [
+            "冰淇淋",
+            "第二份半价"
+          ]
+        ],
+        "515837": [
+          "圆筒冰淇淋",
+          500,
+          "小食甜品 /其他",
+          [
+            "冰淇淋",
+            "第二份半价"
+          ]
+        ],
+        "521815": [
+          "韩式甜辣酱鸡块",
+          1500,
+          "炸鸡",
+          [
+            "上新",
+            "韩式风味"
+          ]
+        ],
+        "521817": [
+          "【美汁源】“多汁柠柠”",
+          1200,
+          "饮品",
+          [
+            "上新",
+            "清爽上新"
+          ]
+        ],
+        "1450": [
+          "麦香鸡",
+          1700,
+          "鸡肉汉堡 /卷",
+          [
+            "单品"
+          ]
+        ],
+        "520445": [
+          "薄皮焦香V翅",
+          1600,
+          "炸鸡",
+          [
+            "单品",
+            "人气"
+          ]
+        ],
+        "521337": [
+          "鲜萃冰咖",
+          1150,
+          "饮品",
+          [
+            "冷饮",
+            "冰爽上新"
+          ]
+        ],
+        "520689": [
+          "鲜萃咖啡",
+          950,
+          "麦咖啡™",
+          [
+            "鲜萃咖啡"
+          ]
+        ],
+        "3505": [
+          "锡兰红茶",
+          1150,
+          "饮品",
+          [
+            "热饮"
+          ]
+        ],
+        "521141": [
+          "迷你草莓新地",
+          800,
+          "小食甜品 /其他",
+          [
+            "冰淇淋"
+          ]
+        ],
+        "1401": [
+          "麦乐鸡",
+          1400,
+          "炸鸡",
+          [
+            "单品",
+            "人气"
+          ]
+        ],
+        "521142": [
+          "迷你朱古力新地",
+          800,
+          "小食甜品 /其他",
+          [
+            "冰淇淋"
+          ]
+        ],
+        "521143": [
+          "4块麦乐鸡",
+          1150,
+          "炸鸡",
+          [
+            "单品"
+          ]
+        ],
+        "1406": [
+          "板烧鸡腿堡",
+          2350,
+          "鸡肉汉堡 /卷",
+          [
+            "单品",
+            "板烧滋滋",
+            "多汁惹味"
+          ]
+        ],
+        "9900005432": [
+          "麦麦脆汁鸡1块",
+          1500,
+          "炸鸡",
+          [
+            "单品"
+          ]
+        ]
+      },
+      "categories": [
+        {
+          "name": "人气热卖",
+          "codes": [
+            "9900016075",
+            "9900016073",
+            "9900016077",
+            "521956",
+            "521952",
+            "9900016566",
+            "9900015184",
+            "521950"
+          ]
+        },
+        {
+          "name": "精选单人餐",
+          "codes": [
+            "9900015183",
+            "9900004236",
+            "9900015184"
+          ]
+        },
+        {
+          "name": "鸡肉汉堡 /卷",
+          "codes": [
+            "9900016075",
+            "9900016073",
+            "521953",
+            "521952",
+            "9900016310",
+            "9900016309",
+            "9900000891",
+            "9900000890",
+            "9900005462",
+            "9900005456",
+            "9900005453",
+            "1440",
+            "1406",
+            "1450",
+            "9900015164"
+          ]
+        },
+        {
+          "name": "小食拼盘 /多人餐",
+          "codes": [
+            "9900015726",
+            "9900006332",
+            "9900015730",
+            "9900004066",
+            "9900011056",
+            "9900005321"
+          ]
+        },
+        {
+          "name": "蘸酱炸鸡",
+          "codes": [
+            "9900016078",
+            "9900016096",
+            "9900015729",
+            "521966",
+            "521797"
+          ]
+        },
+        {
+          "name": "随心配 1+1",
+          "codes": [
+            "9900015187",
+            "9900015188"
+          ]
+        },
+        {
+          "name": "巨无霸 牛鱼肉堡",
+          "codes": [
+            "9900000888",
+            "9900005466",
+            "9900005464",
+            "1100",
+            "1120",
+            "521316",
+            "9900015162"
+          ]
+        },
+        {
+          "name": "炸鸡",
+          "codes": [
+            "521966",
+            "521797",
+            "521881",
+            "521815",
+            "9900005451",
+            "9900004835",
+            "521575",
+            "1700",
+            "520445",
+            "1401",
+            "9900005432",
+            "521143"
+          ]
+        },
+        {
+          "name": "大堡口福 单人餐",
+          "codes": [
+            "9900015160"
+          ]
+        },
+        {
+          "name": "小食甜品 /其他",
+          "codes": [
+            "521956",
+            "521955",
+            "9900016566",
+            "521986",
+            "521950",
+            "521951",
+            "521901",
+            "4810",
+            "9900008754",
+            "9900008745",
+            "515837",
+            "521141",
+            "521142",
+            "9900015165"
+          ]
+        },
+        {
+          "name": "开心乐园",
+          "codes": [
+            "506189"
+          ]
+        },
+        {
+          "name": "麦咖啡™",
+          "codes": [
+            "520689"
+          ]
+        },
+        {
+          "name": "500 大卡套餐",
+          "codes": [
+            "9900011126",
+            "9900011123"
+          ]
+        },
+        {
+          "name": "饮品",
+          "codes": [
+            "521817",
+            "521337",
+            "9900008751",
+            "3010",
+            "515520",
+            "2430",
+            "515281",
+            "9900012416",
+            "3755",
+            "6362",
+            "3757",
+            "520689",
+            "3505"
+          ]
+        }
+      ]
     }
   ],
   "diffs": [
@@ -41540,6 +42403,2571 @@
           "beType": 1,
           "orderType": 1
         },
+        "captured_at": "2026-10-26T20:48:47+08:00",
+        "daypart_label": "夜市"
+      },
+      "after": {
+        "store": {
+          "storeCode": "1420576",
+          "storeName": "麦当劳深圳湾一店餐厅",
+          "city": "深圳市",
+          "address": "粤海街道兰香一街兰桂三路海王星辰大厦104号商铺",
+          "businessStartTime": "00:00",
+          "businessEndTime": "23:59",
+          "beType": 1,
+          "orderType": 1
+        },
+        "captured_at": "2026-10-27T01:32:28+08:00",
+        "daypart_label": "深夜"
+      },
+      "summary": {
+        "added": 14,
+        "removed": 43,
+        "price_up": 2,
+        "price_down": 0,
+        "renamed": 0,
+        "tags": 2,
+        "moved": 0,
+        "unchanged": 62,
+        "total_before": 109,
+        "total_after": 80,
+        "changed": 61
+      },
+      "changes": [
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "521141",
+          "name": "迷你草莓新地",
+          "before": {},
+          "after": {
+            "name": "迷你草莓新地",
+            "price_cents": 800,
+            "original_price_cents": 800,
+            "tags": [
+              "冰淇淋"
+            ],
+            "category": "小食甜品 /其他",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521141_320.png"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "521142",
+          "name": "迷你朱古力新地",
+          "before": {},
+          "after": {
+            "name": "迷你朱古力新地",
+            "price_cents": 800,
+            "original_price_cents": 800,
+            "tags": [
+              "冰淇淋"
+            ],
+            "category": "小食甜品 /其他",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521142_320.png"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "521143",
+          "name": "4块麦乐鸡",
+          "before": {},
+          "after": {
+            "name": "4块麦乐鸡",
+            "price_cents": 1150,
+            "original_price_cents": 1150,
+            "tags": [
+              "单品"
+            ],
+            "category": "炸鸡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521143_320.png"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "521337",
+          "name": "鲜萃冰咖",
+          "before": {},
+          "after": {
+            "name": "鲜萃冰咖",
+            "price_cents": 1150,
+            "original_price_cents": 1150,
+            "tags": [
+              "冷饮",
+              "冰爽上新"
+            ],
+            "category": "饮品",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521337_320.png"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "521815",
+          "name": "韩式甜辣酱鸡块",
+          "before": {},
+          "after": {
+            "name": "韩式甜辣酱鸡块",
+            "price_cents": 1500,
+            "original_price_cents": 1500,
+            "tags": [
+              "上新",
+              "韩式风味"
+            ],
+            "category": "炸鸡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521815_320.png"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "9900012416",
+          "name": "麦炫酷",
+          "before": {},
+          "after": {
+            "name": "麦炫酷",
+            "price_cents": 1300,
+            "original_price_cents": 1300,
+            "tags": [
+              "冷饮",
+              "人气"
+            ],
+            "category": "饮品",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900012416_320.gif"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "9900015160",
+          "name": "大堡口福三件套",
+          "before": {},
+          "after": {
+            "name": "大堡口福三件套",
+            "price_cents": 2390,
+            "original_price_cents": 4700,
+            "tags": [
+              "大口吃肉好快乐"
+            ],
+            "category": "大堡口福 单人餐",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015160_320.png"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "9900015162",
+          "name": "牛肉堡单品精选",
+          "before": {},
+          "after": {
+            "name": "牛肉堡单品精选",
+            "price_cents": 1400,
+            "original_price_cents": 1400,
+            "tags": [
+              "单品",
+              "100%纯牛肉"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015162_320.gif"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "9900015164",
+          "name": "鸡肉堡单品精选",
+          "before": {},
+          "after": {
+            "name": "鸡肉堡单品精选",
+            "price_cents": 2350,
+            "original_price_cents": 2350,
+            "tags": [
+              "单品",
+              "人气"
+            ],
+            "category": "鸡肉汉堡 /卷",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015164_320.png"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "9900015165",
+          "name": "派",
+          "before": {},
+          "after": {
+            "name": "派",
+            "price_cents": 850,
+            "original_price_cents": 850,
+            "tags": [
+              "派",
+              "第二份优惠"
+            ],
+            "category": "小食甜品 /其他",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900015165_320.png"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "9900015183",
+          "name": "精选单人餐三件套",
+          "before": {},
+          "after": {
+            "name": "精选单人餐三件套",
+            "price_cents": 3450,
+            "original_price_cents": 4100,
+            "tags": [
+              "经典精选",
+              "爆款"
+            ],
+            "category": "精选单人餐",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015183_320.gif"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "9900015184",
+          "name": "牛肉汉堡四件套随心选",
+          "before": {},
+          "after": {
+            "name": "牛肉汉堡四件套随心选",
+            "price_cents": 3200,
+            "original_price_cents": 5400,
+            "tags": [
+              "麦金卡"
+            ],
+            "category": "人气热卖",
+            "discount_type": "随单购麦金卡优惠",
+            "can_with_order": true,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015184_320.png"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "9900015187",
+          "name": "人气经典随心配",
+          "before": {},
+          "after": {
+            "name": "人气经典随心配",
+            "price_cents": 1490,
+            "original_price_cents": 1490,
+            "tags": [
+              "超值百种组合随心配"
+            ],
+            "category": "随心配 1+1",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015187_320.png"
+          }
+        },
+        {
+          "kind": "added",
+          "label": "新上",
+          "code": "9900015188",
+          "name": "精选超值随心配",
+          "before": {},
+          "after": {
+            "name": "精选超值随心配",
+            "price_cents": 1490,
+            "original_price_cents": 1490,
+            "tags": [
+              "超值百种组合随心配"
+            ],
+            "category": "随心配 1+1",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260916/product/MS_9900015188_320.png"
+          }
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "1106",
+          "name": "培根蔬萃双层牛堡",
+          "before": {
+            "name": "培根蔬萃双层牛堡",
+            "price_cents": 2450,
+            "original_price_cents": 2450,
+            "tags": [
+              "单品",
+              "100%纯牛肉"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_1106_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "1600",
+          "name": "麦香鱼",
+          "before": {
+            "name": "麦香鱼",
+            "price_cents": 2250,
+            "original_price_cents": 2250,
+            "tags": [
+              "单品",
+              "麦香鱼系列"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260101/product/MS_1600_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "4437",
+          "name": "玉米杯",
+          "before": {
+            "name": "玉米杯",
+            "price_cents": 1300,
+            "original_price_cents": 1300,
+            "tags": [
+              "小食"
+            ],
+            "category": "小食甜品 /其他",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G4437_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "4648",
+          "name": "不素之霸双层牛堡",
+          "before": {
+            "name": "不素之霸双层牛堡",
+            "price_cents": 2650,
+            "original_price_cents": 2650,
+            "tags": [
+              "单品",
+              "100%纯牛肉"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_4648_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "507394",
+          "name": "牛奶",
+          "before": {
+            "name": "牛奶",
+            "price_cents": 1900,
+            "original_price_cents": 1900,
+            "tags": [
+              "其他"
+            ],
+            "category": "麦咖啡™",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G5073941_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "507409",
+          "name": "麦咖啡™奶铁",
+          "before": {
+            "name": "麦咖啡™奶铁",
+            "price_cents": 1390,
+            "original_price_cents": 2100,
+            "tags": [
+              "限定特惠",
+              "更奶更浓"
+            ],
+            "category": "麦咖啡™",
+            "discount_type": "促销优惠",
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260422/product/MS_G507372_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "507411",
+          "name": "麦咖啡™美式",
+          "before": {
+            "name": "麦咖啡™美式",
+            "price_cents": 1190,
+            "original_price_cents": 1900,
+            "tags": [
+              "限定特惠"
+            ],
+            "category": "麦咖啡™",
+            "discount_type": "促销优惠",
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260422/product/MS_G507374_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "510479",
+          "name": "燕麦奶铁",
+          "before": {
+            "name": "燕麦奶铁",
+            "price_cents": 990,
+            "original_price_cents": 2300,
+            "tags": [
+              "麦咖啡™咖啡"
+            ],
+            "category": "麦咖啡™",
+            "discount_type": "随单购麦金卡优惠",
+            "can_with_order": true,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260422/product/MS_G510481_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "510489",
+          "name": "燕麦奶",
+          "before": {
+            "name": "燕麦奶",
+            "price_cents": 2100,
+            "original_price_cents": 2100,
+            "tags": [
+              "其他"
+            ],
+            "category": "麦咖啡™",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G510489_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "511781",
+          "name": "培根安格斯厚牛堡",
+          "before": {
+            "name": "培根安格斯厚牛堡",
+            "price_cents": 3450,
+            "original_price_cents": 3450,
+            "tags": [
+              "单品",
+              "100%安格斯牛肉"
+            ],
+            "category": "安格斯MAX 厚牛堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_511781_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "511782",
+          "name": "芝士安格斯厚牛堡",
+          "before": {
+            "name": "芝士安格斯厚牛堡",
+            "price_cents": 3150,
+            "original_price_cents": 3150,
+            "tags": [
+              "单品",
+              "100%安格斯牛肉"
+            ],
+            "category": "安格斯MAX 厚牛堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_511782_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "515946",
+          "name": "浓浓黑巧（冰/热）",
+          "before": {
+            "name": "浓浓黑巧（冰/热）",
+            "price_cents": 1390,
+            "original_price_cents": 2100,
+            "tags": [
+              "限定特惠"
+            ],
+            "category": "麦咖啡™",
+            "discount_type": "促销优惠",
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_G515945_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "515955",
+          "name": "浓浓燕麦黑巧（冰/热）",
+          "before": {
+            "name": "浓浓燕麦黑巧（冰/热）",
+            "price_cents": 1590,
+            "original_price_cents": 2300,
+            "tags": [
+              "限定特惠"
+            ],
+            "category": "麦咖啡™",
+            "discount_type": "促销优惠",
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_G515954_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "521156",
+          "name": "那么大鸡排（椒盐风味）",
+          "before": {
+            "name": "那么大鸡排（椒盐风味）",
+            "price_cents": 1400,
+            "original_price_cents": 1400,
+            "tags": [
+              "单品"
+            ],
+            "category": "炸鸡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260101/product/MS_521156_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "521791",
+          "name": "茉莉奶绿雪冰",
+          "before": {
+            "name": "茉莉奶绿雪冰",
+            "price_cents": 990,
+            "original_price_cents": 2300,
+            "tags": [
+              "限定特惠"
+            ],
+            "category": "麦咖啡™",
+            "discount_type": "促销优惠",
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521791_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "6352",
+          "name": "阳光橙麦炫酷",
+          "before": {
+            "name": "阳光橙麦炫酷",
+            "price_cents": 1300,
+            "original_price_cents": 1300,
+            "tags": [
+              "冷饮"
+            ],
+            "category": "饮品",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_6352_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900000881",
+          "name": "培根安格斯厚牛堡四件套",
+          "before": {
+            "name": "培根安格斯厚牛堡四件套",
+            "price_cents": 3700,
+            "original_price_cents": 6600,
+            "tags": [
+              "麦金卡"
+            ],
+            "category": "安格斯MAX 厚牛堡",
+            "discount_type": "随单购麦金卡优惠",
+            "can_with_order": true,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000881_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900000882",
+          "name": "芝士安格斯厚牛堡四件套",
+          "before": {
+            "name": "芝士安格斯厚牛堡四件套",
+            "price_cents": 3700,
+            "original_price_cents": 6600,
+            "tags": [
+              "麦金卡"
+            ],
+            "category": "安格斯MAX 厚牛堡",
+            "discount_type": "随单购麦金卡优惠",
+            "can_with_order": true,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000882_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900000885",
+          "name": "培根蔬萃双层牛堡四件套",
+          "before": {
+            "name": "培根蔬萃双层牛堡四件套",
+            "price_cents": 3200,
+            "original_price_cents": 5850,
+            "tags": [
+              "麦金卡"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": "随单购麦金卡优惠",
+            "can_with_order": true,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000885_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900000886",
+          "name": "不素之霸双层牛堡四件套",
+          "before": {
+            "name": "不素之霸双层牛堡四件套",
+            "price_cents": 3200,
+            "original_price_cents": 5850,
+            "tags": [
+              "麦金卡"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": "随单购麦金卡优惠",
+            "can_with_order": true,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000886_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900000893",
+          "name": "双层深海鳕鱼堡四件套",
+          "before": {
+            "name": "双层深海鳕鱼堡四件套",
+            "price_cents": 3200,
+            "original_price_cents": 5850,
+            "tags": [
+              "麦金卡"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": "随单购麦金卡优惠",
+            "can_with_order": true,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000893_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900003537",
+          "name": "学生专享汉堡小食随心选",
+          "before": {
+            "name": "学生专享汉堡小食随心选",
+            "price_cents": 2700,
+            "original_price_cents": 2700,
+            "tags": [
+              "套餐"
+            ],
+            "category": "鸡肉汉堡 /卷",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250420/product/MS_9900003537_320_0_1744785048324.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900003538",
+          "name": "学生专享饮品随心选",
+          "before": {
+            "name": "学生专享饮品随心选",
+            "price_cents": 1000,
+            "original_price_cents": 1000,
+            "tags": [
+              "冷饮"
+            ],
+            "category": "饮品",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900003538_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900003586",
+          "name": "双层深海鳕鱼堡",
+          "before": {
+            "name": "双层深海鳕鱼堡",
+            "price_cents": 2400,
+            "original_price_cents": 2400,
+            "tags": [
+              "单品",
+              "麦香鱼系列"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900003586_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900004064",
+          "name": "精选单人餐三件套",
+          "before": {
+            "name": "精选单人餐三件套",
+            "price_cents": 3450,
+            "original_price_cents": 4600,
+            "tags": [
+              "爆款"
+            ],
+            "category": "人气热卖",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900004064_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900005411",
+          "name": "不素之霸双层牛堡三件套",
+          "before": {
+            "name": "不素之霸双层牛堡三件套",
+            "price_cents": 3750,
+            "original_price_cents": 5000,
+            "tags": [
+              "套餐",
+              "100%纯牛肉"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005411_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900005413",
+          "name": "双层深海鳕鱼堡三件套",
+          "before": {
+            "name": "双层深海鳕鱼堡三件套",
+            "price_cents": 3500,
+            "original_price_cents": 4750,
+            "tags": [
+              "套餐",
+              "麦香鱼系列"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005413_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900005428",
+          "name": "培根安格斯厚牛堡三件套",
+          "before": {
+            "name": "培根安格斯厚牛堡三件套",
+            "price_cents": 4550,
+            "original_price_cents": 5800,
+            "tags": [
+              "套餐",
+              "100%安格斯牛肉"
+            ],
+            "category": "安格斯MAX 厚牛堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005428_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900005430",
+          "name": "芝士安格斯厚牛堡三件套",
+          "before": {
+            "name": "芝士安格斯厚牛堡三件套",
+            "price_cents": 4250,
+            "original_price_cents": 5500,
+            "tags": [
+              "套餐",
+              "100%安格斯牛肉"
+            ],
+            "category": "安格斯MAX 厚牛堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005430_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900005460",
+          "name": "麦香鱼套餐",
+          "before": {
+            "name": "麦香鱼套餐",
+            "price_cents": 3350,
+            "original_price_cents": 4600,
+            "tags": [
+              "套餐",
+              "麦香鱼系列"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504968_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900005468",
+          "name": "培根蔬萃双层牛堡三件套",
+          "before": {
+            "name": "培根蔬萃双层牛堡三件套",
+            "price_cents": 3550,
+            "original_price_cents": 4800,
+            "tags": [
+              "套餐",
+              "100%纯牛肉"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005468_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900006957",
+          "name": "安格斯厚牛堡四件套随心选",
+          "before": {
+            "name": "安格斯厚牛堡四件套随心选",
+            "price_cents": 3700,
+            "original_price_cents": 6600,
+            "tags": [
+              "麦金卡"
+            ],
+            "category": "精选单人餐",
+            "discount_type": "随单购麦金卡优惠",
+            "can_with_order": true,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900006957_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900008746",
+          "name": "鸡肉堡单品精选",
+          "before": {
+            "name": "鸡肉堡单品精选",
+            "price_cents": 2350,
+            "original_price_cents": 2350,
+            "tags": [
+              "单品",
+              "人气"
+            ],
+            "category": "鸡肉汉堡 /卷",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260624/product/MS_9900008746_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900008747",
+          "name": "牛肉堡单品精选",
+          "before": {
+            "name": "牛肉堡单品精选",
+            "price_cents": 1400,
+            "original_price_cents": 1400,
+            "tags": [
+              "单品",
+              "100%纯牛肉"
+            ],
+            "category": "巨无霸 牛鱼肉堡",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_9900008747_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900008752",
+          "name": "派",
+          "before": {
+            "name": "派",
+            "price_cents": 850,
+            "original_price_cents": 850,
+            "tags": [
+              "派",
+              "第二份优惠"
+            ],
+            "category": "小食甜品 /其他",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900008752_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900009245",
+          "name": "牛气满满套餐",
+          "before": {
+            "name": "牛气满满套餐",
+            "price_cents": 3500,
+            "original_price_cents": 4750,
+            "tags": [],
+            "category": "500 大卡套餐",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900009245_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900010110",
+          "name": "鱼牛汉堡四件套随心选",
+          "before": {
+            "name": "鱼牛汉堡四件套随心选",
+            "price_cents": 3200,
+            "original_price_cents": 5850,
+            "tags": [
+              "麦金卡"
+            ],
+            "category": "人气热卖",
+            "discount_type": "随单购麦金卡优惠",
+            "can_with_order": true,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900010110_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900013304",
+          "name": "人气经典随心配",
+          "before": {
+            "name": "人气经典随心配",
+            "price_cents": 1490,
+            "original_price_cents": 1490,
+            "tags": [
+              "超值百种组合随心配"
+            ],
+            "category": "随心配 1+1",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900013304_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900015561",
+          "name": "麦咖啡冰爽一夏",
+          "before": {
+            "name": "麦咖啡冰爽一夏",
+            "price_cents": 990,
+            "original_price_cents": 2300,
+            "tags": [
+              "限定特惠",
+              "人气雪冰喝一夏"
+            ],
+            "category": "麦咖啡™",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015561_320.gif"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900015568",
+          "name": "精选超值随心配",
+          "before": {
+            "name": "精选超值随心配",
+            "price_cents": 1390,
+            "original_price_cents": 1390,
+            "tags": [
+              "超值百种组合随心配"
+            ],
+            "category": "随心配 1+1",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015568_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900015602",
+          "name": "大堡口福三件套",
+          "before": {
+            "name": "大堡口福三件套",
+            "price_cents": 2290,
+            "original_price_cents": 4700,
+            "tags": [
+              "大口吃肉好快乐"
+            ],
+            "category": "大堡口福 单人餐",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015602_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900016057",
+          "name": "汉堡开心乐园餐",
+          "before": {
+            "name": "汉堡开心乐园餐",
+            "price_cents": 2350,
+            "original_price_cents": 2350,
+            "tags": [
+              "开心乐园餐",
+              "童年童款"
+            ],
+            "category": "开心乐园",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016057_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "removed",
+          "label": "下架",
+          "code": "9900016058",
+          "name": "鱼排堡开心乐园餐",
+          "before": {
+            "name": "鱼排堡开心乐园餐",
+            "price_cents": 2400,
+            "original_price_cents": 2400,
+            "tags": [
+              "开心乐园餐",
+              "童年童款"
+            ],
+            "category": "开心乐园",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016058_320.png"
+          },
+          "after": {}
+        },
+        {
+          "kind": "price_up",
+          "label": "涨价",
+          "code": "521986",
+          "name": "马苏里拉拉丝芝士条",
+          "before": {
+            "name": "马苏里拉拉丝芝士条",
+            "price_cents": 1100,
+            "original_price_cents": 1500,
+            "tags": [
+              "上新",
+              "趁热拉丝",
+              "奶香醇厚"
+            ],
+            "category": "小食甜品 /其他",
+            "discount_type": "促销优惠",
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521986_320.png"
+          },
+          "after": {
+            "name": "马苏里拉拉丝芝士条",
+            "price_cents": 1500,
+            "original_price_cents": 1500,
+            "tags": [
+              "上新",
+              "趁热拉丝",
+              "奶香醇厚"
+            ],
+            "category": "小食甜品 /其他",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521986_320.png"
+          },
+          "delta_cents": 400,
+          "delta_pct": 36.4
+        },
+        {
+          "kind": "price_up",
+          "label": "涨价",
+          "code": "9900016566",
+          "name": "心形薯饼8块",
+          "before": {
+            "name": "心形薯饼8块",
+            "price_cents": 990,
+            "original_price_cents": 2250,
+            "tags": [
+              "限时特惠"
+            ],
+            "category": "人气热卖",
+            "discount_type": "促销优惠",
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016566_320.png"
+          },
+          "after": {
+            "name": "心形薯饼8块",
+            "price_cents": 2250,
+            "original_price_cents": 2250,
+            "tags": [
+              "含一份蘸酱"
+            ],
+            "category": "人气热卖",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016566_320.png"
+          },
+          "delta_cents": 1260,
+          "delta_pct": 127.3
+        },
+        {
+          "kind": "tags",
+          "label": "标签",
+          "code": "506189",
+          "name": "如意百宝袋",
+          "before": {
+            "name": "如意百宝袋",
+            "price_cents": 1200,
+            "original_price_cents": 1200,
+            "tags": [
+              "其他"
+            ],
+            "category": "开心乐园",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_506189_320.png"
+          },
+          "after": {
+            "name": "如意百宝袋",
+            "price_cents": 1200,
+            "original_price_cents": 1200,
+            "tags": [],
+            "category": "开心乐园",
+            "discount_type": null,
+            "can_with_order": false,
+            "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_506189_320.png"
+          }
+        }
+      ],
+      "id": "1420576-2026-10-26T20:48:47__1420576-2026-10-27T01:32:28",
+      "before_id": "1420576-2026-10-26T20:48:47",
+      "after_id": "1420576-2026-10-27T01:32:28",
+      "label": "夜市 → 深夜 · 10-27 01:32",
+      "bucket": {
+        "cross_daypart": true,
+        "fresh": [],
+        "gone": [],
+        "rotation_added": [
+          {
+            "code": "521141",
+            "name": "迷你草莓新地",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "迷你草莓新地",
+              "price_cents": 800,
+              "original_price_cents": 800,
+              "tags": [
+                "冰淇淋"
+              ],
+              "category": "小食甜品 /其他",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521141_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "521142",
+            "name": "迷你朱古力新地",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "迷你朱古力新地",
+              "price_cents": 800,
+              "original_price_cents": 800,
+              "tags": [
+                "冰淇淋"
+              ],
+              "category": "小食甜品 /其他",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521142_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "521143",
+            "name": "4块麦乐鸡",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "4块麦乐鸡",
+              "price_cents": 1150,
+              "original_price_cents": 1150,
+              "tags": [
+                "单品"
+              ],
+              "category": "炸鸡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521143_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "521337",
+            "name": "鲜萃冰咖",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "鲜萃冰咖",
+              "price_cents": 1150,
+              "original_price_cents": 1150,
+              "tags": [
+                "冷饮",
+                "冰爽上新"
+              ],
+              "category": "饮品",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521337_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "521815",
+            "name": "韩式甜辣酱鸡块",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "韩式甜辣酱鸡块",
+              "price_cents": 1500,
+              "original_price_cents": 1500,
+              "tags": [
+                "上新",
+                "韩式风味"
+              ],
+              "category": "炸鸡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521815_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "9900012416",
+            "name": "麦炫酷",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "麦炫酷",
+              "price_cents": 1300,
+              "original_price_cents": 1300,
+              "tags": [
+                "冷饮",
+                "人气"
+              ],
+              "category": "饮品",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900012416_320.gif"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "9900015160",
+            "name": "大堡口福三件套",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "大堡口福三件套",
+              "price_cents": 2390,
+              "original_price_cents": 4700,
+              "tags": [
+                "大口吃肉好快乐"
+              ],
+              "category": "大堡口福 单人餐",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015160_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "9900015162",
+            "name": "牛肉堡单品精选",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "牛肉堡单品精选",
+              "price_cents": 1400,
+              "original_price_cents": 1400,
+              "tags": [
+                "单品",
+                "100%纯牛肉"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015162_320.gif"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "9900015164",
+            "name": "鸡肉堡单品精选",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "鸡肉堡单品精选",
+              "price_cents": 2350,
+              "original_price_cents": 2350,
+              "tags": [
+                "单品",
+                "人气"
+              ],
+              "category": "鸡肉汉堡 /卷",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015164_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "9900015165",
+            "name": "派",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "派",
+              "price_cents": 850,
+              "original_price_cents": 850,
+              "tags": [
+                "派",
+                "第二份优惠"
+              ],
+              "category": "小食甜品 /其他",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900015165_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "9900015183",
+            "name": "精选单人餐三件套",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "精选单人餐三件套",
+              "price_cents": 3450,
+              "original_price_cents": 4100,
+              "tags": [
+                "经典精选",
+                "爆款"
+              ],
+              "category": "精选单人餐",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015183_320.gif"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "9900015184",
+            "name": "牛肉汉堡四件套随心选",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "牛肉汉堡四件套随心选",
+              "price_cents": 3200,
+              "original_price_cents": 5400,
+              "tags": [
+                "麦金卡"
+              ],
+              "category": "人气热卖",
+              "discount_type": "随单购麦金卡优惠",
+              "can_with_order": true,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015184_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "9900015187",
+            "name": "人气经典随心配",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "人气经典随心配",
+              "price_cents": 1490,
+              "original_price_cents": 1490,
+              "tags": [
+                "超值百种组合随心配"
+              ],
+              "category": "随心配 1+1",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015187_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "9900015188",
+            "name": "精选超值随心配",
+            "kind": "added",
+            "label": "新上",
+            "before": {},
+            "after": {
+              "name": "精选超值随心配",
+              "price_cents": 1490,
+              "original_price_cents": 1490,
+              "tags": [
+                "超值百种组合随心配"
+              ],
+              "category": "随心配 1+1",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260916/product/MS_9900015188_320.png"
+            },
+            "delta_cents": null
+          }
+        ],
+        "rotation_removed": [
+          {
+            "code": "1106",
+            "name": "培根蔬萃双层牛堡",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "培根蔬萃双层牛堡",
+              "price_cents": 2450,
+              "original_price_cents": 2450,
+              "tags": [
+                "单品",
+                "100%纯牛肉"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_1106_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "1600",
+            "name": "麦香鱼",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "麦香鱼",
+              "price_cents": 2250,
+              "original_price_cents": 2250,
+              "tags": [
+                "单品",
+                "麦香鱼系列"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260101/product/MS_1600_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "4437",
+            "name": "玉米杯",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "玉米杯",
+              "price_cents": 1300,
+              "original_price_cents": 1300,
+              "tags": [
+                "小食"
+              ],
+              "category": "小食甜品 /其他",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G4437_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "4648",
+            "name": "不素之霸双层牛堡",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "不素之霸双层牛堡",
+              "price_cents": 2650,
+              "original_price_cents": 2650,
+              "tags": [
+                "单品",
+                "100%纯牛肉"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_4648_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "507394",
+            "name": "牛奶",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "牛奶",
+              "price_cents": 1900,
+              "original_price_cents": 1900,
+              "tags": [
+                "其他"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G5073941_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "507409",
+            "name": "麦咖啡™奶铁",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "麦咖啡™奶铁",
+              "price_cents": 1390,
+              "original_price_cents": 2100,
+              "tags": [
+                "限定特惠",
+                "更奶更浓"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": "促销优惠",
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260422/product/MS_G507372_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "507411",
+            "name": "麦咖啡™美式",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "麦咖啡™美式",
+              "price_cents": 1190,
+              "original_price_cents": 1900,
+              "tags": [
+                "限定特惠"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": "促销优惠",
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260422/product/MS_G507374_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "510479",
+            "name": "燕麦奶铁",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "燕麦奶铁",
+              "price_cents": 990,
+              "original_price_cents": 2300,
+              "tags": [
+                "麦咖啡™咖啡"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": "随单购麦金卡优惠",
+              "can_with_order": true,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260422/product/MS_G510481_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "510489",
+            "name": "燕麦奶",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "燕麦奶",
+              "price_cents": 2100,
+              "original_price_cents": 2100,
+              "tags": [
+                "其他"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G510489_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "511781",
+            "name": "培根安格斯厚牛堡",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "培根安格斯厚牛堡",
+              "price_cents": 3450,
+              "original_price_cents": 3450,
+              "tags": [
+                "单品",
+                "100%安格斯牛肉"
+              ],
+              "category": "安格斯MAX 厚牛堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_511781_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "511782",
+            "name": "芝士安格斯厚牛堡",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "芝士安格斯厚牛堡",
+              "price_cents": 3150,
+              "original_price_cents": 3150,
+              "tags": [
+                "单品",
+                "100%安格斯牛肉"
+              ],
+              "category": "安格斯MAX 厚牛堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_511782_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "515946",
+            "name": "浓浓黑巧（冰/热）",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "浓浓黑巧（冰/热）",
+              "price_cents": 1390,
+              "original_price_cents": 2100,
+              "tags": [
+                "限定特惠"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": "促销优惠",
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_G515945_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "515955",
+            "name": "浓浓燕麦黑巧（冰/热）",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "浓浓燕麦黑巧（冰/热）",
+              "price_cents": 1590,
+              "original_price_cents": 2300,
+              "tags": [
+                "限定特惠"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": "促销优惠",
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_G515954_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "521156",
+            "name": "那么大鸡排（椒盐风味）",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "那么大鸡排（椒盐风味）",
+              "price_cents": 1400,
+              "original_price_cents": 1400,
+              "tags": [
+                "单品"
+              ],
+              "category": "炸鸡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260101/product/MS_521156_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "521791",
+            "name": "茉莉奶绿雪冰",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "茉莉奶绿雪冰",
+              "price_cents": 990,
+              "original_price_cents": 2300,
+              "tags": [
+                "限定特惠"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": "促销优惠",
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521791_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "6352",
+            "name": "阳光橙麦炫酷",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "阳光橙麦炫酷",
+              "price_cents": 1300,
+              "original_price_cents": 1300,
+              "tags": [
+                "冷饮"
+              ],
+              "category": "饮品",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_6352_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900000881",
+            "name": "培根安格斯厚牛堡四件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "培根安格斯厚牛堡四件套",
+              "price_cents": 3700,
+              "original_price_cents": 6600,
+              "tags": [
+                "麦金卡"
+              ],
+              "category": "安格斯MAX 厚牛堡",
+              "discount_type": "随单购麦金卡优惠",
+              "can_with_order": true,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000881_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900000882",
+            "name": "芝士安格斯厚牛堡四件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "芝士安格斯厚牛堡四件套",
+              "price_cents": 3700,
+              "original_price_cents": 6600,
+              "tags": [
+                "麦金卡"
+              ],
+              "category": "安格斯MAX 厚牛堡",
+              "discount_type": "随单购麦金卡优惠",
+              "can_with_order": true,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000882_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900000885",
+            "name": "培根蔬萃双层牛堡四件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "培根蔬萃双层牛堡四件套",
+              "price_cents": 3200,
+              "original_price_cents": 5850,
+              "tags": [
+                "麦金卡"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": "随单购麦金卡优惠",
+              "can_with_order": true,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000885_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900000886",
+            "name": "不素之霸双层牛堡四件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "不素之霸双层牛堡四件套",
+              "price_cents": 3200,
+              "original_price_cents": 5850,
+              "tags": [
+                "麦金卡"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": "随单购麦金卡优惠",
+              "can_with_order": true,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000886_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900000893",
+            "name": "双层深海鳕鱼堡四件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "双层深海鳕鱼堡四件套",
+              "price_cents": 3200,
+              "original_price_cents": 5850,
+              "tags": [
+                "麦金卡"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": "随单购麦金卡优惠",
+              "can_with_order": true,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000893_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900003537",
+            "name": "学生专享汉堡小食随心选",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "学生专享汉堡小食随心选",
+              "price_cents": 2700,
+              "original_price_cents": 2700,
+              "tags": [
+                "套餐"
+              ],
+              "category": "鸡肉汉堡 /卷",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250420/product/MS_9900003537_320_0_1744785048324.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900003538",
+            "name": "学生专享饮品随心选",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "学生专享饮品随心选",
+              "price_cents": 1000,
+              "original_price_cents": 1000,
+              "tags": [
+                "冷饮"
+              ],
+              "category": "饮品",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900003538_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900003586",
+            "name": "双层深海鳕鱼堡",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "双层深海鳕鱼堡",
+              "price_cents": 2400,
+              "original_price_cents": 2400,
+              "tags": [
+                "单品",
+                "麦香鱼系列"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900003586_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900004064",
+            "name": "精选单人餐三件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "精选单人餐三件套",
+              "price_cents": 3450,
+              "original_price_cents": 4600,
+              "tags": [
+                "爆款"
+              ],
+              "category": "人气热卖",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900004064_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900005411",
+            "name": "不素之霸双层牛堡三件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "不素之霸双层牛堡三件套",
+              "price_cents": 3750,
+              "original_price_cents": 5000,
+              "tags": [
+                "套餐",
+                "100%纯牛肉"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005411_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900005413",
+            "name": "双层深海鳕鱼堡三件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "双层深海鳕鱼堡三件套",
+              "price_cents": 3500,
+              "original_price_cents": 4750,
+              "tags": [
+                "套餐",
+                "麦香鱼系列"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005413_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900005428",
+            "name": "培根安格斯厚牛堡三件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "培根安格斯厚牛堡三件套",
+              "price_cents": 4550,
+              "original_price_cents": 5800,
+              "tags": [
+                "套餐",
+                "100%安格斯牛肉"
+              ],
+              "category": "安格斯MAX 厚牛堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005428_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900005430",
+            "name": "芝士安格斯厚牛堡三件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "芝士安格斯厚牛堡三件套",
+              "price_cents": 4250,
+              "original_price_cents": 5500,
+              "tags": [
+                "套餐",
+                "100%安格斯牛肉"
+              ],
+              "category": "安格斯MAX 厚牛堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005430_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900005460",
+            "name": "麦香鱼套餐",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "麦香鱼套餐",
+              "price_cents": 3350,
+              "original_price_cents": 4600,
+              "tags": [
+                "套餐",
+                "麦香鱼系列"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504968_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900005468",
+            "name": "培根蔬萃双层牛堡三件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "培根蔬萃双层牛堡三件套",
+              "price_cents": 3550,
+              "original_price_cents": 4800,
+              "tags": [
+                "套餐",
+                "100%纯牛肉"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005468_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900006957",
+            "name": "安格斯厚牛堡四件套随心选",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "安格斯厚牛堡四件套随心选",
+              "price_cents": 3700,
+              "original_price_cents": 6600,
+              "tags": [
+                "麦金卡"
+              ],
+              "category": "精选单人餐",
+              "discount_type": "随单购麦金卡优惠",
+              "can_with_order": true,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900006957_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900008746",
+            "name": "鸡肉堡单品精选",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "鸡肉堡单品精选",
+              "price_cents": 2350,
+              "original_price_cents": 2350,
+              "tags": [
+                "单品",
+                "人气"
+              ],
+              "category": "鸡肉汉堡 /卷",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260624/product/MS_9900008746_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900008747",
+            "name": "牛肉堡单品精选",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "牛肉堡单品精选",
+              "price_cents": 1400,
+              "original_price_cents": 1400,
+              "tags": [
+                "单品",
+                "100%纯牛肉"
+              ],
+              "category": "巨无霸 牛鱼肉堡",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_9900008747_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900008752",
+            "name": "派",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "派",
+              "price_cents": 850,
+              "original_price_cents": 850,
+              "tags": [
+                "派",
+                "第二份优惠"
+              ],
+              "category": "小食甜品 /其他",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900008752_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900009245",
+            "name": "牛气满满套餐",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "牛气满满套餐",
+              "price_cents": 3500,
+              "original_price_cents": 4750,
+              "tags": [],
+              "category": "500 大卡套餐",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900009245_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900010110",
+            "name": "鱼牛汉堡四件套随心选",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "鱼牛汉堡四件套随心选",
+              "price_cents": 3200,
+              "original_price_cents": 5850,
+              "tags": [
+                "麦金卡"
+              ],
+              "category": "人气热卖",
+              "discount_type": "随单购麦金卡优惠",
+              "can_with_order": true,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900010110_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900013304",
+            "name": "人气经典随心配",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "人气经典随心配",
+              "price_cents": 1490,
+              "original_price_cents": 1490,
+              "tags": [
+                "超值百种组合随心配"
+              ],
+              "category": "随心配 1+1",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900013304_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900015561",
+            "name": "麦咖啡冰爽一夏",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "麦咖啡冰爽一夏",
+              "price_cents": 990,
+              "original_price_cents": 2300,
+              "tags": [
+                "限定特惠",
+                "人气雪冰喝一夏"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015561_320.gif"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900015568",
+            "name": "精选超值随心配",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "精选超值随心配",
+              "price_cents": 1390,
+              "original_price_cents": 1390,
+              "tags": [
+                "超值百种组合随心配"
+              ],
+              "category": "随心配 1+1",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015568_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900015602",
+            "name": "大堡口福三件套",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "大堡口福三件套",
+              "price_cents": 2290,
+              "original_price_cents": 4700,
+              "tags": [
+                "大口吃肉好快乐"
+              ],
+              "category": "大堡口福 单人餐",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015602_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900016057",
+            "name": "汉堡开心乐园餐",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "汉堡开心乐园餐",
+              "price_cents": 2350,
+              "original_price_cents": 2350,
+              "tags": [
+                "开心乐园餐",
+                "童年童款"
+              ],
+              "category": "开心乐园",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016057_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          },
+          {
+            "code": "9900016058",
+            "name": "鱼排堡开心乐园餐",
+            "kind": "removed",
+            "label": "下架",
+            "before": {
+              "name": "鱼排堡开心乐园餐",
+              "price_cents": 2400,
+              "original_price_cents": 2400,
+              "tags": [
+                "开心乐园餐",
+                "童年童款"
+              ],
+              "category": "开心乐园",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016058_320.png"
+            },
+            "after": {},
+            "delta_cents": null
+          }
+        ],
+        "other": [
+          {
+            "code": "521986",
+            "name": "马苏里拉拉丝芝士条",
+            "kind": "price_up",
+            "label": "涨价",
+            "before": {
+              "name": "马苏里拉拉丝芝士条",
+              "price_cents": 1100,
+              "original_price_cents": 1500,
+              "tags": [
+                "上新",
+                "趁热拉丝",
+                "奶香醇厚"
+              ],
+              "category": "小食甜品 /其他",
+              "discount_type": "促销优惠",
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521986_320.png"
+            },
+            "after": {
+              "name": "马苏里拉拉丝芝士条",
+              "price_cents": 1500,
+              "original_price_cents": 1500,
+              "tags": [
+                "上新",
+                "趁热拉丝",
+                "奶香醇厚"
+              ],
+              "category": "小食甜品 /其他",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521986_320.png"
+            },
+            "delta_cents": 400
+          },
+          {
+            "code": "9900016566",
+            "name": "心形薯饼8块",
+            "kind": "price_up",
+            "label": "涨价",
+            "before": {
+              "name": "心形薯饼8块",
+              "price_cents": 990,
+              "original_price_cents": 2250,
+              "tags": [
+                "限时特惠"
+              ],
+              "category": "人气热卖",
+              "discount_type": "促销优惠",
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016566_320.png"
+            },
+            "after": {
+              "name": "心形薯饼8块",
+              "price_cents": 2250,
+              "original_price_cents": 2250,
+              "tags": [
+                "含一份蘸酱"
+              ],
+              "category": "人气热卖",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016566_320.png"
+            },
+            "delta_cents": 1260
+          },
+          {
+            "code": "506189",
+            "name": "如意百宝袋",
+            "kind": "tags",
+            "label": "标签",
+            "before": {
+              "name": "如意百宝袋",
+              "price_cents": 1200,
+              "original_price_cents": 1200,
+              "tags": [
+                "其他"
+              ],
+              "category": "开心乐园",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_506189_320.png"
+            },
+            "after": {
+              "name": "如意百宝袋",
+              "price_cents": 1200,
+              "original_price_cents": 1200,
+              "tags": [],
+              "category": "开心乐园",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_506189_320.png"
+            },
+            "delta_cents": null
+          },
+          {
+            "code": "520689",
+            "name": "鲜萃咖啡",
+            "kind": "tags",
+            "label": "标签",
+            "before": {
+              "name": "鲜萃咖啡",
+              "price_cents": 950,
+              "original_price_cents": 950,
+              "tags": [
+                "麦咖啡™咖啡",
+                "鲜萃咖啡"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_G520688_320.gif"
+            },
+            "after": {
+              "name": "鲜萃咖啡",
+              "price_cents": 950,
+              "original_price_cents": 950,
+              "tags": [
+                "鲜萃咖啡"
+              ],
+              "category": "麦咖啡™",
+              "discount_type": null,
+              "can_with_order": false,
+              "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_G520688_320.gif"
+            },
+            "delta_cents": null
+          }
+        ],
+        "summary": {
+          "fresh": 0,
+          "gone": 0,
+          "rotation_added": 14,
+          "rotation_removed": 43,
+          "rotation": 57,
+          "other": 4,
+          "real": 4,
+          "changed": 61
+        }
+      },
+      "same_daypart": false
+    },
+    {
+      "before": {
+        "store": {
+          "storeCode": "1420576",
+          "storeName": "麦当劳深圳湾一店餐厅",
+          "city": "深圳市",
+          "address": "粤海街道兰香一街兰桂三路海王星辰大厦104号商铺",
+          "businessStartTime": "00:00",
+          "businessEndTime": "23:59",
+          "beType": 1,
+          "orderType": 1
+        },
         "captured_at": "2026-10-25T23:00:14+08:00",
         "daypart_label": "深夜"
       },
@@ -45729,116 +49157,6 @@
         }
       },
       "same_daypart": true
-    },
-    {
-      "before": {
-        "store": {
-          "storeCode": "1420576",
-          "storeName": "麦当劳深圳湾一店餐厅",
-          "city": "深圳市",
-          "address": "粤海街道兰香一街兰桂三路海王星辰大厦104号商铺",
-          "businessStartTime": "00:00",
-          "businessEndTime": "23:59",
-          "beType": 1,
-          "orderType": 1
-        },
-        "captured_at": "2026-10-06T12:00:00+08:00",
-        "daypart_label": "午餐"
-      },
-      "after": {
-        "store": {
-          "storeCode": "1420576",
-          "storeName": "麦当劳深圳湾一店餐厅",
-          "city": "深圳市",
-          "address": "粤海街道兰香一街兰桂三路海王星辰大厦104号商铺",
-          "businessStartTime": "00:00",
-          "businessEndTime": "23:59",
-          "beType": 1,
-          "orderType": 1
-        },
-        "captured_at": "2026-10-07T12:00:00+08:00",
-        "daypart_label": "午餐"
-      },
-      "summary": {
-        "added": 1,
-        "removed": 0,
-        "price_up": 0,
-        "price_down": 0,
-        "renamed": 0,
-        "tags": 0,
-        "moved": 0,
-        "unchanged": 80,
-        "total_before": 80,
-        "total_after": 81,
-        "changed": 1
-      },
-      "changes": [
-        {
-          "kind": "added",
-          "label": "新上",
-          "code": "9900073287",
-          "name": "黑松露风味安格斯厚牛堡",
-          "before": {},
-          "after": {
-            "name": "黑松露风味安格斯厚牛堡",
-            "price_cents": 4590,
-            "original_price_cents": 4590,
-            "tags": [
-              "新品",
-              "限时"
-            ],
-            "category": "安格斯MAX 厚牛堡",
-            "discount_type": null,
-            "can_with_order": false,
-            "image": ""
-          }
-        }
-      ],
-      "id": "1420576-2026-10-06T12:00:00__1420576-2026-10-07T12:00:00",
-      "before_id": "1420576-2026-10-06T12:00:00",
-      "after_id": "1420576-2026-10-07T12:00:00",
-      "label": "午餐 → 午餐 · 10-07 12:00",
-      "bucket": {
-        "cross_daypart": false,
-        "fresh": [
-          {
-            "code": "9900073287",
-            "name": "黑松露风味安格斯厚牛堡",
-            "kind": "added",
-            "label": "新上",
-            "before": {},
-            "after": {
-              "name": "黑松露风味安格斯厚牛堡",
-              "price_cents": 4590,
-              "original_price_cents": 4590,
-              "tags": [
-                "新品",
-                "限时"
-              ],
-              "category": "安格斯MAX 厚牛堡",
-              "discount_type": null,
-              "can_with_order": false,
-              "image": ""
-            },
-            "delta_cents": null
-          }
-        ],
-        "gone": [],
-        "rotation_added": [],
-        "rotation_removed": [],
-        "other": [],
-        "summary": {
-          "fresh": 1,
-          "gone": 0,
-          "rotation_added": 0,
-          "rotation_removed": 0,
-          "rotation": 0,
-          "other": 0,
-          "real": 1,
-          "changed": 1
-        }
-      },
-      "same_daypart": true
     }
   ],
   "default": {
@@ -45860,15 +49178,192 @@
       "beType": 1,
       "orderType": 1
     },
-    "generated_at": "2026-10-26T20:48:47+08:00",
-    "snapshot_count": 37,
+    "generated_at": "2026-10-27T01:32:28+08:00",
+    "snapshot_count": 38,
     "stats": {
-      "tracked": 199,
-      "alive": 193,
-      "gone": 6,
+      "tracked": 202,
+      "alive": 189,
+      "gone": 13,
       "synthetic": true
     },
     "items": [
+      {
+        "code": "9900014838",
+        "name": "枫糖风味厚松饼猪柳蛋堡三件套",
+        "category": "人气热卖",
+        "tags": [
+          "全球爆款",
+          "全天供应"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900014838_320.png",
+        "status": "gone",
+        "first_seen": "2026-10-25T14:41:23+08:00",
+        "last_seen": "2026-10-25T23:00:14+08:00",
+        "days_alive": 1,
+        "first_price_cents": 2790,
+        "last_price_cents": 2790,
+        "price_changes": [],
+        "dayparts": [
+          "afternoon",
+          "dinner",
+          "late-night"
+        ],
+        "epitaph": "如果你还记得它，它就没有真正下架。",
+        "synthetic": false
+      },
+      {
+        "code": "9900014837",
+        "name": "枫糖风味厚松饼猪柳蛋堡三件套",
+        "category": "精选单人餐",
+        "tags": [
+          "经典精选",
+          "全球爆款",
+          "全天供应"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900014837_320.png",
+        "status": "gone",
+        "first_seen": "2026-10-25T14:41:23+08:00",
+        "last_seen": "2026-10-25T23:00:14+08:00",
+        "days_alive": 1,
+        "first_price_cents": 2790,
+        "last_price_cents": 2790,
+        "price_changes": [],
+        "dayparts": [
+          "afternoon",
+          "dinner",
+          "late-night"
+        ],
+        "epitaph": "菜单轮换的名单里，又多了一个名字。",
+        "synthetic": false
+      },
+      {
+        "code": "521730",
+        "name": "枫糖风味厚松饼猪柳蛋堡",
+        "category": "巨无霸 牛鱼肉堡",
+        "tags": [
+          "单品",
+          "全球爆款",
+          "全天供应"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_521730_320.png",
+        "status": "gone",
+        "first_seen": "2026-10-25T14:41:23+08:00",
+        "last_seen": "2026-10-25T23:00:14+08:00",
+        "days_alive": 1,
+        "first_price_cents": 2200,
+        "last_price_cents": 2200,
+        "price_changes": [],
+        "dayparts": [
+          "afternoon",
+          "dinner",
+          "late-night"
+        ],
+        "epitaph": "它把位置让给了下一位联名款。",
+        "synthetic": false
+      },
+      {
+        "code": "521731",
+        "name": "枫糖风味厚松饼猪柳堡",
+        "category": "巨无霸 牛鱼肉堡",
+        "tags": [
+          "单品",
+          "全球爆款",
+          "全天供应"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_521731_320.png",
+        "status": "gone",
+        "first_seen": "2026-10-25T14:41:23+08:00",
+        "last_seen": "2026-10-25T23:00:14+08:00",
+        "days_alive": 1,
+        "first_price_cents": 1800,
+        "last_price_cents": 1800,
+        "price_changes": [],
+        "dayparts": [
+          "afternoon",
+          "dinner",
+          "late-night"
+        ],
+        "epitaph": "价格停在那一天，之后再也没有变过。",
+        "synthetic": false
+      },
+      {
+        "code": "9900014974",
+        "name": "枫糖风味厚松饼猪柳堡三件套",
+        "category": "精选单人餐",
+        "tags": [
+          "经典精选",
+          "全球爆款",
+          "全天供应"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900014974_320.png",
+        "status": "gone",
+        "first_seen": "2026-10-25T14:41:23+08:00",
+        "last_seen": "2026-10-25T23:00:14+08:00",
+        "days_alive": 1,
+        "first_price_cents": 2390,
+        "last_price_cents": 2390,
+        "price_changes": [],
+        "dayparts": [
+          "afternoon",
+          "dinner",
+          "late-night"
+        ],
+        "epitaph": "它把位置让给了下一位联名款。",
+        "synthetic": false
+      },
+      {
+        "code": "9900015151",
+        "name": "麦麦周末双人餐",
+        "category": "人气热卖",
+        "tags": [
+          "全球爆款",
+          "全天供应"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015151_320.gif",
+        "status": "gone",
+        "first_seen": "2026-10-25T14:41:23+08:00",
+        "last_seen": "2026-10-25T23:00:14+08:00",
+        "days_alive": 1,
+        "first_price_cents": 4990,
+        "last_price_cents": 5090,
+        "price_changes": [
+          {
+            "at": "2026-10-25T23:00:14+08:00",
+            "from": 4990,
+            "to": 5090
+          }
+        ],
+        "dayparts": [
+          "afternoon",
+          "dinner",
+          "late-night"
+        ],
+        "epitaph": "它最后一次出现在菜单上，是一个普通的深夜。",
+        "synthetic": false
+      },
+      {
+        "code": "9900016301",
+        "name": "枫糖风味厚松饼猪柳蛋堡四件套",
+        "category": "巨无霸 牛鱼肉堡",
+        "tags": [
+          "麦金卡"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016301_320.png",
+        "status": "gone",
+        "first_seen": "2026-10-25T14:41:23+08:00",
+        "last_seen": "2026-10-25T23:00:14+08:00",
+        "days_alive": 1,
+        "first_price_cents": 2800,
+        "last_price_cents": 2800,
+        "price_changes": [],
+        "dayparts": [
+          "afternoon",
+          "dinner",
+          "late-night"
+        ],
+        "epitaph": "它把位置让给了下一位联名款。",
+        "synthetic": false
+      },
       {
         "code": "9900008908",
         "name": "薯角（海盐味）",
@@ -46005,8 +49500,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250430/product/MS_6362_320_1745552987716.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1150,
         "last_price_cents": 1150,
         "price_changes": [],
@@ -46030,8 +49525,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521143_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1150,
         "last_price_cents": 1150,
         "price_changes": [],
@@ -46053,8 +49548,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015730_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3980,
         "last_price_cents": 3980,
         "price_changes": [],
@@ -46077,8 +49572,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260304/product/MS_9900005321_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 6290,
         "last_price_cents": 6290,
         "price_changes": [],
@@ -46122,8 +49617,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900011123_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2400,
         "last_price_cents": 2400,
         "price_changes": [],
@@ -46147,8 +49642,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260807/product/MS_521817_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1200,
         "last_price_cents": 1200,
         "price_changes": [],
@@ -46172,8 +49667,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240904/product/MS_2430_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1300,
         "last_price_cents": 1300,
         "price_changes": [],
@@ -46290,8 +49785,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015187_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1490,
         "last_price_cents": 1490,
         "price_changes": [],
@@ -46335,8 +49830,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900004236_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2800,
         "last_price_cents": 2800,
         "price_changes": [
@@ -46391,8 +49886,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900011056_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 4990,
         "last_price_cents": 4990,
         "price_changes": [
@@ -46448,8 +49943,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_521797_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 400,
         "last_price_cents": 300,
         "price_changes": [
@@ -46844,8 +50339,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_1120_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2200,
         "last_price_cents": 2300,
         "price_changes": [
@@ -46875,8 +50370,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504966_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3200,
         "last_price_cents": 3400,
         "price_changes": [
@@ -46976,8 +50471,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900008751_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 950,
         "last_price_cents": 950,
         "price_changes": [],
@@ -47128,8 +50623,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G515837_320.png",
         "status": "alive",
         "first_seen": "2026-10-25T05:05:05+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 2,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 3,
         "first_price_cents": 500,
         "last_price_cents": 500,
         "price_changes": [],
@@ -47295,8 +50790,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260624/product/MS_9900004066_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 7250,
         "last_price_cents": 7250,
         "price_changes": [],
@@ -47319,8 +50814,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015160_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2390,
         "last_price_cents": 2390,
         "price_changes": [],
@@ -47427,8 +50922,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_506189_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1200,
         "last_price_cents": 1200,
         "price_changes": [],
@@ -47521,8 +51016,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_1100_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2550,
         "last_price_cents": 2550,
         "price_changes": [],
@@ -47546,8 +51041,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005466_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3650,
         "last_price_cents": 3650,
         "price_changes": [],
@@ -47570,8 +51065,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000888_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3100,
         "last_price_cents": 3200,
         "price_changes": [
@@ -47662,20 +51157,25 @@
         "name": "心形薯饼8块",
         "category": "人气热卖",
         "tags": [
-          "限时特惠"
+          "含一份蘸酱"
         ],
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016566_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2250,
-        "last_price_cents": 990,
+        "last_price_cents": 2250,
         "price_changes": [
           {
             "at": "2026-10-25T14:41:23+08:00",
             "from": 2250,
             "to": 990
+          },
+          {
+            "at": "2026-10-27T01:32:28+08:00",
+            "from": 990,
+            "to": 2250
           }
         ],
         "dayparts": [
@@ -47697,8 +51197,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G515520_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1150,
         "last_price_cents": 1150,
         "price_changes": [],
@@ -47723,8 +51223,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900008745_320.gif",
         "status": "alive",
         "first_seen": "2026-10-25T05:05:05+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 2,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 3,
         "first_price_cents": 1200,
         "last_price_cents": 1200,
         "price_changes": [],
@@ -47774,8 +51274,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521901_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1500,
         "last_price_cents": 1500,
         "price_changes": [],
@@ -47800,8 +51300,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20241008/product/MS_1406_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2250,
         "last_price_cents": 2350,
         "price_changes": [
@@ -47832,8 +51332,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005462_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3450,
         "last_price_cents": 3450,
         "price_changes": [],
@@ -47856,8 +51356,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000890_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2900,
         "last_price_cents": 2800,
         "price_changes": [
@@ -47894,56 +51394,6 @@
         "price_changes": [],
         "dayparts": [
           "breakfast"
-        ],
-        "epitaph": "",
-        "synthetic": false
-      },
-      {
-        "code": "521731",
-        "name": "枫糖风味厚松饼猪柳堡",
-        "category": "巨无霸 牛鱼肉堡",
-        "tags": [
-          "单品",
-          "全球爆款",
-          "全天供应"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_521731_320.png",
-        "status": "alive",
-        "first_seen": "2026-10-25T14:41:23+08:00",
-        "last_seen": "2026-10-25T23:00:14+08:00",
-        "days_alive": 1,
-        "first_price_cents": 1800,
-        "last_price_cents": 1800,
-        "price_changes": [],
-        "dayparts": [
-          "afternoon",
-          "dinner",
-          "late-night"
-        ],
-        "epitaph": "",
-        "synthetic": false
-      },
-      {
-        "code": "9900014974",
-        "name": "枫糖风味厚松饼猪柳堡三件套",
-        "category": "精选单人餐",
-        "tags": [
-          "经典精选",
-          "全球爆款",
-          "全天供应"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900014974_320.png",
-        "status": "alive",
-        "first_seen": "2026-10-25T14:41:23+08:00",
-        "last_seen": "2026-10-25T23:00:14+08:00",
-        "days_alive": 1,
-        "first_price_cents": 2390,
-        "last_price_cents": 2390,
-        "price_changes": [],
-        "dayparts": [
-          "afternoon",
-          "dinner",
-          "late-night"
         ],
         "epitaph": "",
         "synthetic": false
@@ -48010,103 +51460,6 @@
         "price_changes": [],
         "dayparts": [
           "breakfast"
-        ],
-        "epitaph": "",
-        "synthetic": false
-      },
-      {
-        "code": "521730",
-        "name": "枫糖风味厚松饼猪柳蛋堡",
-        "category": "巨无霸 牛鱼肉堡",
-        "tags": [
-          "单品",
-          "全球爆款",
-          "全天供应"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_521730_320.png",
-        "status": "alive",
-        "first_seen": "2026-10-25T14:41:23+08:00",
-        "last_seen": "2026-10-25T23:00:14+08:00",
-        "days_alive": 1,
-        "first_price_cents": 2200,
-        "last_price_cents": 2200,
-        "price_changes": [],
-        "dayparts": [
-          "afternoon",
-          "dinner",
-          "late-night"
-        ],
-        "epitaph": "",
-        "synthetic": false
-      },
-      {
-        "code": "9900014838",
-        "name": "枫糖风味厚松饼猪柳蛋堡三件套",
-        "category": "人气热卖",
-        "tags": [
-          "全球爆款",
-          "全天供应"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900014838_320.png",
-        "status": "alive",
-        "first_seen": "2026-10-25T14:41:23+08:00",
-        "last_seen": "2026-10-25T23:00:14+08:00",
-        "days_alive": 1,
-        "first_price_cents": 2790,
-        "last_price_cents": 2790,
-        "price_changes": [],
-        "dayparts": [
-          "afternoon",
-          "dinner",
-          "late-night"
-        ],
-        "epitaph": "",
-        "synthetic": false
-      },
-      {
-        "code": "9900014837",
-        "name": "枫糖风味厚松饼猪柳蛋堡三件套",
-        "category": "精选单人餐",
-        "tags": [
-          "经典精选",
-          "全球爆款",
-          "全天供应"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900014837_320.png",
-        "status": "alive",
-        "first_seen": "2026-10-25T14:41:23+08:00",
-        "last_seen": "2026-10-25T23:00:14+08:00",
-        "days_alive": 1,
-        "first_price_cents": 2790,
-        "last_price_cents": 2790,
-        "price_changes": [],
-        "dayparts": [
-          "afternoon",
-          "dinner",
-          "late-night"
-        ],
-        "epitaph": "",
-        "synthetic": false
-      },
-      {
-        "code": "9900016301",
-        "name": "枫糖风味厚松饼猪柳蛋堡四件套",
-        "category": "巨无霸 牛鱼肉堡",
-        "tags": [
-          "麦金卡"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016301_320.png",
-        "status": "alive",
-        "first_seen": "2026-10-25T14:41:23+08:00",
-        "last_seen": "2026-10-25T23:00:14+08:00",
-        "days_alive": 1,
-        "first_price_cents": 2800,
-        "last_price_cents": 2800,
-        "price_changes": [],
-        "dayparts": [
-          "afternoon",
-          "dinner",
-          "late-night"
         ],
         "epitaph": "",
         "synthetic": false
@@ -48190,8 +51543,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900015165_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 850,
         "last_price_cents": 850,
         "price_changes": [],
@@ -48433,8 +51786,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521951_320.gif",
         "status": "alive",
         "first_seen": "2026-10-25T05:05:05+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 2,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 3,
         "first_price_cents": 500,
         "last_price_cents": 500,
         "price_changes": [],
@@ -48551,8 +51904,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015162_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1400,
         "last_price_cents": 1400,
         "price_changes": [],
@@ -48590,15 +51943,15 @@
       {
         "code": "9900015184",
         "name": "牛肉汉堡四件套随心选",
-        "category": "精选单人餐",
+        "category": "人气热卖",
         "tags": [
           "麦金卡"
         ],
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015184_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3200,
         "last_price_cents": 3200,
         "price_changes": [],
@@ -48773,8 +52126,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015183_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3450,
         "last_price_cents": 3450,
         "price_changes": [],
@@ -48818,11 +52171,17 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260916/product/MS_9900015188_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1390,
-        "last_price_cents": 1390,
-        "price_changes": [],
+        "last_price_cents": 1490,
+        "price_changes": [
+          {
+            "at": "2026-10-27T01:32:28+08:00",
+            "from": 1390,
+            "to": 1490
+          }
+        ],
         "dayparts": [
           "late-night",
           "lunch"
@@ -48884,8 +52243,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240904/product/MS_3757_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 750,
         "last_price_cents": 750,
         "price_changes": [],
@@ -48909,8 +52268,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240731/product/MS_3755_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1050,
         "last_price_cents": 1050,
         "price_changes": [],
@@ -48935,8 +52294,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900008754_320.gif",
         "status": "alive",
         "first_seen": "2026-10-25T05:05:05+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 2,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 3,
         "first_price_cents": 1550,
         "last_price_cents": 1550,
         "price_changes": [],
@@ -49224,8 +52583,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521950_320.gif",
         "status": "alive",
         "first_seen": "2026-10-25T05:05:05+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 2,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 3,
         "first_price_cents": 1650,
         "last_price_cents": 1650,
         "price_changes": [],
@@ -49249,8 +52608,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260610/product/MS_9900006332_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 4890,
         "last_price_cents": 4990,
         "price_changes": [
@@ -49280,8 +52639,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20241202/product/MS_520445_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1600,
         "last_price_cents": 1600,
         "price_changes": [],
@@ -49304,8 +52663,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250523/product/MS_G4810_320_1747877491921.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1350,
         "last_price_cents": 1350,
         "price_changes": [],
@@ -49329,8 +52688,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015729_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 4280,
         "last_price_cents": 4280,
         "price_changes": [],
@@ -49353,8 +52712,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016077_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1190,
         "last_price_cents": 1190,
         "price_changes": [],
@@ -49378,8 +52737,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016096_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1190,
         "last_price_cents": 1190,
         "price_changes": [],
@@ -49403,8 +52762,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016078_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1190,
         "last_price_cents": 1190,
         "price_changes": [],
@@ -49416,6 +52775,48 @@
         ],
         "epitaph": "",
         "synthetic": true
+      },
+      {
+        "code": "521142",
+        "name": "迷你朱古力新地",
+        "category": "小食甜品 /其他",
+        "tags": [
+          "冰淇淋"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521142_320.png",
+        "status": "alive",
+        "first_seen": "2026-10-27T01:32:28+08:00",
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 1,
+        "first_price_cents": 800,
+        "last_price_cents": 800,
+        "price_changes": [],
+        "dayparts": [
+          "late-night"
+        ],
+        "epitaph": "",
+        "synthetic": false
+      },
+      {
+        "code": "521141",
+        "name": "迷你草莓新地",
+        "category": "小食甜品 /其他",
+        "tags": [
+          "冰淇淋"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521141_320.png",
+        "status": "alive",
+        "first_seen": "2026-10-27T01:32:28+08:00",
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 1,
+        "first_price_cents": 800,
+        "last_price_cents": 800,
+        "price_changes": [],
+        "dayparts": [
+          "late-night"
+        ],
+        "epitaph": "",
+        "synthetic": false
       },
       {
         "code": "521156",
@@ -49448,8 +52849,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260701/product/MS_9900011126_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2000,
         "last_price_cents": 2000,
         "price_changes": [],
@@ -49472,8 +52873,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_3505_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 850,
         "last_price_cents": 1150,
         "price_changes": [
@@ -49505,8 +52906,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260701/product/MS_521575_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1800,
         "last_price_cents": 1600,
         "price_changes": [
@@ -49535,8 +52936,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G515280_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1000,
         "last_price_cents": 1000,
         "price_changes": [],
@@ -49583,8 +52984,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G3010_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 850,
         "last_price_cents": 950,
         "price_changes": [
@@ -49616,8 +53017,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521966_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 300,
         "last_price_cents": 300,
         "price_changes": [],
@@ -49641,8 +53042,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521815_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1500,
         "last_price_cents": 1500,
         "price_changes": [],
@@ -49664,8 +53065,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260815/product/MS_9900015726_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1990,
         "last_price_cents": 1990,
         "price_changes": [],
@@ -49689,13 +53090,14 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521881_320.png",
         "status": "alive",
         "first_seen": "2026-10-26T20:48:47+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 1,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 2,
         "first_price_cents": 1550,
         "last_price_cents": 1550,
         "price_changes": [],
         "dayparts": [
-          "dinner"
+          "dinner",
+          "late-night"
         ],
         "epitaph": "",
         "synthetic": false
@@ -49712,15 +53114,20 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521986_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1500,
-        "last_price_cents": 1100,
+        "last_price_cents": 1500,
         "price_changes": [
           {
             "at": "2026-10-25T14:41:23+08:00",
             "from": 1500,
             "to": 1100
+          },
+          {
+            "at": "2026-10-27T01:32:28+08:00",
+            "from": 1100,
+            "to": 1500
           }
         ],
         "dayparts": [
@@ -49744,8 +53151,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_521316_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2450,
         "last_price_cents": 2250,
         "price_changes": [
@@ -49822,8 +53229,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521337_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1150,
         "last_price_cents": 1150,
         "price_changes": [],
@@ -49839,14 +53246,13 @@
         "name": "鲜萃咖啡",
         "category": "麦咖啡™",
         "tags": [
-          "麦咖啡™咖啡",
           "鲜萃咖啡"
         ],
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_G520688_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 950,
         "last_price_cents": 950,
         "price_changes": [],
@@ -49871,8 +53277,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015164_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-25T04:42:17+08:00",
-        "days_alive": 30,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2350,
         "last_price_cents": 2350,
         "price_changes": [],
@@ -49918,8 +53324,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260529/product/MS_G1401_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1400,
         "last_price_cents": 1400,
         "price_changes": [],
@@ -49943,8 +53349,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504969_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2500,
         "last_price_cents": 2500,
         "price_changes": [],
@@ -50083,8 +53489,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521955_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3490,
         "last_price_cents": 3490,
         "price_changes": [],
@@ -50107,8 +53513,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261023/product/MS_G521955_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3190,
         "last_price_cents": 3490,
         "price_changes": [
@@ -50128,6 +53534,28 @@
         "synthetic": true
       },
       {
+        "code": "9900012416",
+        "name": "麦炫酷",
+        "category": "饮品",
+        "tags": [
+          "冷饮",
+          "人气"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900012416_320.gif",
+        "status": "alive",
+        "first_seen": "2026-10-27T01:32:28+08:00",
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 1,
+        "first_price_cents": 1300,
+        "last_price_cents": 1300,
+        "price_changes": [],
+        "dayparts": [
+          "late-night"
+        ],
+        "epitaph": "",
+        "synthetic": false
+      },
+      {
         "code": "1700",
         "name": "麦辣鸡翅",
         "category": "炸鸡",
@@ -50139,8 +53567,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260325/product/MS_G1700_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1700,
         "last_price_cents": 1500,
         "price_changes": [
@@ -50170,8 +53598,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504972_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3650,
         "last_price_cents": 3650,
         "price_changes": [],
@@ -50194,8 +53622,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000891_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3000,
         "last_price_cents": 2800,
         "price_changes": [
@@ -50226,8 +53654,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260325/product/MS_1440_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2350,
         "last_price_cents": 2250,
         "price_changes": [
@@ -50257,8 +53685,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005456_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3350,
         "last_price_cents": 3350,
         "price_changes": [],
@@ -50329,8 +53757,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_1450_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1700,
         "last_price_cents": 1700,
         "price_changes": [],
@@ -50354,8 +53782,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504967_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2800,
         "last_price_cents": 2800,
         "price_changes": [],
@@ -50369,36 +53797,6 @@
         "synthetic": true
       },
       {
-        "code": "9900015151",
-        "name": "麦麦周末双人餐",
-        "category": "人气热卖",
-        "tags": [
-          "全球爆款",
-          "全天供应"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015151_320.gif",
-        "status": "alive",
-        "first_seen": "2026-10-25T14:41:23+08:00",
-        "last_seen": "2026-10-25T23:00:14+08:00",
-        "days_alive": 1,
-        "first_price_cents": 4990,
-        "last_price_cents": 5090,
-        "price_changes": [
-          {
-            "at": "2026-10-25T23:00:14+08:00",
-            "from": 4990,
-            "to": 5090
-          }
-        ],
-        "dayparts": [
-          "afternoon",
-          "dinner",
-          "late-night"
-        ],
-        "epitaph": "",
-        "synthetic": false
-      },
-      {
         "code": "9900005432",
         "name": "麦麦脆汁鸡1块",
         "category": "炸鸡",
@@ -50408,8 +53806,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900005432_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1500,
         "last_price_cents": 1500,
         "price_changes": [],
@@ -50455,8 +53853,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521953_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2700,
         "last_price_cents": 2700,
         "price_changes": [],
@@ -50479,8 +53877,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016075_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2990,
         "last_price_cents": 2990,
         "price_changes": [],
@@ -50525,8 +53923,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016310_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 3200,
         "last_price_cents": 3200,
         "price_changes": [],
@@ -50549,8 +53947,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521952_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 1590,
         "last_price_cents": 1590,
         "price_changes": [],
@@ -50573,8 +53971,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016073_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2690,
         "last_price_cents": 2690,
         "price_changes": [],
@@ -50597,8 +53995,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016309_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-10-26T20:48:47+08:00",
-        "days_alive": 31,
+        "last_seen": "2026-10-27T01:32:28+08:00",
+        "days_alive": 32,
         "first_price_cents": 2900,
         "last_price_cents": 2900,
         "price_changes": [],
