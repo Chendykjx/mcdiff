@@ -1,30 +1,30 @@
 {
-  "generated_at": "2026-11-13T22:28:23+08:00",
+  "generated_at": "2026-11-14T02:39:50+08:00",
   "project": {
     "name": "McDiff",
     "tagline": "给麦当劳菜单建一个 git 仓库",
     "repo": "https://github.com/Chendykjx/mcdiff"
   },
   "totals": {
-    "snapshots": 88,
+    "snapshots": 89,
     "stores": 1,
     "skus_tracked": 233,
-    "gone": 32,
-    "price_up": 64,
+    "gone": 27,
+    "price_up": 66,
     "price_down": 63,
-    "added": 1277,
-    "removed": 1272,
-    "real_changes": 264,
-    "rotation_changes": 2515,
+    "added": 1291,
+    "removed": 1316,
+    "real_changes": 267,
+    "rotation_changes": 2573,
     "synthetic": true
   },
   "stores": [
     {
       "storeCode": "1420576",
       "storeName": "麦当劳深圳湾一店餐厅",
-      "snapshots": 88,
+      "snapshots": 89,
       "first_at": "2026-09-26T12:00:00+08:00",
-      "last_at": "2026-11-13T22:28:23+08:00",
+      "last_at": "2026-11-14T02:39:50+08:00",
       "synthetic_days": 29
     }
   ],
@@ -1084,6 +1084,18 @@
       "synthetic": false,
       "meal_count": 86,
       "checksum": "sha256:91be56c2ec7c17e1f329d3f13698b174"
+    },
+    {
+      "id": "1420576-2026-11-14T02:39:50",
+      "index": 88,
+      "store": "1420576",
+      "storeName": "麦当劳深圳湾一店餐厅",
+      "captured_at": "2026-11-14T02:39:50+08:00",
+      "daypart": "late-night",
+      "daypart_label": "深夜",
+      "synthetic": false,
+      "meal_count": 56,
+      "checksum": "sha256:864e24405710a9dfc61795b32420ef3a"
     }
   ],
   "detail": [
@@ -85158,6 +85170,615 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1420576-2026-11-14T02:39:50",
+      "meals": {
+        "9900005456": [
+          "麦辣鸡腿汉堡三件套",
+          3350,
+          "鸡肉汉堡 /卷",
+          [
+            "套餐",
+            "立省10.5元起"
+          ]
+        ],
+        "9900016629": [
+          "海陆双全堡四件套",
+          3200,
+          "鸡肉汉堡 /卷",
+          [
+            "麦金卡"
+          ]
+        ],
+        "521741": [
+          "脆薯饼",
+          850,
+          "小食甜品 /其他",
+          [
+            "小食"
+          ]
+        ],
+        "2430": [
+          "【美汁源】“黄金橙橙”",
+          1300,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900016669": [
+          "炸鸡随心配1+1",
+          1390,
+          "人气热卖",
+          [
+            "麦麦脆汁鸡来了"
+          ]
+        ],
+        "521986": [
+          "马苏里拉拉丝芝士条",
+          1500,
+          "小食甜品 /其他",
+          [
+            "上新",
+            "趁热拉丝",
+            "奶香醇厚"
+          ]
+        ],
+        "9900011056": [
+          "全明星双人分享餐八件套",
+          5290,
+          "人气热卖",
+          [
+            "麦金卡"
+          ]
+        ],
+        "521946": [
+          "旋旋星愿贴",
+          390,
+          "小食甜品 /其他",
+          [
+            "上新",
+            "汪苏泷限量周边"
+          ]
+        ],
+        "9900016674": [
+          "双层脆鸡大堡口福三件套",
+          2390,
+          "大堡口福 单人餐",
+          [
+            "双倍酥脆双倍快乐"
+          ]
+        ],
+        "9900016670": [
+          "巨无霸大堡口福三件套",
+          2990,
+          "人气热卖",
+          [
+            "经典巨无霸重磅加入"
+          ]
+        ],
+        "9900015183": [
+          "精选单人餐三件套",
+          3350,
+          "精选单人餐",
+          [
+            "经典精选",
+            "爆款"
+          ]
+        ],
+        "9900015184": [
+          "牛肉汉堡四件套随心选",
+          3200,
+          "精选单人餐",
+          [
+            "麦金卡"
+          ]
+        ],
+        "9900004835": [
+          "麦乐鸡套餐",
+          2500,
+          "炸鸡",
+          [
+            "套餐",
+            "立省10.5元起"
+          ]
+        ],
+        "3755": [
+          "纯牛奶(盒装)",
+          1050,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900005464": [
+          "双层吉士汉堡套餐",
+          3400,
+          "巨无霸 牛鱼肉堡",
+          [
+            "套餐",
+            "100%纯牛肉"
+          ]
+        ],
+        "9900004236": [
+          "人气超值四件套随心选",
+          2800,
+          "精选单人餐",
+          [
+            "麦金卡"
+          ]
+        ],
+        "3757": [
+          "纯悦",
+          750,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "6362": [
+          "100% 苹果汁(盒装)",
+          1150,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900012416": [
+          "麦炫酷",
+          1300,
+          "饮品",
+          [
+            "冷饮",
+            "人气"
+          ]
+        ],
+        "9900015726": [
+          "韩式甜辣酱鸡块8块",
+          1990,
+          "小食拼盘 /多人餐",
+          [
+            "上新",
+            "韩式风味"
+          ]
+        ],
+        "515295": [
+          "双层脆鸡堡",
+          2350,
+          "鸡肉汉堡 /卷",
+          [
+            "单品",
+            "双倍酥脆双倍快乐"
+          ]
+        ],
+        "521951": [
+          "灰焰圆筒",
+          500,
+          "小食甜品 /其他",
+          [
+            "上新",
+            "灰焰"
+          ]
+        ],
+        "521799": [
+          "日式鲜磨山葵酱",
+          300,
+          "蘸酱炸鸡",
+          [
+            "蘸酱",
+            "优选高原山葵"
+          ]
+        ],
+        "9900016655": [
+          "双吉随心配1+1",
+          1490,
+          "随心配 1+1",
+          [
+            "100%纯牛肉现煎"
+          ]
+        ],
+        "9900000888": [
+          "巨无霸四件套",
+          3200,
+          "巨无霸 牛鱼肉堡",
+          [
+            "麦金卡"
+          ]
+        ],
+        "1100": [
+          "巨无霸",
+          2550,
+          "巨无霸 牛鱼肉堡",
+          [
+            "单品",
+            "100%纯牛肉现煎"
+          ]
+        ],
+        "506189": [
+          "如意百宝袋",
+          1200,
+          "开心乐园",
+          []
+        ],
+        "4810": [
+          "薯条",
+          1350,
+          "小食甜品 /其他",
+          [
+            "小食"
+          ]
+        ],
+        "9900005453": [
+          "麦香鸡套餐",
+          2800,
+          "鸡肉汉堡 /卷",
+          [
+            "套餐",
+            "立省10.5元起"
+          ]
+        ],
+        "9900008745": [
+          "新地",
+          1200,
+          "小食甜品 /其他",
+          [
+            "冰淇淋",
+            "第二份半价"
+          ]
+        ],
+        "9900004066": [
+          "堡堡随心拼（7件任选）",
+          7250,
+          "小食拼盘 /多人餐",
+          [
+            "小食拼盘",
+            "万种组合"
+          ]
+        ],
+        "515520": [
+          "怡泉+C",
+          1150,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "1440": [
+          "麦辣鸡腿汉堡",
+          2250,
+          "鸡肉汉堡 /卷",
+          [
+            "单品",
+            "人气经典",
+            "外酥里嫩"
+          ]
+        ],
+        "1120": [
+          "双层吉士汉堡",
+          2300,
+          "巨无霸 牛鱼肉堡",
+          [
+            "单品",
+            "100%纯牛肉现煎"
+          ]
+        ],
+        "515281": [
+          "阳光柠檬红茶",
+          1000,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900016652": [
+          "随心配1+1三件套!!!",
+          1490,
+          "人气热卖",
+          [
+            "14.9元爽吃3件"
+          ]
+        ],
+        "9900015165": [
+          "派",
+          850,
+          "小食甜品 /其他",
+          [
+            "派",
+            "第二份优惠"
+          ]
+        ],
+        "9900015164": [
+          "鸡肉堡单品精选",
+          2350,
+          "鸡肉汉堡 /卷",
+          [
+            "单品",
+            "人气"
+          ]
+        ],
+        "9900016096": [
+          "蘸酱韩式甜辣酱鸡块",
+          1190,
+          "蘸酱炸鸡",
+          [
+            "蘸酱炸鸡",
+            "蘸酱炸鸡新吃法"
+          ]
+        ],
+        "9900015162": [
+          "牛肉堡单品精选",
+          1400,
+          "巨无霸 牛鱼肉堡",
+          [
+            "单品",
+            "100%纯牛肉"
+          ]
+        ],
+        "9900008751": [
+          "可乐",
+          950,
+          "饮品",
+          [
+            "冷饮"
+          ]
+        ],
+        "9900000891": [
+          "麦辣鸡腿堡四件套",
+          2800,
+          "鸡肉汉堡 /卷",
+          [
+            "麦金卡"
+          ]
+        ],
+        "9900008754": [
+          "经典麦旋风",
+          1550,
+          "小食甜品 /其他",
+          [
+            "冰淇淋",
+            "第二份半价"
+          ]
+        ],
+        "515837": [
+          "圆筒冰淇淋",
+          500,
+          "小食甜品 /其他",
+          [
+            "冰淇淋",
+            "第二份半价"
+          ]
+        ],
+        "521815": [
+          "韩式甜辣酱鸡块",
+          1500,
+          "炸鸡",
+          [
+            "单品",
+            "韩式风味"
+          ]
+        ],
+        "514782": [
+          "脆脆薯条",
+          1600,
+          "小食甜品 /其他",
+          [
+            "小食"
+          ]
+        ],
+        "521817": [
+          "【美汁源】“多汁柠柠”",
+          1200,
+          "饮品",
+          [
+            "上新"
+          ]
+        ],
+        "1450": [
+          "麦香鸡",
+          1700,
+          "鸡肉汉堡 /卷",
+          [
+            "单品"
+          ]
+        ],
+        "520445": [
+          "薄皮焦香V翅",
+          1600,
+          "炸鸡",
+          [
+            "单品",
+            "人气"
+          ]
+        ],
+        "521337": [
+          "鲜萃冰咖",
+          1150,
+          "饮品",
+          [
+            "冷饮",
+            "冰爽上新"
+          ]
+        ],
+        "520689": [
+          "鲜萃咖啡",
+          950,
+          "麦咖啡™",
+          [
+            "鲜萃咖啡"
+          ]
+        ],
+        "3505": [
+          "锡兰红茶",
+          1150,
+          "饮品",
+          [
+            "热饮"
+          ]
+        ],
+        "521141": [
+          "迷你草莓新地",
+          800,
+          "小食甜品 /其他",
+          [
+            "冰淇淋"
+          ]
+        ],
+        "1401": [
+          "麦乐鸡",
+          1400,
+          "炸鸡",
+          [
+            "单品",
+            "人气"
+          ]
+        ],
+        "521142": [
+          "迷你朱古力新地",
+          800,
+          "小食甜品 /其他",
+          [
+            "冰淇淋"
+          ]
+        ],
+        "521143": [
+          "4块麦乐鸡",
+          1150,
+          "炸鸡",
+          [
+            "单品"
+          ]
+        ]
+      },
+      "categories": [
+        {
+          "name": "人气热卖",
+          "codes": [
+            "9900016652",
+            "9900016669",
+            "9900016670",
+            "9900011056"
+          ]
+        },
+        {
+          "name": "小食拼盘 /多人餐",
+          "codes": [
+            "9900015726",
+            "9900004066",
+            "9900011056"
+          ]
+        },
+        {
+          "name": "精选单人餐",
+          "codes": [
+            "9900015183",
+            "9900004236",
+            "9900015184"
+          ]
+        },
+        {
+          "name": "随心配 1+1",
+          "codes": [
+            "9900016652",
+            "9900016669",
+            "9900016655"
+          ]
+        },
+        {
+          "name": "大堡口福 单人餐",
+          "codes": [
+            "9900016670",
+            "9900016674"
+          ]
+        },
+        {
+          "name": "蘸酱炸鸡",
+          "codes": [
+            "9900016096",
+            "521799"
+          ]
+        },
+        {
+          "name": "鸡肉汉堡 /卷",
+          "codes": [
+            "9900016629",
+            "9900000891",
+            "9900005456",
+            "9900005453",
+            "515295",
+            "1440",
+            "1450",
+            "9900015164"
+          ]
+        },
+        {
+          "name": "开心乐园",
+          "codes": [
+            "506189"
+          ]
+        },
+        {
+          "name": "巨无霸 牛鱼肉堡",
+          "codes": [
+            "9900000888",
+            "9900005464",
+            "1100",
+            "1120",
+            "9900015162"
+          ]
+        },
+        {
+          "name": "炸鸡",
+          "codes": [
+            "521799",
+            "9900004835",
+            "520445",
+            "1401",
+            "521143",
+            "521815"
+          ]
+        },
+        {
+          "name": "小食甜品 /其他",
+          "codes": [
+            "521986",
+            "521951",
+            "521946",
+            "521741",
+            "4810",
+            "514782",
+            "9900008754",
+            "9900008745",
+            "515837",
+            "521141",
+            "521142",
+            "9900015165"
+          ]
+        },
+        {
+          "name": "麦咖啡™",
+          "codes": [
+            "520689"
+          ]
+        },
+        {
+          "name": "饮品",
+          "codes": [
+            "521817",
+            "521337",
+            "9900008751",
+            "515520",
+            "2430",
+            "515281",
+            "9900012416",
+            "3755",
+            "6362",
+            "3757",
+            "520689",
+            "3505"
+          ]
+        }
+      ]
     }
   ],
   "diffs": [
@@ -135804,132 +136425,15 @@
       "beType": 1,
       "orderType": 1
     },
-    "generated_at": "2026-11-13T22:28:23+08:00",
-    "snapshot_count": 88,
+    "generated_at": "2026-11-14T02:39:50+08:00",
+    "snapshot_count": 89,
     "stats": {
       "tracked": 233,
-      "alive": 201,
-      "gone": 32,
+      "alive": 206,
+      "gone": 27,
       "synthetic": true
     },
     "items": [
-      {
-        "code": "9900016669",
-        "name": "炸鸡随心配1+1",
-        "category": "人气热卖",
-        "tags": [
-          "麦麦脆汁鸡来了"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900016669_320.gif",
-        "status": "gone",
-        "first_seen": "2026-11-03T04:51:30+08:00",
-        "last_seen": "2026-11-13T03:01:51+08:00",
-        "days_alive": 11,
-        "first_price_cents": 1390,
-        "last_price_cents": 1390,
-        "price_changes": [
-          {
-            "at": "2026-11-07T02:14:57+08:00",
-            "from": 1390,
-            "to": 1490
-          },
-          {
-            "at": "2026-11-11T02:45:34+08:00",
-            "from": 1490,
-            "to": 1390
-          }
-        ],
-        "dayparts": [
-          "late-night"
-        ],
-        "epitaph": "没有公告，没有告别，只是某天它不在了。",
-        "synthetic": false
-      },
-      {
-        "code": "9900016652",
-        "name": "随心配1+1三件套!!!",
-        "category": "人气热卖",
-        "tags": [
-          "14.9元爽吃3件"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900016652_320.gif",
-        "status": "gone",
-        "first_seen": "2026-11-03T04:51:30+08:00",
-        "last_seen": "2026-11-13T03:01:51+08:00",
-        "days_alive": 11,
-        "first_price_cents": 1490,
-        "last_price_cents": 1490,
-        "price_changes": [],
-        "dayparts": [
-          "late-night"
-        ],
-        "epitaph": "它最后一次出现在菜单上，是一个普通的深夜。",
-        "synthetic": false
-      },
-      {
-        "code": "9900012416",
-        "name": "麦炫酷",
-        "category": "饮品",
-        "tags": [
-          "冷饮",
-          "人气"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900012416_320.gif",
-        "status": "gone",
-        "first_seen": "2026-10-27T01:32:28+08:00",
-        "last_seen": "2026-11-12T02:49:35+08:00",
-        "days_alive": 17,
-        "first_price_cents": 1300,
-        "last_price_cents": 1300,
-        "price_changes": [],
-        "dayparts": [
-          "late-night"
-        ],
-        "epitaph": "没有公告，没有告别，只是某天它不在了。",
-        "synthetic": false
-      },
-      {
-        "code": "521141",
-        "name": "迷你草莓新地",
-        "category": "小食甜品 /其他",
-        "tags": [
-          "冰淇淋"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521141_320.png",
-        "status": "gone",
-        "first_seen": "2026-10-27T01:32:28+08:00",
-        "last_seen": "2026-11-12T02:49:35+08:00",
-        "days_alive": 17,
-        "first_price_cents": 800,
-        "last_price_cents": 800,
-        "price_changes": [],
-        "dayparts": [
-          "late-night"
-        ],
-        "epitaph": "没有公告，没有告别，只是某天它不在了。",
-        "synthetic": false
-      },
-      {
-        "code": "521142",
-        "name": "迷你朱古力新地",
-        "category": "小食甜品 /其他",
-        "tags": [
-          "冰淇淋"
-        ],
-        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521142_320.png",
-        "status": "gone",
-        "first_seen": "2026-10-27T01:32:28+08:00",
-        "last_seen": "2026-11-12T02:49:35+08:00",
-        "days_alive": 17,
-        "first_price_cents": 800,
-        "last_price_cents": 800,
-        "price_changes": [],
-        "dayparts": [
-          "late-night"
-        ],
-        "epitaph": "它曾经也是「今日推荐」里的一员。",
-        "synthetic": false
-      },
       {
         "code": "9900016058",
         "name": "鱼排堡开心乐园餐",
@@ -136535,8 +137039,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250430/product/MS_6362_320_1745552987716.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1150,
         "last_price_cents": 1150,
         "price_changes": [],
@@ -136560,8 +137064,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521143_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T03:01:51+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1150,
         "last_price_cents": 1150,
         "price_changes": [],
@@ -136779,8 +137283,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260807/product/MS_521817_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1200,
         "last_price_cents": 1200,
         "price_changes": [],
@@ -136804,8 +137308,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240904/product/MS_2430_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1300,
         "last_price_cents": 1300,
         "price_changes": [],
@@ -136922,8 +137426,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900004236_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 2800,
         "last_price_cents": 2800,
         "price_changes": [
@@ -137031,8 +137535,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900011056_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 4990,
         "last_price_cents": 5290,
         "price_changes": [
@@ -137499,8 +138003,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900016655_320.png",
         "status": "alive",
         "first_seen": "2026-11-02T16:07:17+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 12,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 13,
         "first_price_cents": 1490,
         "last_price_cents": 1490,
         "price_changes": [],
@@ -137586,8 +138090,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_1120_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 2200,
         "last_price_cents": 2300,
         "price_changes": [
@@ -137617,8 +138121,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504966_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 3200,
         "last_price_cents": 3400,
         "price_changes": [
@@ -137719,8 +138223,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261102/product/MS_515295_320.png",
         "status": "alive",
         "first_seen": "2026-11-02T01:13:01+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 12,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 13,
         "first_price_cents": 2350,
         "last_price_cents": 2350,
         "price_changes": [],
@@ -137742,8 +138246,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016674_320.png",
         "status": "alive",
         "first_seen": "2026-11-02T16:07:17+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 12,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 13,
         "first_price_cents": 2390,
         "last_price_cents": 2390,
         "price_changes": [],
@@ -137765,8 +138269,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900008751_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 950,
         "last_price_cents": 950,
         "price_changes": [],
@@ -137917,8 +138421,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G515837_320.png",
         "status": "alive",
         "first_seen": "2026-10-25T05:05:05+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 20,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 21,
         "first_price_cents": 500,
         "last_price_cents": 500,
         "price_changes": [],
@@ -138084,8 +138588,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260624/product/MS_9900004066_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 7250,
         "last_price_cents": 7250,
         "price_changes": [],
@@ -138216,8 +138720,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_506189_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1200,
         "last_price_cents": 1200,
         "price_changes": [],
@@ -138310,8 +138814,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_1100_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 2550,
         "last_price_cents": 2550,
         "price_changes": [],
@@ -138359,8 +138863,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000888_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 3100,
         "last_price_cents": 3200,
         "price_changes": [
@@ -138389,8 +138893,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016670_320.png",
         "status": "alive",
         "first_seen": "2026-11-02T16:07:17+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 12,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 13,
         "first_price_cents": 2990,
         "last_price_cents": 2990,
         "price_changes": [],
@@ -138569,8 +139073,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G515520_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1150,
         "last_price_cents": 1150,
         "price_changes": [],
@@ -138595,8 +139099,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900008745_320.gif",
         "status": "alive",
         "first_seen": "2026-10-25T05:05:05+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 20,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 21,
         "first_price_cents": 1200,
         "last_price_cents": 1200,
         "price_changes": [],
@@ -138620,8 +139124,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261014/product/MS_521946_320.png",
         "status": "alive",
         "first_seen": "2026-11-02T16:07:17+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 12,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 13,
         "first_price_cents": 390,
         "last_price_cents": 390,
         "price_changes": [],
@@ -138644,8 +139148,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521799_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 300,
         "last_price_cents": 300,
         "price_changes": [],
@@ -138954,8 +139458,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900015165_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T03:01:51+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 850,
         "last_price_cents": 850,
         "price_changes": [],
@@ -139073,10 +139577,10 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016629_320.gif",
         "status": "alive",
         "first_seen": "2026-11-02T01:13:01+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 12,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 13,
         "first_price_cents": 3200,
-        "last_price_cents": 3090,
+        "last_price_cents": 3200,
         "price_changes": [
           {
             "at": "2026-11-02T16:07:17+08:00",
@@ -139162,6 +139666,11 @@
             "at": "2026-11-13T16:38:42+08:00",
             "from": 3200,
             "to": 3090
+          },
+          {
+            "at": "2026-11-14T02:39:50+08:00",
+            "from": 3090,
+            "to": 3200
           }
         ],
         "dayparts": [
@@ -139355,8 +139864,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521951_320.gif",
         "status": "alive",
         "first_seen": "2026-10-25T05:05:05+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 20,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 21,
         "first_price_cents": 500,
         "last_price_cents": 500,
         "price_changes": [],
@@ -139398,6 +139907,38 @@
         "dayparts": [
           "afternoon",
           "dinner",
+          "late-night"
+        ],
+        "epitaph": "",
+        "synthetic": false
+      },
+      {
+        "code": "9900016669",
+        "name": "炸鸡随心配1+1",
+        "category": "人气热卖",
+        "tags": [
+          "麦麦脆汁鸡来了"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900016669_320.gif",
+        "status": "alive",
+        "first_seen": "2026-11-03T04:51:30+08:00",
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 12,
+        "first_price_cents": 1390,
+        "last_price_cents": 1390,
+        "price_changes": [
+          {
+            "at": "2026-11-07T02:14:57+08:00",
+            "from": 1390,
+            "to": 1490
+          },
+          {
+            "at": "2026-11-11T02:45:34+08:00",
+            "from": 1490,
+            "to": 1390
+          }
+        ],
+        "dayparts": [
           "late-night"
         ],
         "epitaph": "",
@@ -139528,8 +140069,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015162_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T03:01:51+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1400,
         "last_price_cents": 1400,
         "price_changes": [],
@@ -139574,8 +140115,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015184_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T03:01:51+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 3200,
         "last_price_cents": 3200,
         "price_changes": [],
@@ -139812,10 +140353,10 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015183_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T03:01:51+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 3450,
-        "last_price_cents": 3450,
+        "last_price_cents": 3350,
         "price_changes": [
           {
             "at": "2026-11-07T02:14:57+08:00",
@@ -139826,6 +140367,11 @@
             "at": "2026-11-11T02:45:34+08:00",
             "from": 3350,
             "to": 3450
+          },
+          {
+            "at": "2026-11-14T02:39:50+08:00",
+            "from": 3450,
+            "to": 3350
           }
         ],
         "dayparts": [
@@ -139938,8 +140484,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240904/product/MS_3757_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 750,
         "last_price_cents": 750,
         "price_changes": [],
@@ -139963,8 +140509,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240731/product/MS_3755_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1050,
         "last_price_cents": 1050,
         "price_changes": [],
@@ -139989,8 +140535,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900008754_320.gif",
         "status": "alive",
         "first_seen": "2026-10-25T05:05:05+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 20,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 21,
         "first_price_cents": 1550,
         "last_price_cents": 1550,
         "price_changes": [],
@@ -140035,8 +140581,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250523/product/MS_514782_320_1747877523158.png",
         "status": "alive",
         "first_seen": "2026-10-31T15:25:45+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 14,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 15,
         "first_price_cents": 1600,
         "last_price_cents": 1600,
         "price_changes": [],
@@ -140058,8 +140604,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521741_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-08T21:14:13+08:00",
-        "days_alive": 44,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 850,
         "last_price_cents": 850,
         "price_changes": [],
@@ -140358,8 +140904,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20241202/product/MS_520445_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1600,
         "last_price_cents": 1600,
         "price_changes": [],
@@ -140382,8 +140928,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250523/product/MS_G4810_320_1747877491921.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1350,
         "last_price_cents": 1350,
         "price_changes": [],
@@ -140507,8 +141053,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016096_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1190,
         "last_price_cents": 1190,
         "price_changes": [],
@@ -140551,6 +141097,48 @@
         ],
         "epitaph": "",
         "synthetic": true
+      },
+      {
+        "code": "521142",
+        "name": "迷你朱古力新地",
+        "category": "小食甜品 /其他",
+        "tags": [
+          "冰淇淋"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521142_320.png",
+        "status": "alive",
+        "first_seen": "2026-10-27T01:32:28+08:00",
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 19,
+        "first_price_cents": 800,
+        "last_price_cents": 800,
+        "price_changes": [],
+        "dayparts": [
+          "late-night"
+        ],
+        "epitaph": "",
+        "synthetic": false
+      },
+      {
+        "code": "521141",
+        "name": "迷你草莓新地",
+        "category": "小食甜品 /其他",
+        "tags": [
+          "冰淇淋"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521141_320.png",
+        "status": "alive",
+        "first_seen": "2026-10-27T01:32:28+08:00",
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 19,
+        "first_price_cents": 800,
+        "last_price_cents": 800,
+        "price_changes": [],
+        "dayparts": [
+          "late-night"
+        ],
+        "epitaph": "",
+        "synthetic": false
       },
       {
         "code": "521156",
@@ -140676,8 +141264,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_3505_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 850,
         "last_price_cents": 1150,
         "price_changes": [
@@ -140739,8 +141327,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G515280_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1000,
         "last_price_cents": 1000,
         "price_changes": [],
@@ -140795,6 +141383,27 @@
         "dayparts": [
           "afternoon",
           "dinner",
+          "late-night"
+        ],
+        "epitaph": "",
+        "synthetic": false
+      },
+      {
+        "code": "9900016652",
+        "name": "随心配1+1三件套!!!",
+        "category": "人气热卖",
+        "tags": [
+          "14.9元爽吃3件"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900016652_320.gif",
+        "status": "alive",
+        "first_seen": "2026-11-03T04:51:30+08:00",
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 12,
+        "first_price_cents": 1490,
+        "last_price_cents": 1490,
+        "price_changes": [],
+        "dayparts": [
           "late-night"
         ],
         "epitaph": "",
@@ -140868,8 +141477,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521815_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T03:01:51+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1500,
         "last_price_cents": 1500,
         "price_changes": [],
@@ -140891,8 +141500,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260815/product/MS_9900015726_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1990,
         "last_price_cents": 1990,
         "price_changes": [],
@@ -140917,10 +141526,10 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521986_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1500,
-        "last_price_cents": 1100,
+        "last_price_cents": 1500,
         "price_changes": [
           {
             "at": "2026-10-25T14:41:23+08:00",
@@ -141046,6 +141655,11 @@
             "at": "2026-11-13T16:38:42+08:00",
             "from": 1500,
             "to": 1100
+          },
+          {
+            "at": "2026-11-14T02:39:50+08:00",
+            "from": 1100,
+            "to": 1500
           }
         ],
         "dayparts": [
@@ -141189,8 +141803,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521337_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T03:01:51+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1150,
         "last_price_cents": 1150,
         "price_changes": [],
@@ -141211,8 +141825,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_G520688_320.gif",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 950,
         "last_price_cents": 950,
         "price_changes": [],
@@ -141237,8 +141851,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015164_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T03:01:51+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 2350,
         "last_price_cents": 2350,
         "price_changes": [],
@@ -141284,8 +141898,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260529/product/MS_G1401_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1400,
         "last_price_cents": 1400,
         "price_changes": [],
@@ -141309,8 +141923,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504969_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 2500,
         "last_price_cents": 2500,
         "price_changes": [],
@@ -141438,6 +142052,28 @@
         "synthetic": true
       },
       {
+        "code": "9900012416",
+        "name": "麦炫酷",
+        "category": "饮品",
+        "tags": [
+          "冷饮",
+          "人气"
+        ],
+        "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900012416_320.gif",
+        "status": "alive",
+        "first_seen": "2026-10-27T01:32:28+08:00",
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 19,
+        "first_price_cents": 1300,
+        "last_price_cents": 1300,
+        "price_changes": [],
+        "dayparts": [
+          "late-night"
+        ],
+        "epitaph": "",
+        "synthetic": false
+      },
+      {
         "code": "1700",
         "name": "麦辣鸡翅",
         "category": "炸鸡",
@@ -141504,8 +142140,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000891_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 3000,
         "last_price_cents": 2800,
         "price_changes": [
@@ -141536,8 +142172,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260325/product/MS_1440_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 2350,
         "last_price_cents": 2250,
         "price_changes": [
@@ -141567,8 +142203,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005456_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 3350,
         "last_price_cents": 3350,
         "price_changes": [],
@@ -141639,8 +142275,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_1450_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 1700,
         "last_price_cents": 1700,
         "price_changes": [],
@@ -141664,8 +142300,8 @@
         "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504967_320.png",
         "status": "alive",
         "first_seen": "2026-09-26T12:00:00+08:00",
-        "last_seen": "2026-11-13T22:28:23+08:00",
-        "days_alive": 49,
+        "last_seen": "2026-11-14T02:39:50+08:00",
+        "days_alive": 50,
         "first_price_cents": 2800,
         "last_price_cents": 2800,
         "price_changes": [],
